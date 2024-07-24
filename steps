@@ -1,0 +1,36 @@
+<!-- html july 24th::: -->
+-h1(max)-h6(min) -
+<p>lorem gives random passage(which keeps on changing)</p>
+-<img src="" ,alt="img not found" /> -
+<table border="2"></table>
+--table rowspan: club rows downwards, and remove all same row value from
+downlowd
+<th rowspan="8">1</th>
+
+<!-- Css july 24th:::
+  shorcut for boiler code: shift+1+enter
+  always give width, height, backgroundcolor,border -->
+<style>
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+  .main {
+    display: flex;
+    flex-direction: column-reverse;
+    /* x axis: */
+    justify-content: center;
+    justify-content: space-between;
+    /* y axis: */
+    align-items: end;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    font-size: 10px;
+    border: 10px solid black;
+  }
+</style>
+
+.main x axis: justify content y axis: align items

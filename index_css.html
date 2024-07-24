@@ -1,0 +1,50 @@
+<!-- CSS -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        width: 250px;
+        height: 250px;
+        border: 5px solid black;
+        background-color: aqua;
+        font-size: 50px;
+      }
+      .main {
+        background-color: blueviolet;
+        display: flex;
+        height: 100vh;
+        /* flex-direction:row; */
+        /* flex-direction: row-reverse; */
+        /* flex-direction: column; */
+        /* flex-direction: column-reverse; */
+        /* for x-axis use justify-content */
+        /* justify-content: start; */
+        justify-content: center;
+        /* justify-content: end; */
+        /* justify-content: space-evenly; */
+        /* justify-content: space-between; */
+        /* justify-content: space-around; */
+
+        /* for y we use align-items */
+        align-items: center;
+        /* align-items: start; */
+        /* align-items: end; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+  </body>
+</html>
