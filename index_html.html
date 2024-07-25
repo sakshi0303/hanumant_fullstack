@@ -45,50 +45,123 @@
         <th>colC</th>
       </tr>
     </table>
+    <!-- <form>
+      <fieldset>
+        <legend>Resume</legend>
+
+        <label for="user">Username</label>
+        <input type="text" id="user" placeholder="enter username" /> <br />
+
+        <label for="pass">Password</label>
+        <input type="password" id="pass" placeholder="enter password" /> <br />
+
+        <label for="num">Number</label>
+        <input
+          type="number"
+          id="num"
+          min="10"
+          max="20"
+          placeholder="enter phone number"
+        />
+        <br />
+
+        <label for="resume">Resume</label>
+        <input type="file" id="resume" placeholder="enter your resume" /> <br />
+
+        <label for="mail">Email</label>
+        <input type="email" id="mail" placeholder="enter email" /> <br />
+        <label for="">Gender:</label>
+        <label for="m">Male</label>
+        <input type="radio" id="m" name="g" />
+        <label for="f">Female</label>
+        <input type="radio" id="f" name="g" />
+        <label for="o">Others</label>
+        <input type="radio" name="g" id="o" /> <br />
+
+        <label for="">Skills:</label>
+        <label for="h">HTML</label>
+        <input type="checkbox" id="h" />
+        <label for="c">CSS</label>
+        <input type="checkbox" id="c" />
+        <label for="j">Javascript</label>
+        <input type="checkbox" id="j" /> <br />
+
+        <label for="F">Fruits</label>
+        <select name="F" id="F">
+          <option value="F">Mango</option>
+          <option value="F">Grapes</option>
+          <option value="F">Grapes</option>
+          <option value="F">Grapes</option></select
+        ><br />
+        <br />
+        <label for="t">Comments</label><br />
+        <textarea name="t" id="t" cols="30" rows="10"></textarea>
+      </fieldset>
+    </form> -->
+
     <form>
-      <label for="user">Username</label>
-      <input type="text" id="user" placeholder="enter username" /> <br />
+      <fieldset>
+        <fieldset>
+          <h1>Registration</h1>
+          <h3>Personal Details</h3>
 
-      <label for="pass">Password</label>
-      <input type="password" id="pass" placeholder="enter password" /> <br />
+          <label for="fn"><b>Full Name </b></label>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <label for="dob"><b> Date of Birth </b></label
+          >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <label for="mail"><b> Email </b></label> <br />
 
-      <label for="num">Number</label>
-      <input
-        type="number"
-        id="num"
-        min="10"
-        max="20"
-        placeholder="enter phone number"
-      />
-      <br />
+          <input type="text" id="fn" placeholder="Enter your name" />
+          <input type="date" id="dob" placeholder="Enter birth date" />
+          <input type="email" id="mail" placeholder="Enter your email" /> <br />
+          <br /><br />
 
-      <label for="resume">Resume</label>
-      <input type="file" id="resume" placeholder="enter your resume" /> <br />
+          <label for="mn"><b>Mobile Number</b></label>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <label for="g"> <b> Gender </b></label>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <label for="o"> <b> Ocupation </b></label> <br />
 
-      <label for="mail">Email</label>
-      <input type="email" id="mail" placeholder="enter email" /> <br />
+          <input type="number" id="mn" placeholder="Enter mobile number" />
+          <label for="m">Male</label>
+          <input type="radio" id="g" name="m" />
+          <label for="f">Female</label>
+          <input type="radio" id="f" name="m" />
+          <label for="ot">Others</label>
+          <input type="radio" id="ot" name="m" />
+          <input type="text" id="o" placeholder="Enter Occupation" /> <br />
+          <br />
+          <br />
+
+          <h3>Identity Details</h3>
+
+          <label for="idtype"><b>ID Type</b></label>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <label for="idnum"> <b>ID Number </b></label
+          >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <label for="issaut"> <b> Issue Authority </b></label> <br />
+
+          <input type="text" id="idtype" placeholder="Enter ID type" />
+          <input type="number" id="idnum" placeholder="Enter ID number" />
+          <input type="text" id="issaut" placeholder="Enter Issue department" />
+          <br />
+          <br /><br />
+
+          <label for="isdt"><b>Issue Date </b></label>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <label for="isst"><b> Issue State </b></label
+          >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <label for="isexpdt"> <b> Expiry Date </b></label> <br />
+
+          <input type="date" id="isdt" placeholder="Enter ID issue date" />
+          <input type="text" id="isst" placeholder="Enter ID issue state" />
+          <input type="date" id="isexpdt" placeholder="Enter ID expiry date" />
+          <br />
+          <br /><br />
+          <button>Next -></button>
+        </fieldset>
+      </fieldset>
     </form>
-
-    <!-- <form >
-    <label for="user"> Username</label>
-    <input type="text" id="user" placeholder="Enter your name">
-
-    <label for="sakashi">Password</label>
-    <input type="password" id="sakashi" placeholder=""> <br> <br>
-
-    <label for="num">Number</label>
-    <input type="number" id="num" max="500" min="10"><br> <br>
-
-    <label for="resume">File Upload</label>
-    <input type="file" id="resume"> <br><br>
-
-    <label for="mail">E-mail -id</label>
-    <input type="email" id="mail">
-
-    <label for="">Gen</label>
-
-  </form> -->
-
     <table border="1">
       <tr>
         <th>Country</th>
