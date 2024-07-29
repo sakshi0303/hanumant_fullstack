@@ -7,6 +7,8 @@
 downlowd
 <th rowspan="8">1</th>
 
+/* list-style: none; works inside ul */
+
 <!-- Css july 24th:::
   shorcut for boiler code: shift+1+enter
   always give width, height, backgroundcolor,border -->
