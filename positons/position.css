@@ -1,0 +1,23 @@
+.box{
+  height:300px;
+  width:250px;
+  border:2px solid black;
+  display: inline-block; 
+}
+#container1{
+  background-color: red;
+  position:static;
+  top:100px;
+  margin-top: 100px;
+}
+#container2{
+  background-color: blue;
+}
+
+#container3{
+  background-color: pink;
+}
+
+#container4{
+  background-color: green;
+}

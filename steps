@@ -7,6 +7,12 @@
 downlowd
 <th rowspan="8">1</th>
 
+
+/* display:inline-block */
+
+
+
+"div.box#container1$*4"
 /* list-style: none; works inside ul */
 
 <!-- Css july 24th:::
