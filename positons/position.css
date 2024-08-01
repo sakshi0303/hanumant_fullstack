@@ -1,21 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 .box{
   height:300px;
   width:250px;
   border:2px solid black;
   display: inline-block; 
 }
+.first{
+  height: 2200px;
+  background-color: blueviolet;
+}
+.second{
+  height: 2200px;
+  background-color:brown;
+}
 #container1{
   background-color: red;
-  position:static;
+  /* position:static; we cant use top, margin, left or right, bottom*/
+  /* absolute: intial postion is not occuspoed. works as independent block
+  relative: initial posiiton is occupied, */
+   /* position: absolute; */
+  position: relative; 
   top:100px;
   margin-top: 100px;
 }
 #container2{
   background-color: blue;
+  position:fixed; 
+  top: 400px;
+  bottom: 350px;
 }
 
 #container3{
   background-color: pink;
+  position:sticky;
+  top:200px;
+  bottom:200px;
 }
 
 #container4{

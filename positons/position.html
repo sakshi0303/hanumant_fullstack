@@ -1,16 +1,20 @@
 <!-- "div.box#container1$*4" -->
 <!-- #position: 
- :1- static(by default)
-2:- relative
-3:- absolute
-4:- fixed
-5:- sticky
+1:- static(by default) top,margin,left,right,bottom wont work
+2:- absolute : intial position is not occupied, works as independednt body, 
+3:- relative: initial position is occupied and cannot be replaced by other box
+
+4:- fixed : parent div is need top and bottom and if we scroll down ,freeze the box, throughout the entire website, doesnot bind to the parent class
+5:- sticky:  fixed, only in the immediate parent div, 
 
 display: inline-block::: to make all box in one line
 position: static
-does not allow top to go down use: mrgin-top
+does not allow top to go down use: re,
 margin-top give space to all the boxs
 
+inline: margin, width, height: we cant give
+block: we can give
+sol: use -inline-block
 
 -->
 
@@ -23,9 +27,12 @@ margin-top give space to all the boxs
     <title>Document</title>
   </head>
   <body>
-    <div class="box" id="container1">box1</div>
-    <div class="box" id="container2">box2</div>
-    <div class="box" id="container3">box3</div>
-    <div class="box" id="container4">box4</div>
+    <div class="first">
+      <div class="box" id="container1">box1</div>
+      <div class="box" id="container2">box2</div>
+      <div class="box" id="container3">box3</div>
+      <div class="box" id="container4">box4</div>
+    </div>
+    <div class="second"></div>
   </body>
 </html>
