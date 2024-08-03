@@ -1,0 +1,78 @@
+<!-- psedo class : css property modification transition works with hover
+:hoover changes the default properties 
+nth: 0th
+a: default, hover,active,visited
+
+a: visited: once visited, it will never get the original default color property back on a web page, We have to create another webpage
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+      }
+
+      .box:hover {
+        background-color: aqua;
+      }
+      ul li:nth-child(2n) {
+        background-color: pink;
+      }
+
+      ul li:nth-child(2n + 1) {
+        background-color: aquamarine;
+      }
+
+      ul li:nth-child(3n) {
+        background-color: yellow;
+      }
+
+      ul li:nth-last-child(1) {
+        background-color: green;
+      }
+      /* input type text */
+      ul li:nth-last-of-type() {
+        font-size: 50px;
+      }
+
+      a {
+        font-size: 30px;
+        background-color: orange;
+      }
+
+      a:hover {
+        background-color: pink;
+      }
+
+      a:active {
+        background-color: red;
+      }
+
+      a:visited {
+        background-color: rgb(39, 162, 207);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">hover-pschedo class</div>
+
+    <ul>
+      <li>list1</li>
+      <li>list2</li>
+      <li>list3</li>
+      <li>list4</li>
+      <li>list5</li>
+      <li>list6</li>
+      <li>list7</li>
+    </ul>
+
+    <a href="https://www.youtube.com/"> Click Me</a>
+  </body>
+</html>

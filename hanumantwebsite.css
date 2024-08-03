@@ -1,0 +1,289 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+nav ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap:5vw;
+  font-weight: bolder;
+  justify-content: space-evenly;
+  height:10vh;
+  align-items: center;
+  border-radius: 1%;
+  background-color: aqua;
+}
+nav ul img{
+  margin-right: 10vw;
+}
+.first-section img{
+  width: 100%;
+  height:40%;
+
+}
+.first-section{
+  position: relative;
+  margin-bottom: 20px;
+}
+.content p {
+  border-bottom: 5px solid white;
+  width: fit-content;
+  padding-bottom: 1%;
+  margin-bottom: 1%;
+  font-size: 35px;
+  font-weight:600; 
+}
+.content{
+  position: absolute;
+  top:30%;
+  color: white;
+  margin-left: 5%;
+  font-size: 20px;
+}
+.second-section{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 5%;
+  margin-top: 1%;
+  gap: 20px; 
+  position: relative;
+  margin-bottom: 20px;
+}
+.second-section img{
+  width: 60%;
+  height:420px;
+  margin-top: 20px;
+  margin-bottom: 5%;
+  /* position: absolute; */
+}
+.second-section .p1{
+  width: 65%;
+  height:100%;
+  margin-left: 4%;
+  font-size: 1.5em;
+  margin-right: 4%;
+}
+.second-section .box {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left:420px;
+  gap:30px;
+  border-color: black;
+}
+.second-section .box #box1{
+  height: 130px;
+  width: 220px;
+  background-color: darkgoldenrod;
+}
+.second-section .box #box2{
+  height: 130px;
+  width: 220px;
+  background-color: blue;
+}
+.second-section .box #box3{
+  height: 130px;
+  width: 220px;
+  background-color:pink;
+}
+.third-section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  margin-bottom: 40px;
+  background-color: rgb(230, 249, 251);
+ 
+}
+.card{
+  margin-top: 5%;
+  width: 400px;
+  height: 300px;
+  position: relative;
+}
+.card img{
+  width: 100%;
+  height: 100%;
+}
+.card .cd-content{
+  position: absolute;
+  bottom: 20px;
+  color: white;
+  border-bottom: 10px;
+  left:33px;
+  font-size: 15px;
+}
+.card .cd-contentMain{
+  position: absolute;
+  color: black;
+  top: 140px;
+  font-size: 30px;
+}
+.forth-section{
+  
+  position: relative;
+  /* bottom:40px; */
+
+}
+.forth-section .content{
+  text-align: center;
+  line-height: 30px;
+  position: absolute;
+  left:28%;
+}
+
+.forth-section .content h3{
+  font-size: 37px;
+  color: white;
+  word-spacing: 5px;
+}
+
+.forth-section .content span{
+  font-size: 20px;
+  color: white;
+  word-spacing: 2px;
+}
+
+.forth-section .backimg img{
+  /* margin-right: 10vw; */
+  width: 100%;
+  height: 400px;
+}
+.forth-section .button{
+  display: flex;
+  gap:20px;
+  justify-content: center;
+  margin-top: 10px;
+  /* color: white; */
+}
+.forth-section .button .btn1{
+  width: 160px;
+  height:45px;
+  border: 1px solid rgb(31, 153, 186);
+  color: rgb(31, 153, 186);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.forth-section .button .btn2{
+  width: 200px;
+  height:45px;
+  border: 1px solid rgb(31, 153, 186);
+  color: rgb(31, 153, 186);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+.forth-section .button .btn3{
+  width: 180px;
+  height:45px;
+  border: 1px solid rgb(31, 153, 186);
+  color: rgb(31, 153, 186);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+i{
+  color: white;
+  font-size: 50px;
+  /* display: flex;
+  justify-content: center; */
+}
+.fifth-section{
+ position: relative;
+ margin-bottom: 10px;
+  
+}
+
+.fifth-section .heading h1{
+  font-size: 38px;
+  font-weight: bold;
+  position:absolute;
+  display: flex;
+  justify-content: center;
+  left:40%;
+  top:10%;
+}
+
+.fifth-section .heading span{
+  font-size: 38px;
+  color: rgb(125, 6, 125);
+  font-weight: bold;
+  position:absolute;
+  display: flex;
+  justify-content: center;
+  left:56%;
+  top:10%;
+}
+.fifth-section .part1{
+  position: absolute;
+}
+
+
+.fifth-section .part1 img{
+  height:700px;
+  width: 100%;
+}
+.fifth-section .part2{
+  gap:20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: absolute;
+  top:10px;
+}
+
+
+.fifth-section .part2 .card{
+  background-color: white;
+  width: 380px;
+  height: 250px;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 10px;
+  top:1%;
+  opacity: 80%;
+}
+
+
+.content .circle{
+  width:100px;
+  height:100px;
+  background-color: orange;
+  border-radius: 50%;
+  position: absolute;
+  top:10%;
+}
+
+.fifth-section .card h4{
+  font-size: 16px;
+  position: absolute;
+  top:60%;
+  left:30%;
+}
+
+.footer{
+  /* position: relative; */
+  margin-bottom: 10px;
+  background-color: rgb(19, 19, 91);
+}
+
+.footer .fp1{
+  height: 100%;
+  width:100%;
+
+}
+.footer .fp1 ul{
+  border-bottom: 10px white solid;
+  list-style: none;
+}

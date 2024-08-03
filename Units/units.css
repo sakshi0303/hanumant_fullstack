@@ -1,0 +1,13 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.box{
+  width:90vw;
+  height:70vh;
+  background-color: aquamarine;
+}
+.box img{
+  width:90%;
+  height:60%;
+}
