@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 80px;
+        background-color: aqua;
+
+        list-style: none;
+        font-size: 30px;
+
+        border-radius: 20px;
+      }
+      nav ul li {
+        cursor: pointer;
+        padding: 25px 15px;
+        border-radius: 10px;
+      }
+
+      nav ul li:hover {
+        background-color: lightblue;
+        color: white;
+      }
+
+      .dropdown {
+        /* display: block; */
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        border: 2px solid black;
+        width: 160px;
+        height: fit-content;
+        top: 80px;
+        color: black;
+      }
+      .droplist:hover .dropdown {
+        display: flex;
+      }
+
+      .dropdown2 {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        border: 2px solid black;
+        width: 160px;
+        height: fit-content;
+        top: 80px;
+        left: 160px;
+        color: black;
+        border-color: black;
+      }
+
+      .droplist2:hover .dropdown2 {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li class="droplist">
+          Services
+          <ul class="dropdown">
+            <li>Website Development</li>
+            <li class="droplist2">
+              App Development
+              <ul class="dropdown2">
+                <li>app1</li>
+                <li>app2</li>
+                <li>app3</li>
+                <li>app4</li>
+              </ul>
+            </li>
+            <li>Wordpress Development</li>
+            <li>Android Development</li>
+            <li>Android UI/UX Design</li>
+          </ul>
+        </li>
+        <li>Training</li>
+        <li>Placement</li>
+        <li>Branches</li>
+        <li>Contact US</li>
+      </ul>
+    </nav>
+  </body>
+</html>
