@@ -162,31 +162,100 @@
 // }
 
 // #question : using switch find the largest of five number
-let a4=10;
-let b4=3;
-let c=5;
-let d=8;
-let e=1;
-let largest
-switch(true){
-  case (a4>b4 && a4>c && a4>d && a4>e): largest=a4;
-  console.log(largest);
-  break;
+// let a4=10;
+// let b4=3;
+// let c=5;
+// let d=8;
+// let e=1;
+// let largest
+// switch(true){
+//   case (a4>b4 && a4>c && a4>d && a4>e): largest=a4;
+//   console.log(largest);
+//   break;
 
-  case (b4>a4 && b4>c && b4>d && b4>e): largest=b4;
-  console.log(largest);
-  break;
+//   case (b4>a4 && b4>c && b4>d && b4>e): largest=b4;
+//   console.log(largest);
+//   break;
 
-  case (c>a4 && c>b4 && c>d && c>e): largest=c;
-  console.log(largest);
-  break;
+//   case (c>a4 && c>b4 && c>d && c>e): largest=c;
+//   console.log(largest);
+//   break;
 
-  case (d>a4 && d>b4 && d>c && d>e): largest=d;
-  console.log(largest);
-  break;
+//   case (d>a4 && d>b4 && d>c && d>e): largest=d;
+//   console.log(largest);
+//   break;
 
-  case (e>a4 && e>b4 && e>c && e>d): largest=e;
-  console.log(largest);
-  break;
-  default: console.log("wrong");
-}
+//   case (e>a4 && e>b4 && e>c && e>d): largest=e;
+//   console.log(largest);
+//   break;
+//   default: console.log("wrong");
+// }
+
+// FOR -LOOP
+// let sum=0
+// for(let a=0;a<=10;a++){
+//   sum+=a;
+//   console.log(a)
+// }
+// console.log("total=",sum)
+
+// FOR WHILE-LOOP
+// let sum=0
+// let a=0;
+// while(a<10){
+//   sum+=a;
+//   console.log(a)
+//   a+=1;
+// }
+// console.log("total=",sum)
+
+
+// // for do-while
+// let sum=0
+// let a=0;
+
+// do {
+//   sum+=a;
+//   console.log(a)
+//   a+=1;
+// } while (a<10);
+
+// console.log("total=",sum)
+
+// ARRAY -- Aug 8th 2024--->
+
+let student=['sakshi','swarna','sanjay','gaurav','ruchi','renne']
+// for (let i=0;i<student.length;i++){
+//   console.log(student[i])
+// }
+
+// array functions--> push(add) and pop(remove) form the end of array
+                  // --> shift(remove) and unshift(add) from the start of array
+                  // =>   splice(starting_idx,ending_idx,element added) to add in between of array.
+student.push("harsh") 
+student.pop()
+student.shift()
+student.unshift('hanumant') 
+student.splice(1,3,'sa','ss','werwr',2,3)
+console.log(student);
+
+
+
+
+// WHILE-LOOP
+// let i=0;
+// while (i<student.length){
+//   console.log(student[i])
+//   i+=1
+// }
+
+// DO-WHILE
+// let i=0;
+// do {
+//   console.log(student[i])
+//   i+=1
+// } while (i<student.length);
+
+// mayank :object-< how value target
+// minaj: objects
+// nihal: DOM styling, elemenet segretation
