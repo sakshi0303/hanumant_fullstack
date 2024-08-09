@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.card{
+  background-color: antiquewhite;
+  width: 1500px;
+  height:850px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.innerbox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  
+}
+.innerbox .first-section img{
+  width: 800px;
+  height:350px;
+  position: absolute;
+
+}
+
+.innerbox .secondpart h1{
+  
+  position: absolute;
+  justify-content: center;
+  left: 150px;
+
+}
+
+.innerbox .secondpart .button{
+  display: flex;
+  width: 80px;
+  height:50px;
+  left: 150px;
+  top: 430px;
+  position: absolute;
+  justify-content: center;
+  background-color: beige;
+  align-items: center;
+
+}
