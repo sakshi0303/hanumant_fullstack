@@ -1,0 +1,85 @@
+<!-- 
+  DOM manupilation
+  there is one id (no indexing) 
+            multiple class (indexing)
+
+
+>>>document.getElelmentbyId("#id")  <div id="id">
+
+>>document.getElementByClassName("box") <div class="box">
+
+>>>document.querySelector('#id')    <div id="id">
+
+
+>>>document.querySelectorAll('a')  need of indexing in queryselectorAll
+a[0].style.color="red";
+a[1].style.backgroundColr="yellow"
+
+
+>>>document.querySelector('a')    >> NO need of indexing in queryselectore
+a.style.color="red";
+
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="h">Hanumant</h1>
+    <p class="box">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur earum
+      recusandae repellendus aut maiores nihil adipisci et libero iure
+      molestiae, sit dolore vitae a voluptas, expedita rem ut. Consectetur,
+      asperiores?
+    </p>
+    <p class="box">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur earum
+      recusandae repellendus aut maiores nihil adipisci et libero iure
+      molestiae, sit dolore vitae a voluptas, expedita rem ut. Consectetur,
+      asperiores?
+    </p>
+    <p class="box">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur earum
+      recusandae repellendus aut maiores nihil adipisci et libero iure
+      molestiae, sit dolore vitae a voluptas, expedita rem ut. Consectetur,
+      asperiores?
+    </p>
+
+    <a class="anchor" href="http://facebook.com">facebook</a>
+    <a class="anchor" href="http://youtube.com">youtube</a>
+    <a class="anchor" href="http://linkedin.com">linkedin</a>
+    <a class="anchor" href="http://amazon.com">Amazon</a>
+  </body>
+  <script>
+    // let head = document.getElementById("h");
+    // console.log(head);
+
+    // let p = document.getElementsByClassName("box");
+    // console.log(p);
+
+    // let h = document.querySelector("#h");
+    // h.style.color = "red";
+    // h.style.backgroundColor = "yellow";
+    // console.log(h);
+
+    let m = document.querySelectorAll("p");
+    m[1].style.color = "red";
+    m[0].style.backgroundColor = "yellow";
+    console.log(m);
+    console.log(m);
+
+    // let a = document.getElementsByClassName("anchor");
+    // let a = document.querySelector("a");
+    // a.style.color = "red";
+
+    let a = document.querySelectorAll("a");
+    a[0].style.color = "red";
+    a[3].style.backgroundColor = "pink";
+    console.log(a);
+  </script>
+</html>

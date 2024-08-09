@@ -13,6 +13,7 @@
 // var a ="sakashi"
 // console.log(a);
 
+// there is one id and many class
 
 // let b ="tech"
 // // allow #re-render 
