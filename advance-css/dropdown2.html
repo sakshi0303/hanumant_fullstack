@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul {
+      height: fit-content;
+      display: flex;
+      gap: 5px;
+      list-style: none;
+      justify-content: space-evenly;
+      background-color: rgb(125, 187, 242);
+      font-size: 30px;
+      align-items: center;
+      position: relative;
+    }
+
+    nav ul img {
+      width: 200px;
+      height: 60px;
+      margin-right: 200px;
+    }
+
+    nav ul .dropdown {
+      /* display: block; */
+      top: 75px;
+      left: 80px;
+      display: none;
+      height: fit-content;
+      font-size: 2px solid black;
+      position: absolute;
+      border: 2px solid black;
+    }
+
+    nav ul .droplist {
+      padding: 25px 15px;
+      cursor: pointer;
+    }
+
+    nav ul li:hover {
+      background-color: beige;
+      color: black;
+    }
+
+    nav ul .droplist:hover .dropdown {
+      display: flex;
+    }
+
+    .column li:nth-child(1) {
+      color: purple;
+      font-size: 30px;
+    }
+    .column {
+      padding: 5px 15px;
+    }
+    .column li {
+      border-bottom: 2px solid grey;
+      font-size: 20px;
+      padding: 15px 0px;
+    }
+    .AutoCad {
+      color: purple;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+  <body>
+    <nav>
+      <ul>
+        <img src="/Css/img/hanumant-technology-logo.png" alt="" />
+        <li>Home</li>
+        <li class="droplist">
+          Services
+          <ul class="dropdown">
+            <div class="column">
+              <li>Development Services</li>
+              <li>Website Development</li>
+              <li>App Development</li>
+              <li>Wordpress Development</li>
+              <li>Android Development</li>
+              <li>Android UI/UX Development</li>
+            </div>
+            <div class="column">
+              <li>Development Services</li>
+              <li>Website Development</li>
+              <li>App Development</li>
+              <li>Wordpress Development</li>
+              <li>Android Development</li>
+              <li>Android UI/UX Development</li>
+            </div>
+            <div class="column">
+              <li>Development Services</li>
+              <li>Website Development</li>
+              <li>App Development</li>
+              <li>Wordpress Development</li>
+              <li>Android Development</li>
+              <li>Android UI/UX Development</li>
+            </div>
+            <div class="column">
+              <li>Development Services</li>
+              <li>Website Development</li>
+              <li>App Development</li>
+              <li>Wordpress Development</li>
+              <li>Android Development</li>
+              <li>Android UI/UX Development</li>
+            </div>
+          </ul>
+        </li>
+
+        <li class="droplist">
+          Training
+
+          <ul class="dropdown">
+            <div class="column">
+              <li>Web development Training</li>
+              <li>Website Development Training</li>
+              <li>Full-Stack Development Training</li>
+              <li>MERN stack Development Training</li>
+              <li>Node js training</li>
+              <li>Python Training</li>
+              <li>Java training</li>
+              <li>PHP training</li>
+              <li>Dot Net Training</li>
+              <li>Android Training</li>
+              <li>Laravel Training</li>
+            </div>
+
+            <div class="column">
+              <li>Web Design Training</li>
+              <li>Web Design Training</li>
+              <li>HTML Training</li>
+              <li>CSS Training</li>
+              <li>Javascript training</li>
+              <li>Bootstrap Training</li>
+              <li>React JS training</li>
+              <li>Angular training</li>
+              <li>UI & UX Training</li>
+              <li>C & C++ Training</li>
+              <li>Wordpress Training</li>
+            </div>
+
+            <div class="column">
+              <li>Digital Marketing Training</li>
+              <li>Digital Marketing Training</li>
+              <li>SEO Training</li>
+              <li>SMO Training</li>
+              <li>SEM Training</li>
+              <li>PPC Training</li>
+              <li>Google Adwords Training</li>
+              <li>Content Writing Training</li>
+            </div>
+
+            <div class="column">
+              <li>Graphic & Video Training</li>
+              <li>Adobe Training</li>
+              <li>Coreldraw Training</li>
+              <li>Adobe Illustrator Training</li>
+              <li>Video Editing Training</li>
+              <li class="AutoCad">AutoCad 2D & 3D Training</li>
+              <li>AutoCad Civil</li>
+              <li>AutoCad Mechanical</li>
+              <li>AutoCad Electrical</li>
+              <li>AutoCad Architect</li>
+            </div>
+          </ul>
+        </li>
+        <li>Placement</li>
+        <li>Branches</li>
+        <li>Contact Us</li>
+      </ul>
+    </nav>
+  </body>
+</html>
