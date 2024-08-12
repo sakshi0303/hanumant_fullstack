@@ -233,12 +233,12 @@ let student=['sakshi','swarna','sanjay','gaurav','ruchi','renne']
 // array functions--> push(add) and pop(remove) form the end of array
                   // --> shift(remove) and unshift(add) from the start of array
                   // =>   splice(starting_idx,ending_idx,element added) to add in between of array.
-student.push("harsh") 
-student.pop()
-student.shift()
-student.unshift('hanumant') 
-student.splice(1,3,'sa','ss','werwr',2,3)
-console.log(student);
+// student.push("harsh") 
+// student.pop()
+// student.shift()
+// student.unshift('hanumant') 
+// student.splice(1,3,'sa','ss','werwr',2,3)
+// console.log(student);
 
 
 
@@ -257,6 +257,43 @@ console.log(student);
 //   i+=1
 // } while (i<student.length);
 
-// mayank :object-< how value target
+// 2 method in Array
+
+// for of 
+//    - Array
+
+// for Each - Array -method, 
+//                 -callback, 
+//                 -Loop
+
+// Method For in used in object
+
+
+// FOR OF-- Array of string  and numbers
+console.log("for of (used in array)--->")
+for (const iterator of student) {
+  console.log(iterator)
+}
+
+//For Each: array
+// console.log("for Each (used in array)");
+// student.forEach(element => {
+//   console.log(element);
+// });
+
+
+
+
+
+// mayank :events-< how value target
 // minaj: objects
 // nihal: DOM styling, elemenet segretation
+
+
+
+// events:::
+
+// append: end  inside the box
+// prepaend  inside the box
+// before : up above the box
+// after : down above the box

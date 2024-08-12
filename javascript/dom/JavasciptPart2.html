@@ -49,37 +49,112 @@ a.style.color="red";
       molestiae, sit dolore vitae a voluptas, expedita rem ut. Consectetur,
       asperiores?
     </p>
-
+    <h2>heading</h2>
     <a class="anchor" href="http://facebook.com">facebook</a>
     <a class="anchor" href="http://youtube.com">youtube</a>
     <a class="anchor" href="http://linkedin.com">linkedin</a>
     <a class="anchor" href="http://amazon.com">Amazon</a>
   </body>
   <script>
+    // let a = document.querySelectorAll("a");
+    // a[0].style.color = "red";
+    // a[1].style.backgroundColor = "yellow";
+    // a[2].style.color = "green";
+
+    // let h = document.querySelector("h2");
+    // h.style.color = "green";
+
+    // let j = document.querySelectorAll(".box");
+    // j[0].style.color = "red";
+    // j[1].style.color = "blue";
+
+    // let k = document.querySelector("#h");
+    // k.style.color = "aqua";
+
+    // // in console
+    // // get_item: read the value
+    // // set_item: save data in local storage
     // let head = document.getElementById("h");
     // console.log(head);
 
     // let p = document.getElementsByClassName("box");
-    // console.log(p);
+    // console.log("ppp", p);
+
+    // let pq = document.getElementsByTagName("h2");
+    // console.log("pq", pq);
 
     // let h = document.querySelector("#h");
     // h.style.color = "red";
     // h.style.backgroundColor = "yellow";
     // console.log(h);
 
-    let m = document.querySelectorAll("p");
-    m[1].style.color = "red";
-    m[0].style.backgroundColor = "yellow";
-    console.log(m);
-    console.log(m);
+    // let m = document.querySelectorAll("p");
+    // m[1].style.color = "red";
+    // m[0].style.backgroundColor = "yellow";
+    // console.log(m);
+    // console.log(m);
 
-    // let a = document.getElementsByClassName("anchor");
     // let a = document.querySelector("a");
     // a.style.color = "red";
 
-    let a = document.querySelectorAll("a");
-    a[0].style.color = "red";
-    a[3].style.backgroundColor = "pink";
-    console.log(a);
+    // let a = document.querySelectorAll("a");
+    // a[0].style.color = "red";
+    // a[3].style.backgroundColor = "pink";
+    // console.log(a);
+
+    //Normal loop
+    // getElementsByTagName return HTMLCollection
+    // let items = document.getElementsByTagName("a");
+    // let items = document.querySelectorAll("a");
+    // for (let i = 0; i < items.length; i++) {
+    //   if (i % 2 == 0) {
+    //     items[i].style.color = "red";
+    //   } else {
+    //     items[i].style.color = "green";
+    //   }
+    // }
+
+    // for (let i = 0; i < items.length; i++) {
+    //   items[i].style.color = "red";
+    // }
+
+    //for of loop
+    // index = 0;
+    // for (const i of items) {
+    //   if (index % 2 == 0) {
+    //     i.style.color = "red";
+    //   } else {
+    //     i.style.color = "green";
+    //   }
+    //   index++;
+    // }
+    // let index = 0;
+    // items.forEach((element) => {
+    //   if (index % 2 == 0) {
+    //     element.style.color = "red";
+    //   } else {
+    //     element.style.color = "green";
+    //   }
+    //   index++;
+    // });
+
+    //object--->
+    let person = {
+      id: "1",
+      name: "sakshi",
+      number: "78381293",
+      CourseName: "MERN Full stack developer",
+    };
+
+    // Method """For In""" used in OBJECT
+
+    for (const key in person) {
+      if (Object.hasOwnProperty.call(person, key)) {
+        const element = person[key];
+        console.log(element);
+      }
+    }
+
+    // tmr::innerhtml,object
   </script>
 </html>

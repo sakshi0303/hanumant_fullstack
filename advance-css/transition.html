@@ -1,3 +1,43 @@
+<!-- smmothes in css properties transition
+transition property : width,height, color , all
+transition duration :2s 
+transition timing function:linear
+
+
+animantion
+css property change
+automate
+
+transtion 
+css property change
+it needs phedo-class(mandatory) like hover
+
+border:width,height,color
+
+shortend notation: 
+  transsiton use , in between
+  transform:: do not use comma in between
+
+inc/decrese height and width in differnt ratio:: USE shortend notationaon
+ trannstion: width 4s linar ,height 2s linear;
+ transtion all ease 2s
+
+
+all use in
+.box:hover{
+ transform : scale(2)   2x to original size
+ transform: scaleX(2)
+ transform: scaleY(2)
+  transform: rotate(180deg)
+  transform: scale(2) rotate(180deg);
+  transform: skew(55deg);
+  }
+
+
+  /* 3D  prospective -from where you want to see*/
+        transform: perspective(100px) scale(1.5) rotateX(20deg) rotateY(20deg);
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,24 +48,74 @@
       * {
         padding: 0;
         margin: 0;
-        height: 100%;
       }
-      .box {
+      .box1 {
         width: 100px;
         height: 100px;
         display: flex;
         background-color: pink;
-        justify-content: center;
-        align-items: center;
+        transition-property: width;
+        transition-duration: 3s;
+        transition-timing-function: linear;
+
+        /* justify-content: center;
+        align-items: center; */
       }
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      .box2 {
+        width: 300px;
+        height: 100px;
+        position: relative;
+        top: 150px;
+        background-color: yellow;
+        transition-property: all;
+        transition-timing-function: linear;
+        transition-duration: 3s;
+      }
+      .box1:hover {
+        background-color: burlywood;
+        width: 200px;
+      }
+      .box2:hover {
+        width: 500px;
+        height: 300px;
+        background-color: green;
+      }
+      .box3 {
+        width: 300px;
+        height: 100px;
+        position: relative;
+        top: 250px;
+        background-color: rgb(28, 109, 139);
+        transition: width 4s linear, height 2s linear,
+          background-color 1s linear;
+
+        /* transition: all ease 2s; */
+      }
+      .box3:hover {
+        width: 500px;
+        height: 300px;
+        background-color: green;
+        /* transform: rotate(160deg); */
+        /* transform: scale(80deg); */
+        /* transform: scaleX(80deg); */
+        /* transform: scaleY(80deg); */
+
+        /* transform: skew(-55deg); */
+
+        /* transform: scale(2) rotate(180deg); */
+        /* transform: translate(-30%, 50%); */
+
+        /* 3D  prospective -from where you want to see*/
+        transform: perspective(100px) scale(1.5) rotateX(20deg) rotateY(20deg);
       }
     </style>
   </head>
   <body>
-    <div class="box">box1</div>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">
+      box3 width and height and bc are changing in different timing with shorted
+      notation
+    </div>
   </body>
 </html>
