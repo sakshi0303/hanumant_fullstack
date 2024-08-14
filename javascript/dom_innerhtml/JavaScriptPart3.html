@@ -1,0 +1,22 @@
+<!-- innerhtml 
+create empty div in html, change the value in jS using baptics ""  h.innerHTML-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="heading"></div>
+  </body>
+  <script>
+    let h = document.querySelector(".heading");
+    console.log(h);
+    console.log(h.innerHTML);
+    h.innerHTML = "<h1> new heading </h1>";
+    h.innerHTML += "<button> Click Me</button>";
+    console.log(h.innerHTML);
+  </script>
+</html>

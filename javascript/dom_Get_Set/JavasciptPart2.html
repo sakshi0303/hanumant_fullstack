@@ -57,6 +57,7 @@ a.style.color="red";
     <a class="anchor" href="http://amazon.com">Amazon</a>
   </body>
   <script>
+    //DOM SELECTOR
     // let a = document.querySelectorAll("a");
     // a[0].style.color = "red";
     // a[1].style.backgroundColor = "yellow";
@@ -140,22 +141,61 @@ a.style.color="red";
     // });
 
     //object--->
-    let person = {
-      id: "1",
-      name: "sakshi",
-      number: "78381293",
-      CourseName: "MERN Full stack developer",
-    };
+    // let person = {
+    //   id: "1",
+    //   name: "sakshi",
+    //   number: "78381293",
+    //   CourseName: "MERN Full stack developer",
+    // };
 
-    // Method """For In""" used in OBJECT
+    // // Method """For In""" used in OBJECT
 
-    for (const key in person) {
-      if (Object.hasOwnProperty.call(person, key)) {
-        const element = person[key];
-        console.log(element);
-      }
-    }
+    // for (const key in person) {
+    //   if (Object.hasOwnProperty.call(person, key)) {
+    //     const element = person[key];
+    //     console.log(element);
+    //   }
+    // }
 
     // tmr::innerhtml,object
+
+    //<<<<<SET and GET ATTRIBUTE>>>>> (GET IS USED TO READ and SET IS USED TO SAVE THE VALE , WE ALWAYS USE SET TO ADD elemen first then only we can call get attribute to read)
+
+    //query selector("a")
+    // let link = document.querySelector("a");
+    // link.setAttribute("href", "https://www.hanumanttechnology.com/");
+    // console.log(link.getAttribute("href"));
+
+    //query selectorAll("a") ,<<<<< FOR EACH METHOD--->>>>>
+    // let links = document.querySelectorAll("a");
+    // links.forEach((link) => {
+    //   link.setAttribute("target", "_blank");
+    //   link.setAttribute("sakshi", "_");
+    //   link.setAttribute("href", "https://www.hanumanttechnology.com/");
+    //   console.log(link);
+    // });
+    // console.log(links[1].getAttribute("href"));
+
+    // query selectorAll("a") ,<<<<<FOR OF METHOD--->>>>>
+    // let index = 0;
+    // let links = document.querySelectorAll("a");
+    // for (let link of links) {
+    //   if (index % 2 == 0) {
+    //     link.setAttribute("href", "https://www.hanumanttechnology.com/");
+    //     console.log(link.getAttribute("href"));
+    //   } else {
+    //     link.setAttribute("href", "https://www.google.com/");
+    //     console.log(link.getAttribute("href"));
+    //   }
+    //   index += 1;
+    // }
+
+    //select all getemelemntByClassName 3 box clas is , b is object type and not array type
+    let b = document.querySelectorAll(".box");
+    console.log(typeof b);
+    console.log(b);
+    console.log(Array.isArray(b));
+
+    // inner HTML --> Aug 14
   </script>
 </html>

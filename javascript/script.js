@@ -270,28 +270,95 @@ let student=['sakshi','swarna','sanjay','gaurav','ruchi','renne']
 
 
 // FOR OF-- Array of string  and numbers
-console.log("for of (used in array)--->")
-for (const iterator of student) {
-  console.log(iterator)
-}
+// console.log("for of (used in array)--->")
+// for (const iterator of student) {
+//   console.log(iterator)
+// }
 
+// console.log("hey"); console.log("fd");
 //For Each: array
 // console.log("for Each (used in array)");
 // student.forEach(element => {
 //   console.log(element);
 // });
 
+// #write a  js program which can find a the given number is even or odd
+
+// let v=7
+// console.log(v/2);
+// if (v%2==0){
+//   console.log(v+" is even");
+// }else{
+//   console.log(v +"is odd");
+// }
+
+// parking senerio
+// let fixedchargeof1hr=10;
+// let extracharge=1;
+// let hours=4;
+// let bill=0;
+// let final_price=fixedchargeof1hr+(hours-1)*extracharge
+// console.log("final amount to be paid "+final_price);
+// // mayank :events-< how value target
+// // minaj: objects
+// // nihal: DOM styling, elemenet segretation
+
+//senerio2
+// let salesperitem=100;
+// let useritem=24;
+// let pricetobepayed=0
+// if ( useritem>20){
+//   let discountedprice=(40/100)*(useritem*salesperitem)
+//   pricetobepayed=useritem*salesperitem-discountedprice
+//   console.log("discount price "+pricetobepayed);
+// }
+// else{
+//   console.log("price "+useritem*salesperitem);
+// }
+
+// 240*4
+// 2400-960= 1440
 
 
 
+// greatestnumber between 3 number
 
-// mayank :events-< how value target
-// minaj: objects
-// nihal: DOM styling, elemenet segretation
+// let x=30;
+// let y=30;
+// let z=30;
 
-
-
+// if(x>y && x>z){
+//   console.log(x+" x is greater");
+// }else if(y>x && y>z){
+//   console.log(y+" y is greater");
+// }else if(z>x && z>y){
+//   console.log(z+" z is greater");
+// }else{
+//   console.log("tie");
+// }
 // events:::
+
+
+// user value from range[1,7] 
+let u=3;
+if (u==1){
+  console.log("Monday");
+}else if (u==2){
+  console.log("TuesDay");
+} else if(u==3){
+  console.log("Wednesday");
+}else if(u==4){
+  console.log("Thusday");
+}else if (u==5){
+  console.log("FriDay");
+} else if(u==6){
+  console.log("SaturDay");
+}else if(u==7){
+  console.log("Sunday");
+}else{
+  console.log("Invalid number range is 1-7");
+}
+
 
 // append: end  inside the box
 // prepaend  inside the box
