@@ -10,13 +10,18 @@ create empty div in html, change the value in jS using baptics ""  h.innerHTML--
   </head>
   <body>
     <div class="heading"></div>
+    <p class="yellow"></p>
   </body>
   <script>
     let h = document.querySelector(".heading");
     console.log(h);
     console.log(h.innerHTML);
     h.innerHTML = "<h1> new heading </h1>";
-    h.innerHTML += "<button> Click Me</button>";
+    h.innerHTML += "<button> Click Me</button>  <button>hello</button>";
     console.log(h.innerHTML);
+
+    let p = document.getElementsByClassName("yellow");
+    p.innerHTML = "<h1>Hi There</h1> ";
+    console.log(p.innerHTML);
   </script>
 </html>

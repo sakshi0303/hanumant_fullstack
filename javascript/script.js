@@ -340,27 +340,71 @@ let student=['sakshi','swarna','sanjay','gaurav','ruchi','renne']
 
 
 // user value from range[1,7] 
-let u=3;
-if (u==1){
-  console.log("Monday");
-}else if (u==2){
-  console.log("TuesDay");
-} else if(u==3){
-  console.log("Wednesday");
-}else if(u==4){
-  console.log("Thusday");
-}else if (u==5){
-  console.log("FriDay");
-} else if(u==6){
-  console.log("SaturDay");
-}else if(u==7){
-  console.log("Sunday");
-}else{
-  console.log("Invalid number range is 1-7");
-}
+// let u=3;
+// if (u==1){
+//   console.log("Monday");
+// }else if (u==2){
+//   console.log("TuesDay");
+// } else if(u==3){
+//   console.log("Wednesday");
+// }else if(u==4){
+//   console.log("Thusday");
+// }else if (u==5){
+//   console.log("FriDay");
+// } else if(u==6){
+//   console.log("SaturDay");
+// }else if(u==7){
+//   console.log("Sunday");
+// }else{
+//   console.log("Invalid number range is 1-7");
+// }
+
+// if-else and switch-case are same and work similary and can be done inter changebilty 
+// let a=4;
+// let b=3;
+// let c=3;
+// switch(true){
+//   case (a>b && a>c):console.log("A is greater");
+//   break;
+//   case (b>a && b>c):console.log("B is greater");
+//   break;
+//   case (c>a && c>b):console.log("C is greater");
+//   break;
+//   default:console.log(" enter valid inputs");
+//   break;
+// }
+
+//LOOP (While --> dowhile --> for --> for-each -->for -of --> for in)
+    // repetative task with similar changes
 
 
+
+// find the greates 
 // append: end  inside the box
 // prepaend  inside the box
 // before : up above the box
 // after : down above the box
+
+
+// for (let i=1;i<11;i++){
+//   console.log(2+"*"+i+"="+i*2);
+// }
+
+// JS program which can print the number is even and odd from 1-20
+
+// for(let i=1;i<21;i++){
+//   if (i%2==0){
+//     console.log(i+" is even")
+//   }else{
+//     console.log(i+" is odd");
+//   }
+
+// }
+
+//the given number is prime or not
+
+// let a=7;
+// do {
+//   if (){}
+//   else if (a/a==1){console.log(a+" is prime");}
+// } while (let i=0;i<100;i+=1);
