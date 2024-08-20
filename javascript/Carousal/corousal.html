@@ -1,0 +1,79 @@
+<!-- corosoal:
+
+  setTimeOut(()=>{
+    //run only 1 time
+  },1000)
+
+  setInterval(()=>{
+    //keep on running
+  },1000)
+
+
+1000mil=1sec
+callback , time in milesec -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      width: 80%;
+      height: 500px;
+      margin: 50px auto;
+      background-color: aqua;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+    }
+    img {
+      height: 100%;
+      width: 70%;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <button onclick="decrement()">left</button>
+      <img
+        src="https://cdn.photographylife.com/wp-content/uploads/2018/11/Moeraki-Boulders-New-Zealand.jpg"
+        alt=""
+        srcset=""
+      />
+      <button onclick="increment()">right</button>
+    </div>
+  </body>
+  <script>
+    let images = [
+      "https://cdn.photographylife.com/wp-content/uploads/2018/11/Moeraki-Boulders-New-Zealand.jpg",
+      "https://e3.365dm.com/21/10/2048x1152/skynews-european-space-authority_5534227.jpg?20211004033651",
+      "https://th.bing.com/th/id/OIP.D3RuOIp07SqOGMKS_2xyXwHaJQ?rs=1&pid=ImgDetMain",
+      "https://airandspace.si.edu/sites/default/files/styles/body_large/public/2022-09/11G_Fall22_Cutlass-CasbyMuseumArtGallery7_LIVE.jpg?itok=kP4VXZgX",
+      "https://th.bing.com/th/id/OIP.euCgqPSEBBzv8MPwUem1NQAAAA?&rs=1&pid=ImgDetMain",
+    ];
+    let imgTag = document.querySelector("img");
+    let i = 0;
+    function increment() {
+      i += 1;
+      if (i > images.length - 1) {
+        i = 0;
+      }
+      imgTag.src = images[i];
+      console.log("increment ", i);
+    }
+    function decrement() {
+      i -= 1;
+      if (i < 0) {
+        i = images.length - 1;
+      }
+      imgTag.src = images[i];
+      console.log("decremrnt", i);
+    }
+    //keep on running and changing in 2 sec , setTimeOut in
+    setInterval(() => {
+      increment();
+    }, 2000);
+  </script>
+</html>

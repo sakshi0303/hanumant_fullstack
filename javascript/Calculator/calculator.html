@@ -1,0 +1,65 @@
+<!-- box-styling:border-box -----padding will increace the div size by default,
+border-box: will not increase width when paddoing is done,
+by deafault it is content-box
+
+display:grid is type of table:: it has row and row-->
+<!-- display: grid; grid-template=repat(3,auto) div height will increase on the basis
+of height calculate the height calc(100% - 50px)::: -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 350px;
+        height: 100%;
+        background-color: aqua;
+        margin: 20px auto;
+      }
+      #input {
+        width: 100%;
+        height: 50px;
+        font-size: 30px;
+        text-align: end;
+      }
+      .bottom {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        height: calc(100% - 50px);
+        gap: 1px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <input type="text" id="input" placeholder="0" />
+
+      <div class="bottom">
+        <button>C</button>
+        <button>X</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>0</button>
+        <button>*</button>
+        <button>-</button>
+        <button>+</button>
+      </div>
+    </div>
+  </body>
+</html>

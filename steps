@@ -1,4 +1,4 @@
-<!-- html july 24th::: -->
+/* <!-- html july 24th::: -->
 -h1(max)-h6(min) -
 <p>lorem gives random passage(which keeps on changing)</p>
 -<img src="" ,alt="img not found" /> -
@@ -10,12 +10,12 @@ downlowd
 
 /* display:inline-block */
 
-
+/* 
 
 "div.box#container1$*4"
 /* list-style: none; works inside ul */
 
-<!-- Css july 24th:::
+/* <!-- Css july 24th:::
   shorcut for boiler code: shift+1+enter
   always give width, height, backgroundcolor,border -->
 <style>
@@ -27,17 +27,17 @@ downlowd
     display: flex;
     flex-direction: column-reverse;
     /* x axis: */
-    justify-content: center;
+    /* justify-content: center;
     justify-content: space-between;
     /* y axis: with align item always add height */
-    align-items: end; 
+    /* align-items: end; 
     height:100vh;
     /* parent property */
-    flex-wrap: wrap;
+    /* flex-wrap: wrap;
   }
   .box {
     /* for class */
-    width: 100px;
+    /* width: 100px;
     height: 100px;
     background-color: aqua;
     font-size: 10px;
@@ -48,13 +48,13 @@ downlowd
     align-self:flex-end;
     flex-grow:3;
     flex-shrink:1; */
-  }
-  #box1 {
+  /* }
+  /* #box1 {
     /* for #id */
-  }
-</style>
+  /* }
+/* </style>
 
 .main x axis: justify content y axis: align items symmentic tabs:
 <nav></nav>
 <sakshi></sakshi> --> all are div 
-group self: nav ul
+/* group self: nav ul */ 
