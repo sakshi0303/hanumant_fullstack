@@ -9,10 +9,22 @@ create empty div in html, change the value in jS using baptics ""  h.innerHTML--
     <title>Document</title>
   </head>
   <body>
+    <div class="ap">Ap-TODAY</div>
+
     <div class="heading"></div>
     <p class="yellow"></p>
   </body>
   <script>
+    let ap = document.querySelector(".ap");
+    let ab = document.createElement("button");
+    ab.textContent = " createElement New Button append at the end ";
+    ap.append(ab); // add at the end
+    //ap.prepend(ab); // add at the start
+
+    //ab.remove();
+    ap.before("text added before whole div");
+    ap.after(" text added after whole div");
+
     let h = document.querySelector(".heading");
     console.log(h);
     console.log(h.innerHTML);

@@ -1,0 +1,28 @@
+<!-- Events 
+add event listener
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main"></div>
+  </body>
+
+  <script>
+    let m = document.querySelector(".main");
+    let mb = document.createElement("button");
+    mb.textContent = "Click Me";
+    // mb.addEventListener("click", () => {
+    //   console.log("inside event listerner fuction");
+    // });
+    // m.append(mb);
+    mb.addEventListener("click", () => {
+      console.log("on click event triggered");
+    });
+    m.append(mb);
+  </script>
+</html>
