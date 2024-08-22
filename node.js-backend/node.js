@@ -9,6 +9,8 @@
 // --npm i express mongodb
 // --package.json--> basic information
 // --go to mongodb website and go to products and click on Try COMMUNITY Edition
+// seach npm, find mongodb,express and get mongodb/express code
+
 
 
 download in brew
@@ -55,7 +57,11 @@ nodemon server.js
 //nodemon server.js to run
 //https://www.npmjs.com/package/mongodb
 
-destructure:
+
+
+// seach npm, find mongodb,express and get mongodb/express code
+
+---------------Destructure-------:
 let Obj={
   name:'sakshi',
   age:34
@@ -63,7 +69,6 @@ let Obj={
 
 const {name,age}=Obj;
 console.log(name);
-
 
 
 -------one.js FILE ------>>
@@ -80,3 +85,21 @@ let {x,name,xyz}=require('./one.js')
 console.log(x)
 console.log(name)
 xyz();
+
+
+FRONTEND Platform
+    Facebook login::
+    email[]
+    poasspwrd []
+    submit buton
+
+    request.body.email
+
+BACKEND Platform
+    --> request after button is clicked and request is send to facebook server,
+    <--- response facebook server check in database and response back accordingly
+
+
+API is the way to communicate between frontend(UI,React) and backend(server and database)
+
+app.use(express.json()) //to read json file , postman request will be send in json format

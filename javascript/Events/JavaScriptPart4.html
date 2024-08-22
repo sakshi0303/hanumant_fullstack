@@ -1,5 +1,7 @@
 <!-- Events 
-add event listener
+add event listener click , onclick, dblclick,mouseover,mouseout,mousein,mouseup
+
+add event listerner 
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +11,13 @@ add event listener
     <title>Document</title>
   </head>
   <body>
-    <div class="main"></div>
+    <div class="main">
+      <button class="btn1">btn1</button>
+      <button class="btn2">btn2</button>
+      <button class="btn3">btn3</button>
+      <button>btn4</button>
+      <button>btn5</button>
+    </div>
   </body>
 
   <script>
@@ -24,5 +32,26 @@ add event listener
       console.log("on click event triggered");
     });
     m.append(mb);
+
+    //FIRST WAY
+    let b = document.querySelector(".btn1");
+    b.addEventListener("click", buttonclick);
+    function buttonclick() {
+      console.log(
+        "inside  addeventListener buttonclick external funcntion of btn1"
+      );
+    }
+
+    //SECOND WAY
+    let b2 = document.querySelector(".btn2");
+    b2.addEventListener("click", function () {
+      console.log("inside  addeventListener fucntion() triggered of btn2");
+    });
+
+    //THIRD WAY
+    let b3 = document.querySelector(".btn3");
+    b3.addEventListener("click", () => {
+      console.log("inside  addeventListener arrow method of btn3");
+    });
   </script>
 </html>
