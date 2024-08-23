@@ -1,7 +1,9 @@
 <!-- Events 
-add event listener click , onclick, dblclick,mouseover,mouseout,mousein,mouseup
+>>add event listener click , onclick, dblclick,mouseover,mouseout,mousein,mouseup, 3 ways of function
 
-add event listerner 
+>>THIS keyword: target current objects only
+  // ${this.firstname} and i have a ${cars.name} 
+
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -53,5 +55,22 @@ add event listerner
     b3.addEventListener("click", () => {
       console.log("inside  addeventListener arrow method of btn3");
     });
+
+    //this keyword target current class object props only
+    let person = {
+      firstname: "sakshi",
+      age: 50,
+      sayhello() {
+        console.log(
+          `My name is ${this.firstname} my age is ${this.age}and i have a ${cars.name} whose model is ${cars.model}`
+        );
+      },
+    };
+
+    let cars = {
+      name: "waganar",
+      model: "ferrari",
+    };
+    person.sayhello();
   </script>
 </html>

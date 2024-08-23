@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculatorby1stsir.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <form>
+          <div class="displays">
+            <input type="text" id="textarea" />
+          </div>
+
+          <div>
+            <input type="button" value="ACE" onclick="clearscreen()" />
+            <input type="button" value="DLE" onclick="deletelastchar()" />
+            <input type="button" value="." onclick="calnum('.')" />
+            <input type="button" value="/" onclick="calnum('/')" />
+          </div>
+
+          <div>
+            <input type="button" value="7" onclick="calcum('7')" />
+            <input type="button" value="8" onclick="calcum('8')" />
+            <input type="button" value="9" onclick="calcum('9')" />
+            <input type="button" value="+" onclick="calcum('+')" />
+          </div>
+
+          <div>
+            <input type="button" value="7" onclick="calcum('4')" />
+            <input type="button" value="8" onclick="calcum('5')" />
+            <input type="button" value="9" onclick="calcum('6')" />
+            <input type="button" value="+" onclick="calcum('-')" />
+          </div>
+
+          <div>
+            <input type="button" value="7" onclick="calcum('1')" />
+            <input type="button" value="8" onclick="calcum('2')" />
+            <input type="button" value="9" onclick="calcum('3')" />
+            <input type="button" value="+" onclick="calcum('*')" />
+          </div>
+
+          <div>
+            <input type="button" value="00" onclick="calcum('00')" />
+            <input type="button" value="0" onclick="calcum('0')" />
+            <input type="button" value="=" id="equal" onclick="calresult()" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    function clearscreen() {
+      let textval = document.getElementById("textarea");
+      textval.value = "";
+    }
+    function deletelastchar() {
+      let textval = document.getElementById("textarea");
+      textval.value = textval.value.splice(0, -1);
+    }
+    function calnum(value) {
+      let textval = document.getElementById("textarea");
+      textval.value = value;
+    }
+    function calresult() {
+      let textval = document.getElementById("textarea");
+      textval.value = eval(textval.val);
+    }
+  </script>
+</html>

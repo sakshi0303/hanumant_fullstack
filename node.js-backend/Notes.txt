@@ -20,9 +20,12 @@ download in brew
 // mongo db compass :
 //download mongodb compass:
 // db--> collection --> data
+// Netfix
 
 // nodemon .\server.js
 
+// json: everything is in String
+// obj: not everything in string
 mongodb::
   - it is no sql database
   -here data is stored in a form of Object
@@ -44,7 +47,32 @@ it will automitically create unique id
 > db.User.find({name:'sa'}) // returns all data with respective objectid
 > db.user.deleteOne({_id:ObjectId('66c5b82eeb498e0d3332d83a')})// delete single data
 > db.user.deleteMany({age:23}) //multiple delete
->db.user.updateOne({name:"s"},{$set:{name:"sa-n"}})
+>db.user.updateOne({name:"s"},{$set:{name:"sa-n"}})   // find, vallue with set
+>db.videos.updateOne({title:'video2'},{$set:{title:'videoafteravdate-2',size:100}})
+>db.videos.updateMany(
+  {size:{$lt:101}}, //find
+  {$set:{title:'videoafterupdatemany'}} //value
+  )xw
+>db.videos.updateMany({size:{$lte:100}},{$set:{size:900,title:'ssss'}})
+>use trail
+>db.dropDatabase('trail') // always be inside the database that you want to remove
+>db.User.deleteOne({key:value})
+>db.User.deleteMany([{key:value},{key:value}])
+> express is minimum and flexible web/mobile application framework that is used to do API calling and creating web server
+
+
+>> PARAMS:::
+  app.post('/testing/:abcd', async(req,res)=>{
+    console.log(res.params.abcd)
+  })
+  app.post('/testing/:abcd/:color', async(req,res)=>{
+    console.log(req.params.abcd)
+    console.log(req.params.color)
+  })
+
+>>postman http://localhost:8080/register/update/66c706d27987bb7de4b09696 
+
+
 
 
 
@@ -103,3 +131,9 @@ BACKEND Platform
 API is the way to communicate between frontend(UI,React) and backend(server and database)
 
 app.use(express.json()) //to read json file , postman request will be send in json format
+
+
+//https://www.npmjs.com/package/mongodb
+// time waiting fucntion use async and await or then .catch
+// app.use(express.json()) //to read json file , postman request will be send in json format
+//run the nodemon server before checking in ppostman  --> nodemon server.js to run
