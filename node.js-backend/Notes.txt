@@ -32,7 +32,7 @@ mongodb::
   -the data stored in the collection
   -collection do not have row and columns
 
-CRUD functionality in CRUD
+MONGODB CRUD functionality in CRUD
 > show dbs   // show all database in that terminals
 > use trail            // switched to db trail dataabase
 > db.createCollection('User')   // create collection  { ok: 1 }
@@ -61,7 +61,7 @@ it will automitically create unique id
 > express is minimum and flexible web/mobile application framework that is used to do API calling and creating web server
 
 
->> PARAMS:::
+>> QUERY PARAMS:::
   app.post('/testing/:abcd', async(req,res)=>{
     console.log(res.params.abcd)
   })
@@ -71,10 +71,6 @@ it will automitically create unique id
   })
 
 >>postman http://localhost:8080/register/update/66c706d27987bb7de4b09696 
-
-
-
-
 
 
 npm init -y // inistalise and create package.json
@@ -137,3 +133,49 @@ app.use(express.json()) //to read json file , postman request will be send in js
 // time waiting fucntion use async and await or then .catch
 // app.use(express.json()) //to read json file , postman request will be send in json format
 //run the nodemon server before checking in ppostman  --> nodemon server.js to run
+
+
+
+//create-react-app has full version in it 
+npx:: node-package-executor , npm:: node-package-module (to downloa files)
+-> npm i -g create-react-app
+
+// http:localhost:8080
+-> npx create-react-app frontend                 
+           ///(To create react frontend folder app ::::), it has npm start,npm run build npm test
+           //-g means it will get stored in global
+-> cd backend
+  -> npm init -y (create package.json, -y is default value)
+  -> npm i express mongoose nodemon (download dependency)
+  -> make server.js file inside backend folder
+  -> make db.js (mongoose) and connect with server.js
+  -> http://local.host:8080 --> server is not run in https , always use http
+
+models: will have schema(structure) files 
+userschema.js
+put validations, name ,age 
+const userSchema= new mongoosh.Schema({
+  name:{
+    type:String,
+    trim:true,
+    required:true,
+    minlength:3,
+    maxlength:10,
+    unique:true
+  }
+})
+module.export=mongoose.model('user',userscehd)
+
+>mongodb:: dowes not include sturture and lack alot in fucntions for Schema validation , so we will switch to mongoose
+
+
+>instead of insertOne in mongodb, in mongoosedb it is userschema.create
+install thunderclient if postman is not working: its alternative
+
+if server stop when we enconter error in schema validation(min 3 character), Use try catch to display error
+
+css test: https://exam-app-frontend-nu.vercel.app/
+
+create 3 folder inside backend folder models,routes,controllers
+
+in postman request: always choose json and raw and use app.use(express.json())
