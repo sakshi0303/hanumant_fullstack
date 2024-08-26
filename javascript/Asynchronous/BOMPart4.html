@@ -1,0 +1,57 @@
+<!-- Asyncronous  settimeout, setinterval
+
+  BOM: browser object model. length, width, framea, histroy, refresh(reload),ahead and before,ip-adress,local  
+console.log(window)
+window.alert
+window.prompt
+location.reload()-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>hellow</h1>
+  </body>
+
+  <script>
+    console.log(window);
+    //location.reload();
+    //history back and forward is put on button and window next pages
+    //window key word is optional window.history and histroy  both works alike
+    console.log(window.history);
+    console.log(history);
+    history.back();
+    history.forward();
+    history.go(-2); //go backward 2 pages, frontside +2 pages like pages
+
+    console.log(screen);
+    console.log(screen.width);
+
+    //tells if internet connect can access mimeTypes, online, connection,port,language
+    console.log(navigator);
+    console.log(navigator.onLine);
+
+    console.log(navigator.clipboard);
+    //readtext, write, writetext; .then .catch
+
+    //copy the content on the browser inside h1 content and refresh
+    navigator.clipboard
+      .readText()
+      .then((text) => {
+        console.log(text);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    //location.reload();
+    //location.assign("https://www.google.com");
+
+    navigator.geolocation.getCurrentPosition((e) => {
+      console.log(e.coords);
+    });
+  </script>
+</html>

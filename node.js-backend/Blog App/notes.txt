@@ -1,0 +1,32 @@
+//create-react-app has full version in it 
+npx:: node-package-executor , npm:: node-package-module (to downloa files)
+-> npm i -g create-react-app
+
+// http:localhost:8080
+-> npx create-react-app frontend                 
+           ///(To create react frontend folder app ::::), it has npm start,npm run build npm test
+           //-g means it will get stored in global
+-> cd backend
+  -> npm init -y (create package.json, -y is default value)
+  -> npm i express mongoose (download dependency)
+  -> make server.js file inside backend folder
+  -> make db.js (mongoose) and connect with server.js
+  -> http://local.host:8080 --> server is not run in https , always use http
+
+models: will have schema(structure) files 
+userschema.js
+put validations, name ,age 
+
+module.export=mongoose.model('user',userscehd)
+
+mongodb:: dowes not include sturture and lack alot in terms of validation , so we will switch to mongoose
+
+
+instead of insertOne in mongodb, in mongoosedb it is create
+
+install thunderclint if postman is not working: its alternative
+
+
+when server needs to be runn even if the error access use try catch
+
+node.js test: https://exam-app-frontend-nu.vercel.app/

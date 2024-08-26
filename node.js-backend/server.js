@@ -35,6 +35,7 @@ app.put('/register/update/:_id/:color',async(req,res)=>{
   let {newname,newemail,newpassword}=req.body;
   console.log(req.params._id,req.params.color);
   let userdb=usercollection()
+
   let data=(await userdb).updateOne({_id:req.params._id},{$set:{name:newname,email:newemail,password:newpassword}})
   res.json({msg:"data is updated successfully",body:data})
   

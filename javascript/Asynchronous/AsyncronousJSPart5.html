@@ -1,0 +1,67 @@
+<!-- //learn call back function
+//DOM questions
+async function::
+1,4,23
+delay in data, or data is coming from outside browser then we use asyncronous
+1-callback
+2-callbackhell() -> multiple callback functions called settimeout,
+3-promise
+4-promisses chaining
+5-error handling
+6-async function
+7-event bubling
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1 class="heading1"></h1>
+      <h1 class="heading2"></h1>
+      <h1 class="heading3"></h1>
+      <h1 class="heading4"></h1>
+      <h1 class="heading5"></h1>
+      <h1 class="heading6"></h1>
+      <h1 class="heading7"></h1>
+      <h1 class="heading8"></h1>
+      <h1 class="heading9"></h1>
+      <h1 class="heading10"></h1>
+    </div>
+  </body>
+  <script>
+    //callbyhell fucntion, setinterval inside another setinterval function. these are callback function
+    ha1 = document.querySelector(".heading1");
+    ha2 = document.querySelector(".heading2");
+    ha3 = document.querySelector(".heading3");
+    ha4 = document.querySelector(".heading4");
+    ha5 = document.querySelector(".heading5");
+    ha6 = document.querySelector(".heading6");
+
+    setInterval(() => {
+      ha1.textContent = "heading1";
+      setInterval(() => {
+        ha2.textContent = "heading 2 interval2";
+        setInterval(() => {
+          ha3.textContent = "heading 3 interval3";
+          setInterval(() => {
+            ha4.textContent = "heading 4 inteval 4";
+            setInterval(() => {
+              ha5.textContent = "heading 5 interval 5";
+              setInterval(() => {
+                ha6.textContent = "headign 6 interval 6";
+                setTimeout(() => {
+                  ha6.append("  -->>  this is call back hell fucntion");
+                }, 2000);
+              }, 2000);
+            }, 2000);
+          }, 2000);
+        }, 2000);
+      }, 2000);
+    }, 2000);
+  </script>
+</html>
