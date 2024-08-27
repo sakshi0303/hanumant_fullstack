@@ -11,6 +11,16 @@
 // --go to mongodb website and go to products and click on Try COMMUNITY Edition
 // seach npm, find mongodb,express and get mongodb/express code
 
+//// middle ware are fucntion in which we modify request and response and are used with routes via 'use' keyword
+
+
+step1: server create 
+step2: create data base and connect it to server
+step3:model-> schema(collection)
+step4:controller-> create fucntion related to fucntion
+step5:routes-> make route to run the function
+server.js-> app.use()
+
 
 
 download in brew
@@ -179,3 +189,29 @@ css test: https://exam-app-frontend-nu.vercel.app/
 create 3 folder inside backend folder models,routes,controllers
 
 in postman request: always choose json and raw and use app.use(express.json())
+
+
+
+modle: create collection 
+all fucnntion should be inside constroller of userschema
+
+
+routes::
+UserRoutes.js
+  const router=express.Router()
+  router.post('/creare',createUser)
+  router.delete('/delete/:_id',deleteuser)
+  router.put('/update/:_id',deleteuser)
+
+in mongodb when we update we give objectid:'sdsf'
+in mongoose when we findByIdAndUpdate update, we do not give objectid
+http://localhost:8081/user/update/66cda2805dc4943c07d1dc6a
+
+
+
+step1: server create 
+step2: create data base and connect it to server
+step3:model-> schema(collection)
+step4:controller-> create fucntion related to fucntion
+step5:routes-> make route to run the function
+server.js-> app.use()

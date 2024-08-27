@@ -10,6 +10,8 @@ delay in data, or data is coming from outside browser then we use asyncronous
 5-error handling
 6-async function
 7-event bubling
+9: closure: 
+10: memorisation 
 -->
 
 <!DOCTYPE html>
@@ -42,26 +44,61 @@ delay in data, or data is coming from outside browser then we use asyncronous
     ha5 = document.querySelector(".heading5");
     ha6 = document.querySelector(".heading6");
 
-    setInterval(() => {
-      ha1.textContent = "heading1";
-      setInterval(() => {
-        ha2.textContent = "heading 2 interval2";
-        setInterval(() => {
-          ha3.textContent = "heading 3 interval3";
-          setInterval(() => {
-            ha4.textContent = "heading 4 inteval 4";
-            setInterval(() => {
-              ha5.textContent = "heading 5 interval 5";
-              setInterval(() => {
-                ha6.textContent = "headign 6 interval 6";
-                setTimeout(() => {
-                  ha6.append("  -->>  this is call back hell fucntion");
-                }, 2000);
-              }, 2000);
-            }, 2000);
-          }, 2000);
-        }, 2000);
-      }, 2000);
-    }, 2000);
+    // setInterval(() => {
+    //   ha1.textContent = "heading1";
+    //   setInterval(() => {
+    //     ha2.textContent = "heading 2 interval2";
+    //     setInterval(() => {
+    //       ha3.textContent = "heading 3 interval3";
+    //       setInterval(() => {
+    //         ha4.textContent = "heading 4 inteval 4";
+    //         setInterval(() => {
+    //           ha5.textContent = "heading 5 interval 5";
+    //           setInterval(() => {
+    //             ha6.textContent = "headign 6 interval 6";
+    //             setTimeout(() => {
+    //               ha6.append("  -->>  this is call back hell fucntion");
+    //             }, 2000);
+    //           }, 2000);
+    //         }, 2000);
+    //       }, 2000);
+    //     }, 2000);
+    //   }, 2000);
+    // }, 2000);
+
+    //Promise
+    // > there states: start, pending, complete
+    // > resolve,reject
+    // > then(condition true) and catch (condition false)
+
+    const bucket = ["water", "noodles", "masala", "salt"];
+
+    const friedmaggi = new Promise((resolve, reject) => {
+      if (
+        bucket.includes("water") &&
+        bucket.includes("noodles") &&
+        bucket.includes("masala") &&
+        bucket.includes("salt")
+      ) {
+        resolve({ key: "maggi created" });
+      } else {
+        reject({ key: "moggi not created" });
+      }
+    });
+    friedmaggi
+      .then((fridmagi) => {
+        console.log(fridmagi.key);
+      })
+      .catch((error) => {
+        console.log(error.key);
+      });
+    
+      function xyx(){
+
+      }
+      function xyz(){
+
+      }
+   
   </script>
 </html>

@@ -1,0 +1,36 @@
+<!-- 8:lexical scoping::::: child fucntion will take all value) from the parent fucntion 
+9: closure: inner function is return to the outer fucntion -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle through Closure and lexical scoping</title>
+  </head>
+  <body></body>
+  <script>
+    let b;
+    //let b = "parent can take access to all child values";
+    function mainmethod() {
+      let a = "lexical scoping, ";
+      function xyz() {
+        //both will print the value
+        console.log(a, b);
+      }
+      return xyz;
+    }
+    data = mainmethod();
+    console.log(data);
+
+    function make(color) {
+      document.body.style.backgroundColor = "$(color)";
+
+      return function () {
+        document.body.style.backgroundColor = "$(color)";
+      };
+    }
+
+    document.getElementById("btn").onclick = make("green");
+    document.getElementById("btn2").onclick = make("red");
+  </script>
+</html>
