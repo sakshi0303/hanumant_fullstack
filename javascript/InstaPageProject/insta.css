@@ -1,0 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+  width:100vw;
+  position: relative; 
+  background-color: rgb(194, 249, 249);
+  
+}
+i{
+  color:red;
+  position: absolute;
+  /* transform: translate(-80%,-80%) scale(0); */ 
+  transform:  scale(0);
+  opacity: 0; 
+  font-size: xx-large;
+  transition: all ease 0.5s;
+  
+  
+}
+
+
+img{
+  height: 400px;
+  width: 400px;
+}
