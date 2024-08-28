@@ -14,22 +14,8 @@ app.get('/',(req,res)=>{
   res.send("welcome")
 })
 
-app.post('/register',async(req,res)=>{
-  try{
-    let {name,email,password}=req.body;
-    let data=await usercollection.create({
-    name:name,email:email,password:password
-
-    
-  })
-  res.json({msg:"user successfully registered",sucess:true,data})
-
-  }catch(error){
-    res.json({msg:"user  register failed",sucess:false,error})
-
-  }
-
-})
+const Userroutes=require('./routes/Userroutes')
+app.use('/user', Userroutes);
 
 
 
