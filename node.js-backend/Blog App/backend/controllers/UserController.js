@@ -70,9 +70,38 @@ const deleteUser=(async(req,res)=>{
 
 })
 
+const loginuser=(async(req,res)=>{
+  const {email,password}=req.body
+  try{
+    let checkuser=await usercollection.findOne({email})
+  if(checkuser){
+    //password: is the original password sent in postman requies, loginuser.password is the encrpted password in mongodb compass
+    let checkpassord=bcrypt.compareSync(password, checkuser.password);
+    if(checkpassord){
+      return res.json({msg:"user login successfully",success:true,user:checkuser})
+
+    }else{
+      return res.json({msg:"Password not correct, invalid credential",success:false})
+
+    }
+    
+
+  }else{
+    return res.json({msg:"user not found",sucess:false})
+  }
+
+  }catch(error){
+
+    res.json({msg:"error in login user",success:false,error:error.msg})
+
+  }
+
+})
+
 module.exports={
   createUser,
   updateUser,
   getAllUser,
-  deleteUser
+  deleteUser,
+  loginuser
 }

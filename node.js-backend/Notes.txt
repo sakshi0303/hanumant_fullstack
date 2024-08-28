@@ -236,12 +236,17 @@ let data=await usercollection.findOneAndUpdate({email:email},{$set:{name:name,em
 
 save password in encrpted format::
 > go to npm, search bcrypt.js,   /////////dont download bycrypt -> its old versoion, download only bcrypt.js
-> inside backendend folder download npm i bcryptjs
-in userController.js  send hashpasword
+> inside backend folder download npm i bcryptjs
+in userController.js  send hashpasword in 
 var bcrypt = require('bcryptjs');
 var salt = bcrypt.genSaltSync(10);
-var hash = bcrypt.hashSync("B4c0/\/", salt);
+var hash = bcrypt.hashSync(mypassword, salt);
 // Store hash in your password DB.
 
 salt::add some character by itself in 10 
  "password": "$2a$10$Uj2sDZDpteaQHSlHyMGR4eurNQBPLR5MroxiLJp7Q3ncbdtuAyUzO",
+
+
+return means end the function
+
+LOGIN
