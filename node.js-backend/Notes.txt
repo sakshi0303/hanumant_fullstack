@@ -250,3 +250,46 @@ salt::add some character by itself in 10
 return means end the function
 
 LOGIN
+checkwith email with findOne? checkpassword:"user not found"
+check password with hash.comparesync? login successfully:"invalid credial password not found"
+put in try catach? 
+
+
+never change the folder name after using it, it will show red line error thoughout, but works fine
+
+in updatebyid::
+remove email, 
+and define hashpssword with nothing on top because of let and const block scope(undefined is send when no password is send from  postman update request ),
+ if var is used then there is no problem otherwise the code will brake 
+ > we will add the salt with hashpassword=bcrypt.hassync(password,salt)
+ > update hashpassword in moongoose db
+
+ image/video:type:string in url
+
+postscehme
+
+ ,{timestamps:true}
+
+ user id as foreign key
+ // isadmin:{
+  //   type:Boolean,
+  //   default:false
+  // }
+
+
+  const postSchema=new mongoose.Schema({
+  title:{
+    type:String
+  },
+  //user foreign key
+  user:{
+    type:String,
+    required:true
+  },
+  // isadmin:{
+  //   type:Boolean,
+  //   default:false
+  // }
+}, {
+  timestamps:true /// timestamp by default mongoose
+})

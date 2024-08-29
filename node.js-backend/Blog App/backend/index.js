@@ -17,6 +17,7 @@ let userCollection=require('./models/UserSchema')
 app.use(express.json())
 
 let userrouter=require('./routes/UserRoutes')
+let postroute=require('./routes/PostRoutes')
 
 
 app.get('/',(req,res)=>{
@@ -24,6 +25,7 @@ app.get('/',(req,res)=>{
 })
 
 app.use('/user',userrouter)
+app.use('/post',postroute)
 
 //always use try catch so the server does not stop when the unquire error came , server in the background should keep on working
 // in mongoose we have create instead of insertOne

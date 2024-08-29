@@ -1,24 +1,22 @@
 const express=require('express')
 const app=express()
 const port=8080
-
 app.use(express.json())
 
-//database created
-const userdb=require('./db')
-userdb()
+const User_router=require('./routes/Userroutes')
+app.use('/user',User_router)
 
-let usercollection=require('./models/userSchema')
 
 app.get('/',(req,res)=>{
-  res.send("welcome")
+  res.send('welcome')
 })
 
-const Userroutes=require('./routes/Userroutes')
-app.use('/user', Userroutes);
 
 
+const dbcon=require('./db')
+dbcon()
 
-app.listen(port,()=>
-  console.log(`server is running on ${port}`+`http://localhost:${port}`)
-)
+
+app.listen(port,()=>{
+  console.log(`port is runing on ${port}`+`http://localhost:${port}`);
+})

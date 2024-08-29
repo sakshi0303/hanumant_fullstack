@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 
-const userdb=()=>{
-  mongoose.connect('mongodb://127.0.0.1:27017/Pratice')
-  .then(() => console.log('Mongoose DB Connected!'))
-  .catch(error=>{console.log(error)})
-}
+const dbcon=(()=>{
+  mongoose.connect('mongodb://127.0.0.1:27017/practice')
+  .then(() => console.log('DB Connected!'))
+  .catch((error)=>console.log('db error'+error))
 
-module.exports=userdb
+})
+
+module.exports=dbcon

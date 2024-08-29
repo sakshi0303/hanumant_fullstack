@@ -31,10 +31,18 @@ const createUser=(async(req,res)=>{
 
 
 const updateUser=(async(req,res)=>{
-  let {name,email,password}=req.body
+  let {name,password}=req.body
+  if(!name && !password){
+    return res.json({msg:"name or password is required",sucess:false})
+  }
   let _id=req.params._id
+  //haspassword with let and const has undefined and block scope so that if password is not sent then also findByIdAndUpdate work
+  let hashPassword;
+  if (password){
+    hashPassword=bcrypt.hashSync(password,salt)
+  }
   try{
-    let data=await usercollection.findByIdAndUpdate(_id,{$set:{name:name,email:email,password:password}},{new:true})
+    let data=await usercollection.findByIdAndUpdate(_id,{$set:{name,password:hashPassword}},{new:true})
     //let data=await usercollection.findOneAndUpdate({email:email},{$set:{name:name,email:email,password:password}},{new:true})
     res.json({msg:"user updated successfully",sucess:true,data})
 
