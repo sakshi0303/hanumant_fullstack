@@ -44,6 +44,7 @@ delay in data, or data is coming from outside browser then we use asyncronous
     ha5 = document.querySelector(".heading5");
     ha6 = document.querySelector(".heading6");
 
+    //function inside function
     // setInterval(() => {
     //   ha1.textContent = "heading1";
     //   setInterval(() => {
@@ -71,6 +72,7 @@ delay in data, or data is coming from outside browser then we use asyncronous
     // > resolve,reject
     // > then(condition true) and catch (condition false)
 
+    //-------------PROMISE------------->
     const bucket = ["water", "noodles", "masala", "salt"];
 
     const friedmaggi = new Promise((resolve, reject) => {
@@ -87,18 +89,85 @@ delay in data, or data is coming from outside browser then we use asyncronous
     });
     friedmaggi
       .then((fridmagi) => {
+        //true value
         console.log(fridmagi.key);
       })
       .catch((error) => {
+        //false value
         console.log(error.key);
       });
-    
-      function xyx(){
 
-      }
-      function xyz(){
+    //-------------PROMISE------------->
 
-      }
-   
+    function mypromise() {
+      return new Promise((resolve, reject) => {
+        resolve("hanumant");
+        reject("err");
+      });
+    }
+
+    mypromise()
+      .then((val) => {
+        console.log(val);
+        val += "tech";
+        //return e         #retuen promise value return as a promise not as a value
+        return Promise.resolve(val);
+      })
+      .then((newval) => {
+        console.log(newval);
+        newval += "world";
+        //return Promise.reject(newval);
+        return Promise.resolve(newval);
+      })
+      .then((et) => {
+        console.log("in resolve ", et);
+      })
+      .catch((e) => {
+        console.log("in reject" + e);
+      });
+
+    //-------------PROMISE CHAINING ------------->
+    //promise chaing, use then and use return explicit value return the value by itself
+    //we have to mention resolve and reject for then to execute
+    //promise chaining is better than callback hell fucntion,fucntion inside function like a DOM is called whereas here, with then
+
+    function textchange(e, text, color, time) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (e) {
+            e.textContent = text;
+            e.style.color = color;
+            resolve();
+          } else {
+            reject();
+          }
+        }, time);
+      });
+    }
+    //explicit fucntion no return value
+    textchange(ha1, "one", "red", 1000)
+      .then(() => textchange(ha2, "two", "yellow", 1000))
+      .then(() => textchange(ha3, "three", "blue", 1000))
+      .then(() => textchange(ha4, "four", "green", 1000))
+      .catch((e) => console.log(e));
+
+    //-------------ERROR HANDLING------------->
+    // if user made an error: without try cacth, the server stop and doesnt execute next lines of ConvolverNode
+    // if try catch is used, next value is executed without server being stoped
+    //finally if errro is there or not there it will execute
+    let usr = {
+      name: "sakshi",
+      city: "lucknow",
+    };
+
+    //console.log("without try and catch",usr.address);  the server will stop and not runn next line
+    try {
+      console.log(usr.address); //undefined, next lines are executed
+    } catch (e) {
+      console.log(e);
+    } finally {
+      console.log("finally block");
+    }
+    console.log("last");
   </script>
 </html>

@@ -43,3 +43,24 @@
 #container4{
   background-color: green;
 }
+
+.flex-auto{
+  display: flex;
+  /* flex:auto; */
+  background-color: aqua;
+}
+.flex-auto .box1{
+  background-color: blanchedalmond;
+  flex:1;
+  font-family: ;
+  
+}
+
+.flex-auto .box2{
+  background-color: green;
+  flex:2
+}
+/* .flex-one{
+  flex: 2;
+  background-color: blueviolet;
+} */

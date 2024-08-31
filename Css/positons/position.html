@@ -16,6 +16,17 @@ inline: margin, width, height: we cant give
 block: we can give
 sol: use -inline-block
 
+
+div p
+all p element div +p all  p sister element
+div>p all  immediate p element
+
+meta description: keywords for search optimisation
+
+  div p: Selects all <p> elements inside a <div>, regardless of depth.
+  div + p: Selects the first <p> element immediately following a <div> as a sibling.
+  div > p: Selects only the <p> elements that are direct children of a <div>.
+
 -->
 
 <!DOCTYPE html>
@@ -27,12 +38,22 @@ sol: use -inline-block
     <title>Document</title>
   </head>
   <body>
-    <div class="first">
+    <!-- <div class="first">
       <div class="box" id="container1">box1</div>
       <div class="box" id="container2">box2</div>
       <div class="box" id="container3">box3</div>
       <div class="box" id="container4">box4</div>
     </div>
-    <div class="second"></div>
+    <div class="second"></div> -->
+
+    <div class="flex-auto">
+      <div class="box1">flexauto-Aa</div>
+      <div class="box2">flexauto-BB</div>
+    </div>
+
+    <div class="flex-one">
+      <div class="box1">flex1-Aa</div>
+      <div class="box2">flex1-BB</div>
+    </div>
   </body>
 </html>
