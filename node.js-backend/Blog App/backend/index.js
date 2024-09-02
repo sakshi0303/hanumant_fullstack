@@ -9,10 +9,8 @@
 const express=require('express')
 const app=express()
 const port=8081
-const userdb=require('./db')
-userdb()
-
-let userCollection=require('./models/UserSchema')
+const mongoosedb=require('./db')
+mongoosedb()
 
 app.use(express.json())
 
@@ -27,8 +25,15 @@ app.get('/',(req,res)=>{
 app.use('/user',userrouter)
 app.use('/post',postroute)
 
+
+app.listen(port,()=>{
+  console.log(`server is running on ${port} ` + `http://localhost:${port}`);
+})
+
 //always use try catch so the server does not stop when the unquire error came , server in the background should keep on working
 // in mongoose we have create instead of insertOne
+
+// let userCollection=require('./models/UserSchema')
 // app.post('/register',async (req,res)=>{
 //   try{
 //     let {name,email,password}=req.body;
@@ -46,6 +51,3 @@ app.use('/post',postroute)
 
 // })
 
-app.listen(port,()=>{
-  console.log(`setrver is running on ${port} ` + `http://localhost:${port}`);
-})
