@@ -1,0 +1,66 @@
+react is javascript library or framework:
+library: used
+framework: 
+file create 10 time
+framework: react
+
+download node
+>install npm
+>npm i -g create-react-app 
+>npx create-react-app frontend
+>
+
+
+>npm create vite@latest
+>y
+>project name: dummy
+>framework:react
+>varient:javascript
+
+cd dummy
+npm install
+npm run dev
+
+>npm create vite@latest
+>y
+>project name:: dummy
+>framework: react
+>variant: javascript
+    >cd Dummy
+    >npm install
+    >npm run dev
+
+in src app.js: remove all the div tag inside fregment
+remove all jss property in app.css and index.css
+
+>taiwind
+go to tailwind: 
+search for vite framework:::  https://tailwindcss.com/docs/guides/vite
+
+run the command in terminal and add taiwind.config.js and index.css
+>npm i
+>npm run dev 
+
+
+main file: App.jsx
+serve in 
+
+Dev UI>> https://www.devui.io/components/cards
+ > view components
+ > card components
+ > toggle from html to react code
+ > paste in Cart.jsx
+ > export default in Cart.jsx --> file name should be capital letter export  default function Card() {
+    > Card.jsx and  export default function Card name should be same 
+ > add cart and serve in App.jsx
+> and app.js is serve in Main.jsx
+
+>react props: 
+    data will keep on changing inside one component
+    and inside Card pass val as argumnet a
+    <Card name="Sakshi" paragraph=" Sakshi Descripting" link="Click here" />
+    <Card name="Swarna" paragraph=" Swarnd Descripting" link="Click " />
+    export default function Card({ name, paragraph, link }) {
+        {name} {paragraph} {link}
+
+> w3 react , geek for geek free code camp

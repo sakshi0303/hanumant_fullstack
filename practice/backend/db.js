@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 
-const dbcon=(()=>{
-  mongoose.connect('mongodb://127.0.0.1:27017/practice')
-  .then(() => console.log('DB Connected!'))
-  .catch((error)=>console.log('db error'+error))
+const moongoosedb=(
+  mongoose.connect('mongodb://127.0.0.1:27017/test')
+  .then(() => console.log('Connected!'))
+  .catch((e)=> console.log(e))
 
-})
 
-module.exports=dbcon
+)
+
+module.exports=moongoosedb

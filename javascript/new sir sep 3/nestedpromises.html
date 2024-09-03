@@ -1,0 +1,57 @@
+<!-- Promises are used to handle asyncronous operations in javascript
+>>>>promise object has three stage :: PENDING, FULLFILLED, REJECTED
+>>>>it takes a callback function with two parameters resolve ,reject
+>>>>if your promise is RESOLVED you can get your answer in .then() part
+>>>>if promise is REJECTED you can get your answer in .catch part
+
+fetch return promise -> ressolve,reject
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    //nested promises
+
+    let x = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("go to shop");
+      }, 5000);
+    })
+      .then((ans) => console.log(ans))
+      .catch((e) => console.log(e))
+      .then(() => {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("buy cold drink");
+          }, 2000);
+        });
+      })
+      .then((ans) => console.log(ans))
+      .catch((e) => console.log(e))
+      .then(() => {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("go back to home");
+          }, 4000);
+        });
+      })
+      .then((ans) => console.log(ans))
+      .catch((e) => console.log(e))
+      .then(() => {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("drink coldrink");
+          }, 100);
+        });
+      })
+      .then((ans) => console.log(ans))
+      .catch((e) => console.log(e));
+  </script>
+</html>

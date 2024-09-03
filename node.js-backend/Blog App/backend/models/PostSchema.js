@@ -10,12 +10,14 @@ const postSchema=new mongoose.Schema({
   image:{
     type:String
   },
-  videp:{
+  video:{
     type:String
   },
+  //to get the object id and use keyword ref with user from userschema collection
   user:{
-    type:String,
-    required:true
+    type:mongoose.Schema.Types.ObjectId,
+    required:true,
+    ref:'User'
   },
   // isadmin:{
   //   type:Boolean,

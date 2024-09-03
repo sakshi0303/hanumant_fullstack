@@ -293,3 +293,49 @@ postscehme
 }, {
   timestamps:true /// timestamp by default mongoose
 })
+
+--when user information is needed in post collection as FORIENG KEy--------------------------
+
+'User': is the collection name
+
+in userschema.js file 
+user{
+  type:mongoose.Schema.Types.ObjectId,
+  require:true,
+  ref:'User'
+}
+
+ub usercollection.js
+
+async(req,res)=>{
+  let data=postschema.find().populate({path:user})
+
+}
+
+const getALLUsersPosts=(async (req,res)=>{
+  try{
+  let data=await postschema.find().populate({path:'user'})
+  return res.json({msg:"all posts fetch",sucess:true,data})
+}catch(error){
+  return res.json({msg:"error in post fetching",sucess:false,data})
+
+}
+})
+
+----------------- FRONT END:::::::----------------------
+>rafce :: react arrow fucntion component export ------------>>>>>>>>IMPortant
+cd frontend
+>npm start
+>App.js is the main file
+>inside src"
+    components --> Navbar code that is reuse again and again
+    pages -> all pages logn,home.jsx,SignUp
+>delete all css inside app.js and index.css
+
+>inside app.js:: remove headers and all the div and add h1 tag
+>create Homes.jsx inside page  and TYPE:::: rafce
+
+>>>>>>>FILE NAME INSIDEE pages will always be capital word------------->>>>>>>>IMPortant
+
+npm start
+to run: go to terminal and click on link

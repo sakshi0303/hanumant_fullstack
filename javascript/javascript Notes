@@ -1,0 +1,58 @@
+javascript is a syncronous  language and your all code is executed inside call stack
+
+but if any time taking fucntion comes it started behaving asyncronously
+
+event loop: it pull the stuff from callback queue and push into callstack whenever the callstack is empty
+
+
+JS engine call stack
+web apis :
+consodle 
+fetch
+promised 
+setttime out
+set interval
+time taking fucntion 
+
+
+* *
+ *
+* *
+
+
+callstack if element is not time taking it go to  web api
+
+and  i  does not take time: it goes to call stack
+if i takes time or cllback function it goes to webapi 
+
+from webapi it will take  to finish and then append to the queue
+
+if the call stack is empty and element is in queue then EVENTLOOP will  take element from the quee and push into the callstack
+
+event loop check if callback is empty , it takes from the queue and
+
+
+
+input: one 
+one
+two:2s 
+three
+four:1s
+
+
+output:
+one
+three 
+four
+two
+
+
+
+if we want to mzke sure the input is same order:
+we use callback
+async
+await
+
+stack: lastin furst ot 
+
+

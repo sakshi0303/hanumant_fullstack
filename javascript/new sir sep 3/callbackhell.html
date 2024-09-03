@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+
+  <script>
+    // setTimeout(() => {
+    //   console.log("a");
+    //   setTimeout(() => {
+    //     console.log("b");
+    //     setTimeout(() => {
+    //       console.log("c");
+    //       setTimeout(() => {
+    //         console.log("d");
+    //       }, 1000);
+    //     }, 0);
+    //   }, 2000);
+    // }, 1000);
+
+    //in real life time is not data api fecth or db connect: is taking time::
+
+    //callback-hell
+
+    // input: one
+    // one
+    // two:2s
+    // three
+    // four:1s
+
+    // function one(a, b, c) {
+    //   console.log("one");
+    //   a(b, c);
+    // }
+
+    // function two(b, c) {
+    //   setTimeout(() => {
+    //     console.log("two");
+    //     b(c);
+    //   }, 2000);
+    // }
+
+    // function three(c) {
+    //   console.log("three");
+    //   c();
+    // }
+
+    // function four() {
+    //   setTimeout(() => {
+    //     console.log("four");
+    //   }, 1000);
+    // }
+
+    // one(a, b, c);
+
+    // go to shop >  5sec
+    //  buy coldrink >  2sec
+    // come back home > 4sec
+    //drink coldrink > 1sec
+
+    function Gotoshop(buycolddrink, comebackhome, drinkcoldrink) {
+      setTimeout(() => {
+        console.log("go to shop");
+        buycolddrink(comebackhome, drinkcoldrink);
+      }, 5000);
+    }
+
+    function buycolddrink(comebackhome, drinkcoldrink) {
+      setTimeout(() => {
+        console.log("buy cold drink");
+        comebackhome(drinkcoldrink);
+      }, 2000);
+    }
+
+    function comebackhome(drinkcoldrink) {
+      setTimeout(() => {
+        console.log("come back home");
+        drinkcoldrink();
+      }, 4000);
+    }
+
+    function drinkcoldrink() {
+      setTimeout(() => {
+        console.log("drink cold drink");
+      }, 1000);
+    }
+
+    Gotoshop(buycolddrink, comebackhome, drinkcoldrink);
+  </script>
+</html>

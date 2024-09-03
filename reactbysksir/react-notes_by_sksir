@@ -1,0 +1,37 @@
+>>>react is javascript library
+>it has re-usable component, decrease app size and fast
+>it has single page Application ( if we click on one link the Page doesnt reload)
+    > whole DOM is recreated agian and again on load< react doesnt load again and again>
+> it has hooks and props
+> Component: A reuseable piece of code . It is of 2 types
+      > Function Component  
+          >declare normal js fucntion and return atleast one element
+          > this is the simpler way of defining component in react. fucntion component can be declare just like nornal function in javascript that must return react element.
+      > Class Component:
+
+>>Main.js(throuh npm create vite@latest)/index.js (npx create-react-app frontend)
+>App.js (serving of components)
+
+> Component:
+    Home.js
+    About.jsx
+    ContactJS.jsx
+    NavBar.jsx
+
+props:  with the help of props we can pass data from parent component to child component
+
+vice-versa is possible 
+
+npx create-react-app frotnend
+npm start
+
+in jsx::: we get the suggestion like p  (if page is not shown then it we can browse the page by ourself, it will reflect later)
+in js: we will not get the suggest
+
+npm i react-router-dom
+// BrowserRouter --> it will tell the browser theat we will use routing in out application
+// routes: container that has router
+// download npm i react-router-dom
+
+
+if page 
