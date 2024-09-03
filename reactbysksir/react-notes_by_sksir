@@ -22,8 +22,11 @@ props:  with the help of props we can pass data from parent component to child c
 
 vice-versa is possible 
 
-npx create-react-app frotnend
-npm start
+>npx create-react-app frotnend
+>npm start
+>rename App.js to App.jsx
+>create componeet and router , do rafce
+>npm i react-router-dom
 
 in jsx::: we get the suggestion like p  (if page is not shown then it we can browse the page by ourself, it will reflect later)
 in js: we will not get the suggest
