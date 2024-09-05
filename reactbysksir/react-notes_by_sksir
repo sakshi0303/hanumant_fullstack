@@ -54,5 +54,17 @@ paste the bootstap navcode from Bootstap website and paste inside navbar.jsx
 and change the class= to className= and put /> 
 
 
-install auto close tag
-Auto Complete Tag
+download following  extentions::::
+> auto close tag
+> Auto Complete Tag
+> auto rename tag
+> ES7 React/Redux/GraphQL/React-Native snippets
+> html to JSX
+> JavaScript (ES6) code snippets
+> Material Icon Theme
+> React Hooks Snippets
+
+
+in App.jsx
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min'

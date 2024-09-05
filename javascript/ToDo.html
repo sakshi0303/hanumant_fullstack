@@ -11,6 +11,7 @@
         <input type="text" name="" id="">
         <button onclick="add()">Add</button>
         <button onclick="deletee()">Delete</button>
+        <button onclick="deleteall()">Delete All</button>
         
 
     </div>
@@ -19,7 +20,7 @@
     
 </body>
 <script>
-    inputlist=["1","2"]
+    var inputlist=["1","2"]
     d=document.querySelector('ul')    
     console.log(d);
 
@@ -31,11 +32,16 @@
         }
        
     }
+    function deleteall(){
+        console.log("deleetall");
+        var inputlist=[]
+    }
     
     //console.log(d.getAttribute('li'));
 
     function deletee(){
         console.log("delete");
+
 
     }
     function add(){
@@ -52,6 +58,7 @@
         d.innerHTML=''
         displaylist()
     }
+
     
 </script>
 </html>

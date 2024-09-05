@@ -7,7 +7,7 @@
 // >Hooks are functions that are used in functional component only
 // >Hooks must be called at the top
 // > Hooks are used to update the state of the application
-
+// localhost:3030
 // > usestate
 //     > usestate hook is used to store the value and can also used to trigger rerender of component after a period of time
 //     > it takes two argument [value ,function] a value and a function
