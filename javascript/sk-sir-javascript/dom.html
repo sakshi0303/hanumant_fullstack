@@ -1,0 +1,114 @@
+                                               <!-- html (document object model DOM)
+                                                >head{
+                                                    >title }
+                                                >body( 
+                                                    >nav, 
+                                                    >div(div{p},div), 
+                                                    >ul(li1,l1,))
+Document object model 
+react and javascript works with object                                                
+                                                
+ console.log(l[i].children);                   
+                                                
+                                                -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="ul">
+        <li>apple</li>
+        <li>banana</li>
+        <li>orange</li>
+    </ul>
+    <ul class="ul">
+        <li>apple</li>
+        <li>banana</li>
+        <li>orange</li>
+    </ul>
+    <ul class="ul">
+        <li>apple</li>
+        <li>banana</li>
+        <li>orange</li>
+    </ul>
+
+    <p> </p>
+
+    <div class="container">
+
+    </div>
+    
+</body>
+<script>
+    // in  document.getelementbyClassname we do not mention . 
+
+    
+
+
+    let l=document.getElementsByClassName('ul')  //  return array or array
+    console.log(l);
+
+    for (let i =0;i<l.length;i++){
+        console.log(l[i].children);         // ######### LI.CHILDREN return array
+
+        l[i].children[1].style.backgroundColor="pink"
+
+    }
+
+    p=document.querySelector('p')
+    p.innerHTML=`this is innerhtml`
+    c=document.getElementsByClassName('container')[0] // return first row
+    console.log(c);
+    
+    ch=document.querySelector('.container') // queryselector will give the 
+    console.log(ch);
+    img=document.createElement('img') //create element img tag inside javascript
+    img.src="https://th.bing.com/th/id/OIP.Mggh2LiMwsRGTOruc9qsfwHaD4?rs=1&pid=ImgDetMain"
+    img.style.width='100px'
+    img.style.height='100px'
+    para=document.createElement('p') //create element p tag inside javascript
+    para.innerHTML="this is para2"
+    c.append(img,para) // append into the container 
+    
+    c.style.width='200px';
+    c.style.height='200px';
+
+    // Add Class Name  can be added in 2 ways 1) classlist.add  2) className
+    let x=document.createElement('p')
+    x.classList.add('one')
+    x.classList.add('two')  // it will add class="one two"
+    x.classList.remove('one') // remove the one class  , class="one"
+    console.log(x);
+    //x.className="Trail" // trail replaced one two    class="Trail"
+    console.log(x);
+    
+
+    // tagname will always give array
+    let x2=document.createElement('p')
+    x2.innerHTML=`this is set attribute exxample`
+    x2.setAttribute('title',"this is set attribute") // setattribute
+    body=document.getElementsByTagName('body')[0] // tagname,classname it gives the 0 value
+    console.log(body);
+    body.append(x2)
+
+    let d=document.querySelector('.container')
+    let ans=d.getAttribute('class') //getattribute
+    let ans2=d.getAttribute('title')
+    console.log(ans);
+    console.log(ans2);
+
+    // every string we add mathetatial expression: it will convert string into number 
+    // "1"+1=11
+    // '1'-1=0
+    // console.log("a1"-1): NaN
+    
+
+
+   
+</script>
+</html>

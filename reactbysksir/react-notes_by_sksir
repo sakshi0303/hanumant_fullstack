@@ -38,3 +38,21 @@ npm i react-router-dom
 
 
 download ES7+ React/Redux/React-Native snippets : for abbreication in react 
+
+prewriten code and we can reuse it
+?tailwind: css framework
+?bootstrap : open source css frameword. we can make responsive design
+
+
+download bootstrap --> npm i bootstrap@5.3.3
+
+package.lock.json: "complete dependency" (browserrouter,routes,route)
+package.json:main depenenday (react-router-dom)
+
+
+paste the bootstap navcode from Bootstap website and paste inside navbar.jsx
+and change the class= to className= and put /> 
+
+
+install auto close tag
+Auto Complete Tag

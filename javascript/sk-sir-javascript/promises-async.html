@@ -1,0 +1,147 @@
+<!-- Promises are used to handle asyncronous operations in javascript
+>>>>promise object has three stage :: PENDING, FULLFILLED, REJECTED
+>>>>it takes a callback function with two parameters resolve ,reject
+>>>>if your promise is RESOLVED you can get your answer in .then() part
+>>>>if promise is REJECTED you can get your answer in .catch part
+
+fetch return promise -> ressolve,reject
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    //nested promises
+
+    // let x = new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     resolve("go to shop");
+    //   }, 5000);
+    // })
+    //   .then((ans) => console.log(ans))
+    //   .catch((e) => console.log(e))
+    //   .then(() => {
+    //     return new Promise((resolve, reject) => {
+    //       setTimeout(() => {
+    //         resolve("buy cold drink");
+    //       }, 2000);
+    //     });
+    //   })
+    //   .then((ans) => console.log(ans))
+    //   .catch((e) => console.log(e))
+    //   .then(() => {
+    //     return new Promise((resolve, reject) => {
+    //       setTimeout(() => {
+    //         resolve("go back to home");
+    //       }, 4000);
+    //     });
+    //   })
+    //   .then((ans) => console.log(ans))
+    //   .catch((e) => console.log(e))
+    //   .then(() => {
+    //     return new Promise((resolve, reject) => {
+    //       setTimeout(() => {
+    //         resolve("drink coldrink");
+    //       }, 100);
+    //     });
+    //   })
+    //   .then((ans) => console.log(ans))
+    //   .catch((e) => console.log(e));
+
+
+      // one 3s
+      // two:2s
+      // three:1s
+
+      // let one = new Promise((resolve,reject)=>{
+      //   setTimeout(()=>{
+      //     resolve("one")
+      //   },3000)
+      // }).then((ans)=>console.log(ans)).catch((e)=> console.log(e))
+      // .then(()=>{
+      //   return new Promise((resolve,reject)=>{
+      //     setTimeout(()=>{
+      //       resolve("two")
+      //     },2000)
+      //   }).then((ans)=> console.log(ans)).catch((e)=> console.log(e))
+      // })
+      // .then(()=>{
+      //   return new Promise((resolve,reject)=>{
+      //     setInterval(()=>{
+      //       resolve("three")
+      //     },1000)
+      //   }).then((ans)=>console.log(ans)).catch((e)=>console.log(e))
+      // })
+
+
+      //  --------------Promise ALL---------
+
+      // Promise.all() method takes an array of promises as input and return a single promise.
+      //This return promise fullfill when all the input promises are fullfilled
+      
+      //  Promblem in Promise.All
+      //if any of promise gets rejected then we cannot use the value of resolved promise. 
+      // if one promise in the array is rejected , then ans will show the first rejected promise only
+
+      // let x=new Promise((resolve,reject)=>{
+      //   setTimeout(()=>{
+      //     resolve("one")
+      //   },1000)
+      // })
+
+      // let y=new Promise((resolve,reject)=>{
+      //   setTimeout(()=>{
+      //     //resolve("two")
+      //     reject("two reject")
+      //   },2000)
+      // })
+
+      // let z=new Promise((resolve,reject)=>{
+      //   setTimeout(()=>{
+      //     //resolve("three")
+      //     reject("three reject")
+      //   },1000)
+      // })
+      // Promise.all([x,y,z]).then((ans)=>console.log(ans)).catch((e)=>console.log(e))
+      //when all are executed, then show the ans
+
+
+      //------------ Promise.allSettled() retuurn an array of object with resolve and rejected
+        
+      //Promise.allSettled([x,y,z]).then((ans)=>console.log(ans)).catch((e)=>console.log(e))  
+
+
+
+      //Dummyjson> readdoc> 'https://dummyjson.com/products'
+      //fetch json return promise we do not have to write it
+      //.json() to convert into json format
+
+
+      //----ASYNC and AWAIT async webapi:: when the line is complete then go to next line
+
+      function xyz(){
+        let res=fetch('https://dummyjson.com/products')
+        .then((ans)=>ans.json()).then((ans)=>console.log(ans))
+        .catch((e)=> console.log(e))
+      }
+
+      // async function xyz(){
+      //   let data=await fetch('https://dummyjson.com/products')
+      //   let ans=await data.json()
+      //   console.log(ans);
+      // }
+
+      xyz()
+
+      
+
+
+
+  </script>
+</html>

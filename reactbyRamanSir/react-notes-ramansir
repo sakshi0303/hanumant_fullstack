@@ -64,3 +64,40 @@ Dev UI>> https://www.devui.io/components/cards
         {name} {paragraph} {link}
 
 > w3 react , geek for geek free code camp
+
+react-router-dom
+
+only components are changes,navbar and header is fixed eg: youtube.com
+for tailwindcss::
+>npm install lucide-react // it is necessaary to 
+> npm i react-router-dom
+
+
+instead of href , convert to to
+
+outlink
+instead of a use react trouter link 
+Navbar
+> <a > -->> <link>
+> href===> to
+
+go to main.js
+
+> RouterProvider router={route}
+import { createBrowserRouter,CreateRoutesFromElement,Route,RouterProvider}
+
+
+1) create components rom devui , rename class name and put default keyword while exporting
+2) in NavBar: change href--> to and <a> to <Link>(from react router dom)
+3) in App.jsx: import navbar,footer and Outlet from react router dom
+4) in main.jsx let router=CreateBrowserRouter(createRoutesFromElement(Route path:"/" elemer={}))
+
+let router=createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='' element={<App/>}>
+      <Route path='' element={<Home/>}/>
+      <Route path='aboutus' element={<AboutUs/>}/>
+      <Route path='contact' element={<Contact/>}/> 
+    </Route>
+  )
+)
