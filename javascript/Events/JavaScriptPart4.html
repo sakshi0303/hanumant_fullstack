@@ -17,6 +17,7 @@
       <button class="btn1">btn1</button>
       <button class="btn2">btn2</button>
       <button class="btn3">btn3</button>
+      <button class="btn4">btn4</button>
       <button>btn4</button>
       <button>btn5</button>
     </div>
@@ -55,6 +56,15 @@
     b3.addEventListener("click", () => {
       console.log("inside  addeventListener arrow method of btn3");
     });
+
+    let b4= document.querySelector(".btn4")
+    b4.onclick=()=>{
+      b4.style.color="red";
+      console.log("inside direct event externally of btn4");
+    }
+
+    
+
 
     //this keyword target current class object props only
     let person = {

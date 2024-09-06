@@ -55,6 +55,7 @@ Dev UI>> https://www.devui.io/components/cards
  > add cart and serve in App.jsx
 > and app.js is serve in Main.jsx
 
+
 >react props: 
     data will keep on changing inside one component
     and inside Card pass val as argumnet a
@@ -72,17 +73,28 @@ for tailwindcss::
 >npm install lucide-react // it is necessaary to 
 > npm i react-router-dom
 
+in component: get navbar devi code
 
+From https://www.devui.io/
+in Pages: 
+About : hero
+contact: signin
+AboutUS: team
+footer
+In Components
+navbar : navbar 
+
+download >>>npm i react-router-dom , lucide-react
 instead of href , convert to to
 
 outlink
-instead of a use react trouter link 
+instead of <a></a> use react trouter <link> 
 Navbar
 > <a > -->> <link>
 > href===> to
 
 go to main.js
-
+> remove app and add   <RouterProvider router={router}/>
 > RouterProvider router={route}
 import { createBrowserRouter,CreateRoutesFromElement,Route,RouterProvider}
 
@@ -92,12 +104,20 @@ import { createBrowserRouter,CreateRoutesFromElement,Route,RouterProvider}
 3) in App.jsx: import navbar,footer and Outlet from react router dom
 4) in main.jsx let router=CreateBrowserRouter(createRoutesFromElement(Route path:"/" elemer={}))
 
-let router=createBrowserRouter(
+import {createBrowserRouter,createRoutesFromElements,Route,RouterProvider} from 'react-router-dom'
+<!-- 
+const router=createBrowserRouter(
   createRoutesFromElements(
     <Route path='' element={<App/>}>
-      <Route path='' element={<Home/>}/>
-      <Route path='aboutus' element={<AboutUs/>}/>
-      <Route path='contact' element={<Contact/>}/> 
+      <Route  path='about' element={<About/>}/>
+      <Route  path='contact' element={<ContactUs/>}/>
+      <Route  path='' element={<Home/>}/>
+
     </Route>
+
   )
 )
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <RouterProvider router={router}/>
+  </StrictMode>, -->

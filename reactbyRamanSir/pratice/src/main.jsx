@@ -4,24 +4,21 @@ import App from './App.jsx'
 import './index.css'
 
 import {createBrowserRouter,createRoutesFromElements,Route,RouterProvider} from 'react-router-dom'
-import Home from './Components/Home.jsx'
-import AboutUs from './Components/AboutUs.jsx'
-import Contact from './Components/Contact.jsx'
+import About from './Pages/About.jsx'
+import ContactUs from './Pages/ContactUs.jsx'
+import Home from './Pages/Home.jsx'
 
-
-
-let router=createBrowserRouter(
+const router=createBrowserRouter(
   createRoutesFromElements(
     <Route path='' element={<App/>}>
-      <Route path='' element={<Home/>}/>
-      <Route path='about' element={<AboutUs/>}/>
-      <Route path='contact' element={<Contact/>}/> 
+      <Route  path='about' element={<About/>}/>
+      <Route  path='contact' element={<ContactUs/>}/>
+      <Route  path='' element={<Home/>}/>
 
     </Route>
 
   )
 )
-
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router}/>

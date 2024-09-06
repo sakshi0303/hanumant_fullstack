@@ -1,0 +1,97 @@
+<!-- // in css always use background-color
+// h3, ul, li is ablack element and always start in new line
+//query selector gives only one elment , and classname, tagname:: give array obbject
+// in bootstap: cloick on install and go to cdn get the link 
+// media only screen  // for moble seach online //https://www.w3schools.com/cssref/css3_pr_mediaquery.php
+// parent will be relative,  child will be absolute (we put absolute so that we can move independently)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    nav{
+        height: 60px;
+        width: 100%;
+        background-color: aqua;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 40px;
+        align-items: center;
+        position: relative;
+
+    }
+    ul{
+        display: flex;
+        gap: 30px;
+        list-style: none;
+       
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    .menu{
+        display: none;
+    }
+
+    @media only screen and (max-width: 600px) {
+    .menu {
+    display: block;
+    }
+    ul{
+    display: none;
+    }
+    ul.active{
+        display: block;
+        top:100%;
+        background-color: pink;
+        left:0;
+        width: 100vw;
+        text-align: center;
+        /* move freely across the parent class */
+        position: absolute; 
+    }
+    ul.active li{
+        border-bottom: 1px solid white;
+        padding: 10px 20px;
+    }
+    ul.active li a{
+        color: white;
+    }
+    }
+
+    
+
+</style>
+<body>
+    <nav>
+        <h3>Welcome</h3>
+        <ul>
+            <li> <a href="http://google.com"> Home </a></li>
+            <li> <a href="http://youtube.com"> About </a></li>
+            <li> <a href="http://youtube.com"> Contact Us</a></li>
+            <li> <a href="http://youtube.com">Service </a></li>
+        </ul>
+        <i  onclick="changeclass()" font-size="30px;" class="bi bi-list menu"></i>
+
+
+    </nav>
+    
+</body>
+<script>
+    function changeclass() {
+        let ul=document.querySelector('ul')
+        ul.classList.toggle('active')
+    }
+</script>
+</html>
