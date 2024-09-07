@@ -1,0 +1,12 @@
+form{
+    position: relative;
+}
+form .close{
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+}
+img{
+    width: 300px;
+    height:300px
+}

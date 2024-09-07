@@ -41,14 +41,20 @@
 // arr.splice(startingind, no of items delelte,items ided)
 // arr.splice(2,1)
 //in react use onlick onlcij={()=>{handlesubmit()}}
+//(true? true value:false value )
+// conditional rendering
+        // ternary oprator 
+        // && operator 
 
 import React, { useRef, useState } from 'react'
+
 
 const ExpenseTracker = () => {
     let snoRef=useRef('')
     let placeRef=useRef('')
     let priceRef=useRef('')
     let headingref=useRef('')
+    const [clicked, setclicked] = useState(false);
     const [arr, setarr] = useState([
         {
             id: 1,
@@ -111,7 +117,7 @@ const ExpenseTracker = () => {
     return (
         <div>
             <h1 className='text-center'>expense tracker App</h1>
-            <h2 ref={headingref} >sdss</h2>
+            {/* <h2 ref={headingref} >sdss</h2> */}
 
             {/* {
     arr.map((obj)=>{
@@ -122,14 +128,19 @@ const ExpenseTracker = () => {
 
         })
       } */}
+            <div className='text-center'>
+            <button onClick={()=>{setclicked(true)}} className='bg-info my-3'> Add Expense</button>
+            </div>
+            
 
-
-            <form style ={{width:"max-content"}}action="" className='d-flex bg-dark gap-2 my-3 rounded mx-auto p-3 ' >
+            {/* //in react  use {} for condition*/}
+            { clicked && <form style ={{width:"max-content"}}action="" className='d-flex bg-dark gap-2 my-3 rounded mx-auto p-3 ' >
+                <button onClick={()=>{setclicked(false)}}type="button" class="btn-close close" aria-label="Close"></button>
                 <input type="number" name="" id="" placeholder='enter serial number' ref={snoRef}/>
                 <input type="number" name="" id="" placeholder='enter price' ref={placeRef}/>
                 <input type="text" name="" id="" placeholder='enter place' ref={priceRef} />
                 <button onClick={handlesubmit}className='btn btn-success' >Add Item</button>
-            </form>
+            </form>}
             <table className="table table-dark w-75 m-auto text-center"> 
                 <thead>
                     <tr>

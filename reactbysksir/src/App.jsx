@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min'
 import NavBar from './Components/NavBar';
 import ExpenseTracker from './Pages/ExpenseTracker';
+import SwapImg from './Pages/SwapImg';
 
 // BrowserRouter --> it will tell the browser theat we will use routing in out application
 // routes: container that has router
@@ -24,6 +25,7 @@ function App() {
         <Route path='/*' element={<Pnf/>}/>
         <Route path='/counter' element={<Counter/>}/>
         <Route path='/expensetracker' element={<ExpenseTracker/>}/>
+        <Route path='/swapimage' element={<SwapImg/>}/>
       </Routes>
       
       </BrowserRouter>
