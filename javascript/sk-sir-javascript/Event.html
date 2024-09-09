@@ -1,3 +1,8 @@
+// in rresonsive event wont work , mouseenter,mouseleave, mouseover, mouseleave:
+// in html it is events are  onmouseenter,onmouseleave, onmouseover, onmouseleave onchange onkeydown,onscroll
+// in javascript through addeventlisterner we have to use , mouseenter,mouseleave, mouseover, mouseleave onchange keydown,scroll:
+// container.onclick(()=>{})
+// onkeydown works only on input down onchnage (whener the change is there), onkeydown(button press)
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +20,7 @@
 <body>
     <div onclick="colorchange()" class="container">
     </div>
+    <input type="text">
 </body>
 <script>
     let q = document.getElementsByClassName('container')[0]
@@ -23,6 +29,18 @@
     function colorchange(){
         q.style.backgroundColor="yellow"
     }
+    let i=document.getElementsByTagName('input')[0]
+    console.log(i);
+    i.onkeydown=()=>{
+        console.log('on key down event is running ');
+    }
+
+    i.addEventListerner("keydown",()=>{
+        console.log('on key down event is running  by add ');
+    })
+
+    
+
 
 </script>
 </html>

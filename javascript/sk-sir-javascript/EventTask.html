@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+
+    }
+    
+    .box{
+        width: 600px;
+        height: 400px;
+        
+        position: relative;
+        overflow: hidden;
+        border: 2px solid red;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    .img2{
+        /* background-color: yellow; */
+        animation: changeright;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        transition: 3s all ease ;
+    }
+    @keyframes changeright {
+        from{
+            left: 0%;
+        }
+        to{
+            left: 90%;
+        }
+    }
+
+    .img1{
+        background-color: pink;
+        animation: change;
+        animation-duration: 2s;
+        animation-timing-function:linear;
+        /* //animation-delay: 2s; */
+        transition: 3s all ease;
+        /* animation-iteration-count: infinite; */
+
+    }
+    @keyframes change {
+        
+        from{
+            left:90%;
+        }
+        to{
+            left:0%
+        }
+        
+    }
+
+
+</style>
+<body>
+    
+        <div class="box">
+            <img  src="https://th.bing.com/th/id/OIP.ymX6I0Vw5ZHmi6nMV9YoggHaD1?w=344&h=180&c=7&r=0&o=5&dpr=3.5&pid=1.7" alt="imgnot found">
+        </div>
+
+   
+    
+</body>
+<script>
+    let b=document.querySelector('.box')
+    console.log(b);
+    
+    
+
+    let imgg=document.querySelector('img')
+    b.addEventListener("mouseenter",(()=>{
+        
+        imgg.className='img1'
+        console.log(img1);
+        
+    }))
+
+    b.addEventListener("mouseleave",(()=>{
+        imgg.className='img2'
+        console.log(img2);
+    }))
+
+    
+    
+
+</script>
+</html>

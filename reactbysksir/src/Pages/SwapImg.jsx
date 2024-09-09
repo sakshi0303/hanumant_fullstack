@@ -24,7 +24,6 @@ const SwapImg = () => {
     }
 
 
-
     return (
         <div>
             <img src={img1} alt="" />
