@@ -29,6 +29,10 @@ const NavBar = () => {
         <li className="nav-item">
           <Link className="nav-link" to="/swapimage">SwapImage</Link>
         </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/useeffect">UseEffect</Link>
+        </li>
+        
       </ul>
     </div>
   </div>

@@ -1,4 +1,5 @@
 //map,foreach, to do repeted task
+// spread opreator
 //map is a function that has callback functiin it return new array
 // in return use {} for javascript 
 // map has to return something in div, or itself 
@@ -45,6 +46,14 @@
 // conditional rendering
         // ternary oprator 
         // && operator 
+
+ // spread opreator
+
+//  useRef: re-render everytime
+//  onchange; everytime page rerender
+
+//setarr([...arr,obj]) spread operato 
+// slice will give the array of that specific element
 
 import React, { useRef, useState } from 'react'
 
@@ -96,7 +105,8 @@ const ExpenseTracker = () => {
         }
         console.log(obj);
         if (obj.id && obj.place && obj.price){
-            setarr([...arr,obj])
+            // spread opreator
+            setarr([...arr,obj]) 
 
         }else{
             alert("please enter all fields values")
@@ -107,10 +117,26 @@ const ExpenseTracker = () => {
 
     }
     const handledelete=(obj,index)=>{
-        let copyArr=[...arr]
-        copyArr.splice(index,1)
-        console.log(copyArr);
-        setarr(copyArr)
+        //method -1
+        // let copyArr=[...arr]
+        // copyArr.splice(index,1)
+        // console.log(copyArr);
+        // setarr(copyArr)
+
+        //method-2 
+        let i=arr.findIndex((ele)=>ele.id===obj.id)
+        console.log(i);
+        let copyArr2=[...arr]
+        copyArr2.splice(i,1)
+        console.log(copyArr2);
+        setarr(copyArr2)
+
+
+        //method 3 
+        // keep the item taht mateches the condition and return the array
+        // let filterdarray=arr.filter((ele)=>ele.id!==obj.id)
+        // console.log(filterdarray);
+        // setarr(filterdarray)
 
 
     }
@@ -153,7 +179,8 @@ const ExpenseTracker = () => {
                 <tbody>
                     {
                         arr.map((obj,index) => {
-                            // values should be just after return not in next line
+                            // values should be just after return not in next line 
+                            //by default index is zero
                             return <tr key={obj.id}>
                                 <th scope="row">{index+1}</th>
                                 <td>{obj.place}</td>

@@ -10,6 +10,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min'
 import NavBar from './Components/NavBar';
 import ExpenseTracker from './Pages/ExpenseTracker';
 import SwapImg from './Pages/SwapImg';
+import EffectsHooks from './Pages/EffectsHooks';
 
 // BrowserRouter --> it will tell the browser theat we will use routing in out application
 // routes: container that has router
@@ -26,6 +27,7 @@ function App() {
         <Route path='/counter' element={<Counter/>}/>
         <Route path='/expensetracker' element={<ExpenseTracker/>}/>
         <Route path='/swapimage' element={<SwapImg/>}/>
+        <Route path='/useeffect' element={<EffectsHooks/>}/>
       </Routes>
       
       </BrowserRouter>
