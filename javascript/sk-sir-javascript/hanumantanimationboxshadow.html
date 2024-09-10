@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            width: 400px;
+            height: 320px;
+            background-color: aqua;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+        .container:hover{
+            background-color: rgb(59, 59, 107);
+            transform: scale(1.05);
+            transition: all ease 1s;
+        }
+        .iconBox{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 100%;
+            position: relative;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 100px;
+        }
+        .shadow{
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            box-shadow: 0 0 10px 7px lightgray;
+            position: absolute;
+            opacity: 0;
+        }
+        .container:hover .shadow{
+            animation: move 1s linear 2;
+        }
+        @keyframes move{
+            0%{
+                transform: scale(1);
+                opacity: 1;
+            }
+            100%{
+                transform: scale(1.2);
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="iconBox">
+            <div class="shadow"></div>
+        </div>
+        <p>Lorem ipsum dolor sit.</p>
+        <p>Lorem ipsum dolor sit hello.</p>
+    </div>
+
+    <div class="box1"></div>
+</body>
+</html>

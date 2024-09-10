@@ -11,15 +11,8 @@ download node
 >
 
 
->npm create vite@latest
->y
->project name: dummy
->framework:react
->varient:javascript
 
-cd dummy
-npm install
-npm run dev
+
 
 >npm create vite@latest
 >y
@@ -40,6 +33,9 @@ search for vite framework:::  https://tailwindcss.com/docs/guides/vite
 run the command in terminal and add taiwind.config.js and index.css
 >npm i
 >npm run dev 
+
+npm i lucide-react, react-router-dom
+change App.jsx and main.jsx
 
 
 main file: App.jsx
@@ -105,6 +101,9 @@ import { createBrowserRouter,CreateRoutesFromElement,Route,RouterProvider}
 4) in main.jsx let router=CreateBrowserRouter(createRoutesFromElement(Route path:"/" elemer={}))
 
 import {createBrowserRouter,createRoutesFromElements,Route,RouterProvider} from 'react-router-dom'
+
+
+
 <!-- 
 const router=createBrowserRouter(
   createRoutesFromElements(
@@ -121,3 +120,17 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router}/>
   </StrictMode>, -->
+
+USECONTEXT------------>>>>
+
+to send data from one component data to another compoenet data:
+useContext ref()
+user(give),setuser(take)
+and userContent will take the data from userComponent and  send  data to the setuserUsercomponet  via Range/channel
+
+download es7 extentstion
+ES7 React/Redux/GraphQL/React-Native snippets
+UserContext.jsx // channerl
+UserContextProvider.jsx
+
+in app.js: 

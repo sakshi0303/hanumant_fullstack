@@ -8,7 +8,8 @@
 // if array of dependacny is blank useEffect hook will run only one time
 // you can use useEffect hook again if it's dependency change
 // cretae react aap
-
+// useeffect happens as a side effect 
+    //>side effects happens due to result changing
 // whenever a api is created a fucntion is creates
 // setitem will re-render(print) the Component and fucntion is called again --> Page goes to infinte loop
 import React,{useState,useEffect} from 'react'

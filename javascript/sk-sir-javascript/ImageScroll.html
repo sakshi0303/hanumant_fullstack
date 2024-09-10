@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+body{
+            width: 100%;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 400px;
+            height: 400px;
+            background-color: aqua;
+            border: 3px solid;
+            position: relative;
+            /* overflow: hidden; */
+        }
+        img{
+            position: absolute;
+        }
+        .container.enter img{
+            animation: ltr 3s linear ;
+        }
+        .container.out img{
+            animation: rtl 3s linear ;
+        }
+        @keyframes ltr{
+            0%{
+                left: -100%;
+            }
+            100%{
+                left: 0;
+            }
+        }
+        @keyframes rtl{
+            0%{
+                right: -100%;
+            }
+            100%{
+                right: 0;
+            }
+        }
+/* 
+        .container{
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+            border: 2px solid;
+            position: absolute;
+
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img height="100%" width="100%" src="https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg" alt="">
+    </div>
+
+
+    <script>
+        let box = document.querySelector('.container')
+        // console.log(box)
+
+        box.addEventListener('mouseenter',()=>{
+            box.classList.add('enter')
+            box.classList.remove('out')
+            console.log(box)
+          
+        })
+
+        box.addEventListener('mouseleave',()=>{
+            box.classList.add('out')
+            box.classList.remove('enter')
+            console.log(box)
+        })
+
+
+
+    </script>
+
+</html>
