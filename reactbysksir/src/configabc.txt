@@ -1,0 +1,10 @@
+https://api.edamam.com/search?q=${value}&app_id=249b8c77&app_key=accc417489d9e0dfa317fbc0cb7be4c8
+
+edama: account: go to dashbaard, go to application click on view
+
+#edaman -direfent app id and key for free version
+appid=f0034b10
+appkey->faea6a21bbca23a641627a59130fa310
+
+change app_id,app_key,q=biryani
+https://api.edamam.com/search?q=biryani&app_id=f0034b10&app_key=faea6a21bbca23a641627a59130fa310

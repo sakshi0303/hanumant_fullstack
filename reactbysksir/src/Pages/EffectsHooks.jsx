@@ -21,9 +21,9 @@ const EffectsHooks = () => {
     console.log(clicked);
 
     //if empty array it will execute only once
-    useEffect(()=>{
-        console.log("inside useellecft when array is empty false is show once");
-    },[])
+    // useEffect(()=>{
+    //     console.log("inside useellecft when array is empty false is show once");
+    // },[])
 
     //if array has clicked dependency then it will run twice
     useEffect(()=>{

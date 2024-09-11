@@ -22,13 +22,12 @@ const TrailApi = () => {
     }, []) 
     
 
-
-
-  return (
-    <div>
+  // return (
+  //   <div>
       
-    </div>
-  )
+  //   </div>
+  // )
 }
 
 export default TrailApi
+

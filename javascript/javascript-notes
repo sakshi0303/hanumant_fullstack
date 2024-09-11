@@ -7,7 +7,8 @@ but if any time taking fucntion comes it started behaving asyncronously
 
 event loop: it pull the stuff from callback queue and push into callstack whenever the callstack is empty
 
-
+box-shadow:h-offset v-offset blur spread color give space in between box-shadow: 0 0 10px 7px lightgray;
+bannet feely website: clippy css clip path:: https://bennettfeely.com/clippy/
 JS engine call stack
 web apis :
 consodle 
