@@ -8,17 +8,13 @@ import Home from './Components/Home.jsx'
 import AboutUs from './Components/AboutUs.jsx'
 import Contact from './Components/Contact.jsx'
 
-
-
 let router=createBrowserRouter(
   createRoutesFromElements(
     <Route path='' element={<App/>}>
       <Route path='' element={<Home/>}/>
       <Route path='about' element={<AboutUs/>}/>
       <Route path='contact' element={<Contact/>}/> 
-
     </Route>
-
   )
 )
 
