@@ -1,4 +1,12 @@
-// signup from DevUI
+// signup from DevUI convert link -> type=button 
+// give bootstap css
+// id="email"
+// // onChange={(e)=>setemail(e.target.value)}
+// //
+// 
+// type="button"
+// to="/welcome"
+// onClick={clickfun}
 import React, { useContext, useState } from 'react'
 import { ArrowRight } from 'lucide-react'
 import UserContext from '../Context/UserContext'
@@ -7,10 +15,13 @@ import { Link } from 'react-router-dom';
 export default function Register() {
   const [name, setname] = useState('');
   const [email, setemail] = useState('');
-  let {setUser}=useContext(UserContext)
+
+  // to get the data , usecontxt(plugglig) 
+  // usercontext: createContext
+  let {setuser}=useContext(UserContext)
 
   function clickfun(){
-    console.log(sd);
+    setuser({name,email})
 
   }
   return (
@@ -80,7 +91,8 @@ export default function Register() {
                 </div>
                 <div> */}
                   <Link
-                    to="button"
+                    type="button"
+                    to="/welcome"
                     onClick={clickfun}
                     className="inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-black/80"
                   >

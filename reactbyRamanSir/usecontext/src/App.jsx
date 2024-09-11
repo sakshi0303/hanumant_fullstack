@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import UserContextProvider from './Context/UserContextProvider'
-import Navbar from './Components/NavBar'
+import NavBar from './Components/NavBar'
 import { Outlet } from 'react-router-dom'
 
 function App() {
@@ -11,9 +11,9 @@ function App() {
 
   return (
     <>
-      welcome
+     
       <UserContextProvider>
-        <Navbar/>
+        <NavBar/>
         <Outlet/>
       </UserContextProvider>
         

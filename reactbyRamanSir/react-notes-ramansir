@@ -123,6 +123,12 @@ createRoot(document.getElementById('root')).render(
 
 USECONTEXT------------>>>>
 
+to avoid props drilling we use usecontent
+rect-roter-dom
+c
+createcontext: range
+
+
 to send data from one component data to another compoenet data:
 useContext ref()
 user(give),setuser(take)
@@ -130,7 +136,16 @@ and userContent will take the data from userComponent and  send  data to the set
 
 download es7 extentstion
 ES7 React/Redux/GraphQL/React-Native snippets
-UserContext.jsx // channerl
+createContext (setuser)--> create bridge/ 
+
+useContext(user) // channel create
+UserContext.jsx 
 UserContextProvider.jsx
 
+sendbutton useContext
+setuser: send
+use: receive
+createcontext: 
+
+usercontext will send the data
 in app.js: 

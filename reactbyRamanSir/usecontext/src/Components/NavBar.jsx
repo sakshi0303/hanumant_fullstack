@@ -1,3 +1,4 @@
+// convert anchor tag to Link and href to to
 'use client'
 
 import React from 'react'
@@ -7,15 +8,15 @@ import { Link } from 'react-router-dom'
 const menuItems = [
   {
     name: 'Home',
-    href: '',
+    to: '',
   },
   {
-    name: 'Register',
-    href: '',
+    name: 'About',
+    to: '',
   },
   {
-    name: 'Welcome',
-    href: 'welcome',
+    name: 'Contact',
+    to: '',
   },
 ]
 
@@ -49,14 +50,14 @@ export default function Navbar() {
         <div className="hidden lg:block">
           <ul className="inline-flex space-x-8">
             {menuItems.map((item) => (
-              <Link key={item.name}>
-                <a
+              <li key={item.name}>
+                <Link
                   to={item.to}
                   className="text-sm font-semibold text-gray-800 hover:text-gray-900"
                 >
                   {item.name}
-                </a>
-              </Link>
+                </Link>
+              </li>
             ))}
           </ul>
         </div>

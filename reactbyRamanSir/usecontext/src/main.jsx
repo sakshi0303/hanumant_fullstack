@@ -13,8 +13,8 @@ import Register from './Components/Register.jsx'
 let router=createBrowserRouter(
   createRoutesFromElements(
     <Route path='' element={<App/>}>
-      <Route path='welcome' element={<Welcome/>}/>
       <Route path='' element={<Register/>}/>
+      <Route path='/welcome' element={<Welcome/>}/>
 
     </Route>
 
