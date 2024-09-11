@@ -1,0 +1,119 @@
+<!-- DateTime  new date in css  it is datetime object: day month date time location
+datetime--local wil give date, dtate time am.pm
+<input onchange="gettime(event)"  type="datetime-local"  name="" id="">
+e.target: will give the whole tag 
+e.target.value() will get the value
+timefiddrent in correct format and put it isnde settimeout to trigger: 
+getTime(event) should have event only, no other keyword works 
+input time format can be differtnt then date  new date() format
+timegap in milisecond
+and settimeout also works in millissec
+
+audo: https://mixkit.co/free-sound-effects/alarm/
+let audio=new Audio()
+audio.src=""
+put audio.src=""
+audio.play()
+audio.stop()
+
+download alarmm audio and pate inside the same block
+convert original data format
+new Data()
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        font-size: 200px;
+       
+    }
+    .timer{
+        height: 100px;
+        
+    }
+    .bottom{
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        /* background-color: bisque; */
+        align-items: center;
+        justify-content: center;
+        
+    }
+    button{
+        height: 100px;
+        width: 100px;
+        background-color: wheat;
+    }
+    input{
+        font-size: 10px;
+        padding: 20px;
+        width: 200px;
+        height: 100px;
+
+    }
+
+    
+
+</style>
+<body>
+    <div class="timer">
+        <div class="container"></div>
+        <div class="bottom">
+            <input onchange="getTime(event)"  type="datetime-local"  name="" id="">
+            <button>Start</button>
+            <button>Stop</button>
+        </div>
+    </div>
+</body>
+<script>
+    let audio=new Audio()
+    audio.src="mixkit-vintage-warning-alarm-990.wav"
+    function getTime(e23){
+        console.log(e23.target); // it gives the whole selected tag
+        console.log(e23.target.value);
+        
+        allarmtimeInformat=new Date(e23.target.value)
+        currenttime=new Date()
+        timediffinsec=allarmtimeInformat-currenttime
+
+        setTimeout(()=>{
+            audio.play()
+        },timediffinsec)
+    }
+    let cont=document.querySelector('.container')
+    
+    setInterval(() => {
+        let date=new Date()
+    let hour=date.getHours()
+    let minutes=date.getMinutes()
+    let seconds=date.getSeconds()
+    if (hour<10){
+        hour=`0${hour}`
+    }
+    if (minutes<10){
+        minutes=`0${minutes}`
+    }
+    if (seconds<10){
+        seconds=`0${seconds}`
+    }
+    cont.innerHTML=`${hour}:${minutes}:${seconds}`
+        
+    }, 1000);
+
+    
+    // console.log(hour,minutes,seconds);
+
+
+</script>
+</html>
