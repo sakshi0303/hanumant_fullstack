@@ -1,4 +1,27 @@
 >>>react is javascript library
+
+createreact app ecomerse:
+>>context API
+if API key is over:: 
+in edamam.com developer recipe login https://www.edamam.com/
+crearte new application
+receipe Seacrh App
+
+Project 
+Porject1
+create application
+
+
+>> !importt to make more important
+html,body{
+    bcg:black
+
+useref
+usestate
+uselocation
+usenavigate
+useeffect
+}
 >it has re-usable component, decrease app size and fast
 >it has single page Application ( if we click on one link the Page doesnt reload)
     > whole DOM is recreated agian and again on load< react doesnt load again and again>
@@ -71,3 +94,15 @@ import 'bootstrap/dist/js/bootstrap.bundle.min'
 
 
 //edamam.com :registerd -Project choose your plan: Reciepe Search Api Developer
+
+// breakpoints css for responsive 
+
+// always use backgroud and delete afterwars
+//in javascript put in console., window.lcoaton="/"
+
+
+let navigate=useNavigate(x)
+
+>react icons=https://react-icons.github.io/react-icons/
+>npm i react-icons
+

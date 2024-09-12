@@ -14,11 +14,19 @@ let audio=new Audio()
 audio.src=""
 put audio.src=""
 audio.play()
-audio.stop()
+audio.pause()
+
+interval=setTimeOut((),[])
+clearInterval(interval)
 
 download alarmm audio and pate inside the same block
 convert original data format
 new Data()
+
+make interval and allarmtimeInformat global
+clearTimeout(interval)
+alarm.pause()
+input tag of loacaldatetime =''
 -->
 
 <!DOCTYPE html>
@@ -70,13 +78,15 @@ new Data()
     <div class="timer">
         <div class="container"></div>
         <div class="bottom">
-            <input onchange="getTime(event)"  type="datetime-local"  name="" id="">
-            <button>Start</button>
-            <button>Stop</button>
+            <input id="input" onchange="getTime(event)"  type="datetime-local"  name="" id="">
+            <button onclick="start()">Start</button>
+            <button onclick="stop()">Stop</button>
         </div>
     </div>
 </body>
 <script>
+    let allarmtimeInformat
+    let interval
     let audio=new Audio()
     audio.src="mixkit-vintage-warning-alarm-990.wav"
     function getTime(e23){
@@ -84,12 +94,7 @@ new Data()
         console.log(e23.target.value);
         
         allarmtimeInformat=new Date(e23.target.value)
-        currenttime=new Date()
-        timediffinsec=allarmtimeInformat-currenttime
-
-        setTimeout(()=>{
-            audio.play()
-        },timediffinsec)
+        
     }
     let cont=document.querySelector('.container')
     
@@ -110,6 +115,25 @@ new Data()
     cont.innerHTML=`${hour}:${minutes}:${seconds}`
         
     }, 1000);
+
+    function start(){
+        currenttime=new Date()
+        timediffinsec=allarmtimeInformat-currenttime
+
+        interval=setTimeout(()=>{
+            audio.play()
+        },timediffinsec)
+        alert("alarm Started")
+
+    }
+
+    function stop(){
+        audio.pause()
+        clearTimeout(interval)
+        document.getElementById("input").value=''
+        alert("alarm Stoped")
+        
+    }
 
     
     // console.log(hour,minutes,seconds);

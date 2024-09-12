@@ -1,0 +1,67 @@
+<!-- form onsubmit(event), e.preventdefault()
+
+Storage:::::
+
+session storage (data is lost after session expire ) it should be ablways in the sting format
+cookie storage (~4kb size) 
+local storage (5mb size)
+
+>to save data in local storage--localStorage.setItem(key,value)   // old data is replaced by new value eveytime
+>to access/get data from local storage  --localStorage.getItem(key)
+>to remove data from local storage storage--localStorage.removeItem(key)
+
+//it should be ablways in the sting format -----JSON.stringify(obj)
+
+// to get json.parse(window.getlocalstorage('signup'))
+
+To see on screen
+
+if array values keeps deleting after refreshing the screen
+arr=localstorage.getItem('SignUp')||[]
+>in applicaion 
+> local storage 
+
+Q1: if screen reload  and data goes off we use JSON.parse(localStorage.getItem('sakshi'))||[]
+Q2: Isue: when we submit the same value again and again, it shoudl rpeplace the value in  localstorage
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="name">Name</label>
+        <input type="text" name="" id="name">
+        <label for="email">Email</label>
+        <input type="text" name="" id="email">
+        <label for="password">Password</label>
+        <input type="text" name="" id="password">
+        <label for="address">Address</label>
+        <textarea name="" id="address" cols="30" rows="10"></textarea>
+        <button onclick="handlesubmit(event)">Submit</button>
+    </form>
+    
+</body>
+<script>
+    function handlesubmit(e){
+       
+        e.preventDefault()
+        let arr=JSON.parse(localStorage.getItem('sakshi'))||[]
+        let obj={
+            name:document.getElementById('name').value,
+            email:document.getElementById('email').value,
+            password:document.getElementById('password').value,
+            address:document.getElementById('address').value,
+        }
+        console.log(obj);
+        arr.push(obj)
+        localStorage.setItem('sakshi',JSON.stringify(arr))
+
+    }
+</script>
+</html>
+
+

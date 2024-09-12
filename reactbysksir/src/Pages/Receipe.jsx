@@ -1,46 +1,48 @@
 // go to bootstramp and get the card item and return via map
 // in link tab ew can use state to send data new component
-// useLocation has state is correctly in which path and
-//     <link href="/view" state={ele} className="btn btn-primary">View Receipe</link>
+// useLocation has 
+// container has taken bydault 80% of width conatiner will go to left
+// row and container are bootram predined classes whose values can be changes
+// go to bootstramp and get the card item and return via map
 import React from 'react'
-import { useEffect,useState } from 'react'
-import {Link} from 'react-router-dom'
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 const Receipe = () => {
-    const [data,setdata]=useState([])
-    const getdata=async()=>{
-        let res=await fetch('https://api.edamam.com/search?q=biryani&app_id=f0034b10&app_key=faea6a21bbca23a641627a59130fa310')
-        let data=await res.json()
-        console.log(data.hits);
-        setdata(data.hits)
+  const [receipes, setreceipes] = useState([]);
 
-    }
+  let getdata=async()=>{
+    let raw=await fetch("https://api.edamam.com/search?q=biryani&app_id=f0034b10&app_key=faea6a21bbca23a641627a59130fa310")
+    let data=await raw.json()
+    console.log(data.hits)
+    setreceipes(data.hits)
+    //console.log(receipes.recipe.image);
 
-    useEffect(()=>{
-        getdata()
+  }
 
-    },[])
+  useEffect(() => {
+    getdata()
+  }, []);
   return (
-    // container has taken bydault 80% of width conatiner will go to left
-    // row and container are bootram predined classes whose values can be changes
-    <div className='row m-0 p-0 justify-content-center bg-warning gap-3 container m-auto'>
-      {data.map((ele,i)=>{
-        // go to bootstramp and get the card item and return via map
-        return <div key={i} className="card" style={{width: '18rem'}}>
+    <div>
+      {receipes.map((ele)=>{
+        return <div className="card" style={{width: '18rem'}}>
   <img src={ele.recipe.image} className="card-img-top" alt="..." />
   <div className="card-body">
-    <h5 className="card-title">{ele.recipe.label}</h5>
-    
-
-    <button onClick={()=>console.log(ele)}>click Me</button>
-    {/* <p className="card-text"></p> */}
-    <Link to="/view" state={ele} className="btn btn-primary">View Receipe</Link>
+    <h5 className="card-title">Card title</h5>
+    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" className="btn btn-primary">Go somewhere</a>
   </div>
 </div>
 
+
+
+
       })}
+      
     </div>
   )
 }
 
 export default Receipe
+
