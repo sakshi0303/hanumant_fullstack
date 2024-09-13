@@ -29,7 +29,7 @@ Q2: Isue: when we submit the same value again and again, it shoudl rpeplace the 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SignUp</title>
 </head>
 <body>
     <form action="">
@@ -42,6 +42,7 @@ Q2: Isue: when we submit the same value again and again, it shoudl rpeplace the 
         <label for="address">Address</label>
         <textarea name="" id="address" cols="30" rows="10"></textarea>
         <button onclick="handlesubmit(event)">Submit</button>
+        <p>already a user <a href="login.html"> Login</a></p>
     </form>
     
 </body>
@@ -57,8 +58,19 @@ Q2: Isue: when we submit the same value again and again, it shoudl rpeplace the 
             address:document.getElementById('address').value,
         }
         console.log(obj);
+        userexit=arr.find((ele)=>ele.email===obj.email)
+        if (userexit){
+            return alert("user exits")
+
+        }
+        
         arr.push(obj)
         localStorage.setItem('sakshi',JSON.stringify(arr))
+        alert("user registered successfully")
+        window.location.href="login.html"
+
+        
+        
 
     }
 </script>

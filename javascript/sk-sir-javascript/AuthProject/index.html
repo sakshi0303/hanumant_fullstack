@@ -1,11 +1,89 @@
+<!-- https://newsapi.org/ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Index</title>
+    <style>
+        .container{
+            background-color: aqua;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4,auto);
+            justify-content: space-evenly;
+            gap:30px;
+            padding: 20px;
+
+        }
+        img{
+            width: 100%;
+            height: 60%;
+        }
+        .box{
+            background-color: blue;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            gap:10px;
+            padding:10px
+
+        }
+    </style>
+    
 </head>
+
 <body>
+    <nav>
+        <h3>NewsApp</h3>
+    </nav>
+    <div class="container">
+
+    </div>
     
 </body>
+<script>
+    let getdata=async(value)=>{
+        res=await fetch(`https://newsapi.org/v2/everything?q=${value}&apiKey=270c72aad78146928622c2b4af8055c8`)
+        let data=await res.json()
+        console.log(data.articles);
+        let news=data.articles
+        console.log(news)
+        container=document.querySelector('.container')
+        news.forEach(element => {
+            let box=document.createElement('div')
+            let titleTag=document.createElement('h3')
+            let imageTag=document.createElement('img')
+            let button=document.createElement('button')
+
+            //class to define csss
+            box.className='box'
+            titleTag.className="title"
+            imageTag.className="img"
+            button.className="btn"
+
+            titleTag.innerHTML=element.title
+            imageTag.src=element.urlToImage
+            button.innerHTML='view full news'
+
+            box.append(imageTag,titleTag,button)
+            container.append(box)
+        
+
+            console.log(element.title);
+            // d.append(element.title)
+            
+        });
+       
+        
+
+
+
+
+       
+        
+
+    }
+    getdata('india')
+</script>
 </html>
