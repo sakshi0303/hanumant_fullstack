@@ -16,8 +16,10 @@ import ViewReceipe from './Pages/ViewReceipe';
 // BrowserRouter --> it will tell the browser theat we will use routing in out application
 // routes: container that has router
 // download npm i react-router-dom
+// props are used to send data from parent component to child component
 function App() {
   return (
+    
     <div className="App">
       <BrowserRouter>
       <NavBar/>

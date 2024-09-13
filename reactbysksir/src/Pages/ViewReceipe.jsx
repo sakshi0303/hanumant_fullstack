@@ -1,32 +1,54 @@
-// #one row can have 12 colms'
-/// uuselocation give obj and path exist and path state has data or not
-// for respinsive design md devuce 4, less than 
-// breakpoints css for responsive 
-// col-md-4 for page responsive
-//let navigate=useNavigate(x)
-//react icons=https://react-icons.github.io/react-icons/ npm i react-icons
-// co
 import React from 'react'
 import {Link,useLocation} from 'react-router-dom'
 
 const ViewReceipe = () => {
     let location=useLocation()
-    console.log(location);
+    console.log(location.state);
+    let recipe=location.state.recipe
+
    
   return (
-    <div>
       <div className="container">
         <div className="row">
-          <div className="col">
-            <img src="" alt=""  />
+          <div className="col-sm-4 bg-info d-flex justify-content-center ">
+            <img src={recipe.image} alt=""  />
 
           </div>
-          <div className="col">
-            <h4></h4>
-            <h5></h5>
-            <h6></h6>
-            <Link>View Recipe</Link>
+          <div className="col-md-8">
+            <h4 className='my-3'>Title:{recipe.label}</h4>
+            <h5 className='my-3'>DishType:{recipe.dishType}</h5>
+            <h6 className='my-3'>CousineType:{recipe.cousineType}</h6>
+            <Link to={recipe.url}>View Recipe</Link>
 
+          </div>
+
+        </div>
+        
+        <div className="row mt-3">
+          <div className="col-md-6">
+            <h3>Ingrediant Lines</h3>
+            <ul>
+            {recipe.ingredientLines.map((ele)=>{
+              return <li> {ele}</li>
+            })}
+            </ul>
+          </div>
+          {/* <div className="col">
+            <ul>
+            {
+            recipe.totalNutrients.map((ele)=>{
+              return <li> label:{ele.label} quantity: {ele.quantity} unit: {ele.unit}</li>
+            })}
+            
+            </ul>
+          </div> */}
+          <div className="col-md-6">
+            <ul>
+              <h3> Health Labels</h3>
+            {recipe.healthLabels.map((ele)=>{
+              return <li> {ele}</li>
+            })}
+            </ul>
           </div>
 
         </div>
@@ -34,7 +56,7 @@ const ViewReceipe = () => {
       
            
       
-    </div>
+ 
   )
 }
 

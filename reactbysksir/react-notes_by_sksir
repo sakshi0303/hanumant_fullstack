@@ -1,5 +1,5 @@
 >>>react is javascript library
-
+>>> to live the project:: Goto Vercel.com https://vercel.com/sakshi0303s-projects/hanumant-fullstack
 createreact app ecomerse:
 >>context API
 if API key is over:: 
@@ -7,6 +7,7 @@ in edamam.com developer recipe login https://www.edamam.com/
 crearte new application
 receipe Seacrh App
 
+--> props are used to pass data from mparent component to child component
 Project 
 Porject1
 create application
