@@ -6,22 +6,29 @@ import Home from './Pages/Home';
 import Contact from './Pages/Contact';
 import NavBar from './Components/NavBar';
 import { useState } from 'react';
+import Product from './Pages/Product';
+import PNF from './Pages/PNF';
+import Cart from './Pages/Cart';
+import Login from './Pages/Login';
+import SignUp from './Pages/SignUp';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min'
 //child(Contact) to parent(App.js) Props
 function App() {
-  const [data, setdata] = useState('');
-  function xyz(ans){
-    console.log(ans);
-    setdata(ans)
-
-  }
+  
   return (
     <div className="App">
      <BrowserRouter>
      <NavBar/>
      <Routes>
       <Route path='/about' element={<About/>}/>
-      <Route path='/' element={<Home data={data}/>}/>
-      <Route path='/contact' element={<Contact data={xyz}/>}/>
+      <Route path='/' element={<Home />}/>
+      <Route path='/contact' element={<Contact />}/>
+      <Route path='/product' element={<Product/>}/>
+      <Route path='/signup' element={<SignUp/>}/>
+      <Route path='/login' element={<Login/>}/>
+      <Route path='/cart' element={<Cart/>}/>
+      <Route path='/*' element={<PNF/>}/>
      </Routes>
      
      </BrowserRouter>
