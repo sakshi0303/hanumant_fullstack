@@ -5,11 +5,14 @@
 //  <div className='row m-0 p-0 bg-info justify-content-center gap-3'>
 // in axios we dont have to convert into json
 // limit=0&skip=0
+// child to child transfer through parent via function 
 import React,{useState , useEffect} from 'react'
 import axios from 'axios'
 import Demo from '../Components/Demo';
+import { Link } from 'react-router-dom';
 
-const Home = () => {
+const Home = (props) => {
+  
   const [product, setproduct] = useState([]);
   const [error, seterror] = useState(false);
   const getdata=async()=>{
@@ -26,6 +29,13 @@ const Home = () => {
     getdata()
     
   }, [])
+
+  const handleAdd=(ele)=>{
+    console.log("handle add is called ");
+    // we will run the function here inside child class from parent App.jsx file
+    props.xyz(ele)
+
+  }
   
  
   return (
@@ -37,9 +47,10 @@ const Home = () => {
           return ele.thumbnail && <div key={i}className="card" style={{width: '18rem'}}>
     <img src={ele.thumbnail} className="card-img-top" alt="..." />
     <div className="card-body">
-      <h5 className="card-title"></h5>
-      <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" className="btn btn-primary">Go somewhere</a>
+      <h5 className="card-title">{ele.title}</h5>
+      <p className="card-text"><strong>Price</strong>{ele.price} $</p>
+      <Link to="/view" state={ele} className="btn btn-primary">View Details</Link>
+      <button className='btn btn-info mx-1' onClick={()=>handleAdd(ele)} >Add to cart</button>
     </div>
   </div>
   
