@@ -1,0 +1,204 @@
+<!-- https://newsapi.org/ 
+if page is refreshng always use event and e.defaultPrevent to not allow reloading
+in onchange: target.value
+other will be .value
+
+# responsiveness through media query use grid always
+ .container{
+            background-color: aqua;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4,auto);
+            justify-content: space-evenly;
+            gap:30px;
+            padding: 20px;
+
+        }
+    @media only screen and (max-width:1248px) {
+            .container{
+                grid-template-columns: repeat(3,auto);
+            }
+            
+        }
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            background-color: aqua;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4,auto);
+            justify-content: space-evenly;
+            gap:30px;
+            padding: 20px;
+
+        }
+        img{
+            width: 100%;
+            height: 60%;
+        }
+        .box{
+            background-color: blue;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            gap:10px;
+            padding:10px
+
+        }
+        .box .btn{
+            border-radius: 20px;
+            background-color: pink;
+
+        }
+        .box .btn:hover{
+            box-shadow: 0 0 5px 5px;
+        }
+        nav li{
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width:1248px) {
+            .container{
+                grid-template-columns: repeat(3,auto);
+            }
+            
+        }
+
+        @media only screen and (max-width:793px) {
+            .container{
+                grid-template-columns: repeat(2,auto);
+            }
+            
+        }
+
+        @media only screen and (max-width:610px) {
+            .container{
+                grid-template-columns: repeat(1,auto);
+            }
+            
+        }
+
+
+    </style>
+    
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="d-flex ms-auto" role="search">
+                <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button onclick="handlesearch(event)" class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item" onclick="getdata('World')">
+                <a class="nav-link" >World</a>
+              </li>
+              <li class="nav-item" onclick="getdata('india')">
+                <a class="nav-link" >India</a>
+              </li>
+              <li class="nav-item" onclick="getdata('Sports')">
+                <a class="nav-link" >Sports</a>
+              </li>
+              <li class="nav-item" onclick="getdata('Entertainment')">
+                <a class="nav-link" >Entertainment</a>
+              </li>
+
+              
+            </ul>
+           
+          </div>
+        </div>
+      </nav>
+    
+    <div class="container">
+
+    
+    </div>
+    
+</body>
+   
+<script>
+
+    let  handlesearch=async(e)=>{
+        e.preventDefault()
+        console.log("search running");
+        let searchvalue=document.getElementById('search').value
+        console.log(searchvalue);
+        getdata(searchvalue)
+
+    }
+     let getdata=async(value)=>{
+        res=await fetch(`https://newsapi.org/v2/everything?q=${value}&apiKey=270c72aad78146928622c2b4af8055c8`)
+        let data=await res.json()
+        console.log(data.articles);
+        let news=data.articles
+        console.log(news)
+        container=document.querySelector('.container')
+        container.innerHTML=''
+        news.forEach(element => {
+            let box=document.createElement('div')
+            let titleTag=document.createElement('h3')
+            let imageTag=document.createElement('img')
+            let button=document.createElement('button')
+
+            //class to define csss
+            box.className='box'
+            titleTag.className="title"
+            imageTag.className="img"
+            button.className="btn"
+
+            titleTag.innerHTML=element.title
+            imageTag.src=element.urlToImage
+            button.innerHTML='view full news'
+
+            box.append(imageTag,titleTag,button)
+            container.append(box)
+        
+
+            console.log(element.title);
+            button.addEventListener('click',()=>{
+                console.log("running");
+                window.location.href=element.url
+            })
+            // d.append(element.title)
+            
+        });
+       
+        
+
+
+
+
+       
+        
+
+    }
+    getdata('india')
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</html>
