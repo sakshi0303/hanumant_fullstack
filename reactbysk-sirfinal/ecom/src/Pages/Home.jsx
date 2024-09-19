@@ -33,7 +33,11 @@ const Home = (props) => {
   const handleAdd=(ele)=>{
     console.log("handle add is called ");
     // we will run the function here inside child class from parent App.jsx file
-    props.xyz(ele)
+    //  props.xyz(ele)
+    //ele.quantity=1
+    let updateobj={...ele,quantity:1}
+    props.xyz(updateobj)
+   
 
   }
   

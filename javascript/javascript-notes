@@ -87,5 +87,21 @@ await
 stack: lastin furst ot 
 
 
-  //Dummyjson> readdoc> 'https://dummyjson.com/products'
+//Dummyjson> readdoc> 'https://dummyjson.com/products'
+
+
+Virtual DOM: it is a representation of actual DOM (copy of actual DOM)
+> it is used to improve the performance of updates and changes to the actual DOM by reducing the no of expensive DOM manipulation
+>When a component state or props changes react creat a new virtual DOM tree and compare it to the previous tree and then apply only minimuam set of changes necceary to actual DOM  this imporves the performance of application
+> Javacript : html> head> body >div(h1=x),nav directly changes in DOM
+> React: makes a copy of DOM known as Virtual DOM and update the vakue of x=11  i
+
+npm: node package manager
+npm i -g create-react-app
+npx create-react-app frontendlowercase
+
+
+
+
+
 

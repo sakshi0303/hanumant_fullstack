@@ -21,7 +21,15 @@ function App() {
   const [cartdata, setcartdata] = useState([]);
   function xyz(ans){
     // #get specific element data from home
-    console.log(ans);
+    console.log("ans==",ans);
+    
+    let idexist=cartdata.find((ele)=>ele.id===ans.id)
+    
+    if (idexist){
+      return alert("item already in cart")
+  
+    }
+    
     
     setcartdata([...cartdata,ans])
     console.log(cartdata);
@@ -30,7 +38,9 @@ function App() {
   return (
     <div className="App">
      <BrowserRouter>
-     <NavBar cartdata={cartdata} />
+     <div style={{marginBottom:"60px"}}><NavBar cartdata={cartdata} /></div>
+     
+     {/* <NavBar cartdata={cartdata} style={{marginBottom:"60px"}} /> */}
      <Routes>
       <Route path='/about' element={<About/>}/>
       <Route path='/' element={<Home  xyz={xyz}/>}/>
