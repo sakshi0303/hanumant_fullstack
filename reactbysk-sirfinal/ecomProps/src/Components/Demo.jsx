@@ -5,7 +5,7 @@ const Demo = (props) => {
   return (
     <div>
     <h1>
-        this is demo page and text is coming from {props.title}
+        internet not working
     </h1>
     </div>
 

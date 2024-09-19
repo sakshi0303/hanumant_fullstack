@@ -1,5 +1,9 @@
 >props:
-
+Extenstion:
+>Tabnine // for code snippet
+>SuperMaven // for 
+--->For API fetching::   npm i axios
+--> axisois 
 when we go to 
 Home: 
     this is home page
@@ -8,6 +12,8 @@ About:
     this is about page
     abc("second")
     <abc title={data}/>
+
+
 
 downlaod bootstramp npm i bootstrap@latest
 
