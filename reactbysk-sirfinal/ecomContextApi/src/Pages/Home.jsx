@@ -17,8 +17,12 @@ import { Link } from 'react-router-dom';
 // npm i react-loading-skeleton
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
+import { useContext } from 'react';
+import CartContext from '../Context/CartContext';
 
 const Home = () => {
+  let ctx=useContext(CartContext)
+  console.log(ctx);
   
   const [product, setproduct] = useState([]);
   const [error, seterror] = useState(false);
@@ -27,7 +31,7 @@ const Home = () => {
     setloading(true)
     try{
     let res=await axios.get('https://dummyjson.com/products?limit=0&skip=0')
-    console.log(res);
+    console.log("product",res);
     setproduct(res.data.products)
     setloading(false)
     }catch(error){
@@ -40,9 +44,7 @@ const Home = () => {
     
   }, [])
 
-  const handleAdd=(obj)=>{
-
-  }
+  
  
   
  
@@ -80,7 +82,7 @@ const Home = () => {
       <h5 className="card-title">{ele.title}</h5>
       <p className="card-text"><strong>Price</strong>{ele.price} $</p>
       <Link to="/view" state={ele} className="btn btn-primary">View Details</Link>
-      <button className='btn btn-info mx-1' onClick={()=>handleAdd(ele)} >Add to cart</button>
+      <button className='btn btn-info mx-1' onClick={()=>ctx.AddtoCart(ele)} >Add to cart</button>
     </div>
   </div>
   

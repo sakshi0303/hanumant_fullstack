@@ -1,5 +1,6 @@
 import React from 'react'
 import CounterContext from './CounterContext'
+import { useState } from 'react';
 
 const CounterState = (props) => {
     const [count, setcount] = useState(0);

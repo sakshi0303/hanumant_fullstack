@@ -15,7 +15,8 @@
 import React from 'react'
 import { useContext } from 'react';
 import { useState } from 'react';
-import CounterContext from '../../Context/CounterContext';
+import CounterContext from '../Context/CounterContext';
+
 
 const Counter = () => {
 
@@ -47,8 +48,8 @@ const Counter = () => {
       <button onClick={()=>ctx.setcount(ctx.count+1)}>Increment</button>
       <button onClick={()=>ctx.setcount(ctx.count-1)}>Decrement</button>
       <button onClick={()=>ctx.setcount(ctx.count*2)}>multiplyby2</button>
-      <button onClick={ctx.setcount(ctx.count/2)}>devideby2</button>
-      <button onClick={ctx.setcount(ctx.count*5)}>multiplyby5</button>
+      <button onClick={()=>ctx.setcount(ctx.count/2)}>devideby2</button>
+      <button onClick={()=>ctx.setcount(ctx.count*5)}>multiplyby5</button>
     </div>
   )
 }

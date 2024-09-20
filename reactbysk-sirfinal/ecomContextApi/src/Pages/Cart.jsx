@@ -3,18 +3,50 @@
 // for update   obj.course="sd"  delete obj.name
 // um.toFixed(2)} will make the price in string and show only 2 decial point
 import React from 'react'
+import { useContext } from 'react'
+import CartContext from '../Context/CartContext'
 
 const Cart = () => {
-  let arr=[]
-  let sum=0
-  const handleDelete =(obj,idx)=>{
+  let ctx=useContext(CartContext)
+  console.log("DATA",ctx);
+  
+
+  const handleDelete =(obj,i)=>{
+    let copyarr=[...ctx.cartdata]
+    copyarr.splice(i,1)
+    ctx.setcartdata(copyarr)
 
   }
 
-  const handleincrement=(obj,i)=>{
+  const handleincrement=(ele,i)=>{
+    console.log(ele,i);
+    let updatedobj={
+      ...ele,
+      quantity:ele.quantity+1,
+      price:ele.price+(ele.price/ele.quantity)
+    }
+    console.log(updatedobj);
+    let copyarr=[...ctx.cartdata]
+    copyarr[i]=updatedobj
+    ctx.setcartdata(copyarr)
+
+
   }
 
   const handledecrement=(obj,i)=>{
+    console.log(obj,i);
+    let updatedobj={
+      ...obj,
+      quantity:obj.quantity-1,
+      price:obj.price-(obj.price/obj.quantity)
+    }
+    if (updatedobj.quantity<1){
+      return handleDelete(obj,i)
+    }
+
+    let copyarr=[...ctx.cartdata]
+    copyarr[i]=updatedobj
+    ctx.setcartdata(copyarr)
   }
   
 
@@ -26,10 +58,10 @@ const Cart = () => {
 
   // }
 
-  // let sum=0
-  // props.cartdata.forEach((ele)=>{
-  //   sum+=ele.price
-  // })
+  let sum=0
+  ctx.cartdata.forEach((ele)=>{
+    sum+=ele.price
+  })
 
   // const handleincrement=(obj,i)=>{
   //   // opdate the element
@@ -85,7 +117,7 @@ const Cart = () => {
   </thead>
   <tbody>
     {
-    arr.map((ele,index)=>{
+    ctx.cartdata.map((ele,index)=>{
       return  <tr>
       <th scope="row">{index+1}</th>
       <td><img src={ele.thumbnail} alt="" height={'150'} width={'150'}/></td>

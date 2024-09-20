@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import CounterState from './context/CounterState';
+import CartState from './Context/CartState';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <CounterState>
+    <CartState>
     <App />
-    </CounterState>
+    </CartState>
+   
   
 );
 

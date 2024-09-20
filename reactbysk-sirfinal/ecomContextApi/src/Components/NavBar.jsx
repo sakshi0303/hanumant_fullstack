@@ -3,9 +3,12 @@
 //<nav className="fixed-top" sticky on top
 
 import React from 'react'
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import CartContext from '../Context/CartContext'
 
-const NavBar = (props) => {
+const NavBar = () => {
+  let ctx=useContext(CartContext)
   return (
     <div>
       <nav className="navbar navbar-expand-lg  bg-dark fixed-top">
@@ -36,7 +39,7 @@ const NavBar = (props) => {
           <Link className="nav-link" to="/login">Login</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/cart">Cart <sup>{props.cartdata.length}</sup></Link>
+          <Link className="nav-link" to="/cart">Cart <sup>{ctx.cartdata.length}</sup></Link>
         </li>
         
       </ul>

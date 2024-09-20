@@ -5,7 +5,7 @@ const Product = () => {
   let getdata=async()=>{
     let raw=await fetch('https://dummyjson.com/products')
     let data=await raw.json()
-    //console.log(data);
+    console.log("productdats",data);
     setpdata(data.products)
 
   }
