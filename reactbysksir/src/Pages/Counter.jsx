@@ -13,40 +13,42 @@
 //     > it takes two argument [value ,function] a value and a function
 
 import React from 'react'
+import { useContext } from 'react';
 import { useState } from 'react';
+import CounterContext from '../../Context/CounterContext';
 
 const Counter = () => {
 
-  const [x,setx]=useState(10);
-  function increment(){
-    //console.log("inside incremetn fn");
-    setx(x+1)
-  }
-  const decrement=()=>{
-    setx(x-1)
-  }
+  let ctx=useContext(CounterContext)
+  // function increment(){
+  //   //console.log("inside incremetn fn");
+  //   setx(x+1)
+  // }
+  // const decrement=()=>{
+  //   setx(x-1)
+  // }
 
-  const multiplyby2 = () => {
-    setx(x * 2);
-  };
+  // const multiplyby2 = () => {
+  //   setx(x * 2);
+  // };
 
-  const multiplyby5 = () => {
-    setx(x * 5);
-  };
+  // const multiplyby5 = () => {
+  //   setx(x * 5);
+  // };
 
-  const devideby2 = () => {
-    setx(x / 2);
-  };
+  // const devideby2 = () => {
+  //   setx(x / 2);
+  // };
   
   return (
     <div>
       <h1>this is Counter Page</h1>
-      <p>value x ={x}</p>
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>Decrement</button>
-      <button onClick={multiplyby2}>multiplyby2</button>
-      <button onClick={devideby2}>devideby2</button>
-      <button onClick={multiplyby5}>multiplyby5</button>
+      <p>value x ={ctx.count}</p>
+      <button onClick={()=>ctx.setcount(ctx.count+1)}>Increment</button>
+      <button onClick={()=>ctx.setcount(ctx.count-1)}>Decrement</button>
+      <button onClick={()=>ctx.setcount(ctx.count*2)}>multiplyby2</button>
+      <button onClick={ctx.setcount(ctx.count/2)}>devideby2</button>
+      <button onClick={ctx.setcount(ctx.count*5)}>multiplyby5</button>
     </div>
   )
 }

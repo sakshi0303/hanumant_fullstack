@@ -3,12 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import CounterState from '../Context/CounterState';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   //<React.StrictMode> print all element in console
+    <CounterState>
     <App />
-  //</React.StrictMode>
+    </CounterState>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function

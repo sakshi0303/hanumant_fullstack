@@ -2,6 +2,7 @@
 // so we have to create a function in app.js and execute it in home.jhsx
 // npm react-ToastContainer, react-magnifier 
 // npm react-toastify to make alert box visually good
+// npm maginifier
 // context API
 
 import './App.css';
