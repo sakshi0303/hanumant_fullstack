@@ -19,7 +19,7 @@ import SignUp from './Pages/SignUp';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min'
 import View from './Pages/View';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 //child(Contact) to parent(App.js) Props

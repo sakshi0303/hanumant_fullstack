@@ -12,5 +12,31 @@
     color: white !important;
 }
 .navbar{
-    box-shadow: 0 0 10px 5px white;
+    box-shadow: 0 0 10px 5px lightgray;
+}
+
+.skelotonContainer{
+    display: flex;
+    grid-template-columns: repeat(3,auto);
+}
+
+.crimson{
+    background-color: crimson !important;
+    color: crimson !important;
+}
+
+
+.signupform{
+    background-color: red;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    background-image: url(https://ponderosa.agency/app/uploads/2024/04/ecommerce-design-full-width-1920x786.jpg);
+    background-size: cover;
+}
+.signupform form{
+    background-color: rgb(255, 0, 0,0.2);
+    padding: 20px;
+    border-radius: 20px;
+
 }
