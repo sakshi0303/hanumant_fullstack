@@ -18,9 +18,13 @@
     // let firstindex=last_index-number_of_item
     // let SlicedItem- arr.Slice(startindex-lastindex) (lastidx=10) therefore slieditem=(0-9)
     // number of button: Math.ciel (arr.length/no_of_items)
-    // Array(10)..key()->[0,1,2,3,4,5,6,7,8,9]
+    // Array(10)..key()->[0,1,2,3,4,5,6,7,8,9] 
     // let buttonArry=[...Array(no_of_button).fill(0).keys()]
     // [0-9]// 
+  // active is bydefault blue color bootstamp class
+
+  // onsubmit in form should have type butoon ==submit
+  // localstorage: everything should be in string format setitem, getitem.removeitem
   
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
@@ -57,6 +61,30 @@ const Home = () => {
 
   }, [])
 
+  // pagination::
+  const [currentPage, setcurrentPage] = useState(1);
+  let no_of_item=10;
+  let endidx=currentPage * no_of_item
+  let fntidx=endidx-no_of_item
+  let slicedproductarr=product.slice(fntidx,endidx)
+  let noofbutton=Math.ceil(product.length/no_of_item)
+  let btnarray=new Array(noofbutton).fill(0)
+  console.log(btnarray);
+
+
+  const handlenext=()=>{
+    if (currentPage<=btnarray.length-1){
+      setcurrentPage(currentPage+1)
+    }
+
+  }
+
+  const handleprevious=()=>{
+    if (currentPage>1){
+      setcurrentPage(currentPage-1)
+    }
+
+  }
 
 
 
@@ -88,7 +116,7 @@ const Home = () => {
             {error === false ?
               (<div className='row m-0 p-0 bg-info justify-content-center gap-3'>
                 {
-                  product.map((ele, i) => {
+                  slicedproductarr.map((ele, i) => {
                     return ele.thumbnail && <div key={i} className="card" style={{ width: '18rem' }}>
                       <img src={ele.thumbnail} className="card-img-top" alt="..." />
                       <div className="card-body">
@@ -113,13 +141,15 @@ const Home = () => {
 
       <nav aria-label="Page navigation example">
         <ul className="pagination justify-content-center">
-          <li className="page-item disabled">
+          <li onClick={handleprevious} className="page-item disabled">
             <a className="page-link">Previous</a>
           </li>
-          <li className="page-item"><a className="page-link" href="#">1</a></li>
-          <li className="page-item"><a className="page-link" href="#">2</a></li>
-          <li className="page-item"><a className="page-link" href="#">3</a></li>
-          <li className="page-item">
+          {/* <li className="page-item active"><a className="page-link" href="#">1</a></li> */}
+          
+          {btnarray.map((item,i)=>{
+            return <li onClick={()=>setcurrentPage(i+1)} className={currentPage===i+1?"page-item active":"page-item"}><Link className="page-link" href="#">{i+1}</Link></li>
+          })}
+          <li  onClick={handlenext} className="page-item">
             <a className="page-link" href="#">Next</a>
           </li>
         </ul>

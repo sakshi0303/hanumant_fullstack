@@ -18,7 +18,7 @@ const NavBar = () => {
       <span className="navbar-toggler-icon" />
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-    <form className="d-flex m-auto" role="search">
+    <form className="d-flex ms-auto mt-4 mt-md-auto" role="search">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
         <button className="btn btn-outline-success" type="submit">Search</button>
       </form>
