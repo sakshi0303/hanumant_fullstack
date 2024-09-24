@@ -6,9 +6,18 @@ import React from 'react'
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import CartContext from '../Context/CartContext'
+import Usercontext from '../Context/UserContext'
 
 const NavBar = () => {
   let ctx=useContext(CartContext)
+  let userctx=useContext(Usercontext)
+  console.log(userctx);
+  let login=userctx.userData.login
+
+  const handlelogout=()=>{
+    localStorage.removeItem('userdetails')
+    userctx.setuserData({login:false,email:''})
+  }
   return (
     <div>
       <nav className="navbar navbar-expand-lg  bg-dark fixed-top">
@@ -23,24 +32,29 @@ const NavBar = () => {
         <button className="btn btn-outline-success" type="submit">Search</button>
       </form>
       <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li className="nav-item">
+        {login===true && <li className="nav-item">
           <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-        </li>
-        <li className="nav-item">
+        </li>}
+        {login===true && <li className="nav-item">
           <Link className="nav-link" to="/about">About</Link>
-        </li>
-        <li className="nav-item">
+        </li>}
+        {login===true && <li className="nav-item">
           <Link className="nav-link" to="/contact">Contact</Link>
-        </li>
-        <li className="nav-item">
+        </li>}
+        {login===false && <li className="nav-item">
           <Link className="nav-link" to="/signup">SignUp</Link>
-        </li>
-        <li className="nav-item">
+        </li>}
+
+        {login===false && <li className="nav-item">
           <Link className="nav-link" to="/login">Login</Link>
-        </li>
-        <li className="nav-item">
+        </li>}
+        {login===true && <li className="nav-item">
           <Link className="nav-link" to="/cart">Cart <sup>{ctx.cartdata.length}</sup></Link>
-        </li>
+        </li>}
+        {login===true && 
+        <li className="nav-item">
+          <Link onClick={handlelogout} className="nav-link" to="#">Logout</Link>
+        </li>}
         
       </ul>
       
