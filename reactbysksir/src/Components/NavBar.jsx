@@ -33,6 +33,10 @@ const NavBar = () => {
           <Link className="nav-link" to="/useeffect">UseEffect</Link>
         </li>
         
+        <li className="nav-item">
+          <Link className="nav-link" to="/onchangeformwithradiobutton">OnchangeForm with radio button</Link>
+        </li>
+        
       </ul>
     </div>
   </div>

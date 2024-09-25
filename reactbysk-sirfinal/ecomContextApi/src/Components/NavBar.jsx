@@ -2,7 +2,7 @@
 // <sup>{props.cartdata.length}</sup> supertag
 //<nav className="fixed-top" sticky on top
 
-import React from 'react'
+import React, { useState } from 'react'
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import CartContext from '../Context/CartContext'
@@ -13,10 +13,23 @@ const NavBar = () => {
   let userctx=useContext(Usercontext)
   console.log(userctx);
   let login=userctx.userData.login
+  // let searchvalue=userctx.searchvalue setsearchvalue
+  // text-dark
+  
+  const [searchinputvalue, setsearchinputvalue] = useState('');
 
   const handlelogout=()=>{
+    userctx.setsearchvalue('')
     localStorage.removeItem('userdetails')
     userctx.setuserData({login:false,email:''})
+    setsearchinputvalue('')
+    
+  }
+
+  const handlesearch=(e)=>{
+    setsearchinputvalue(e.target.value)
+    userctx.setsearchvalue(e.target.value.toLowerCase())
+
   }
   return (
     <div>
@@ -28,8 +41,8 @@ const NavBar = () => {
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <form className="d-flex ms-auto mt-4 mt-md-auto" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-        <button className="btn btn-outline-success" type="submit">Search</button>
+        <input value={searchinputvalue} onChange={handlesearch} className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+        {/* <button className="btn btn-outline-success" type="submit">Search</button> */}
       </form>
       <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
         {login===true && <li className="nav-item">

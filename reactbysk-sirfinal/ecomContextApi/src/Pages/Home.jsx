@@ -25,6 +25,7 @@
 
   // onsubmit in form should have type butoon ==submit
   // localstorage: everything should be in string format setitem, getitem.removeitem
+  // findindex, find : return 
   
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
@@ -36,10 +37,13 @@ import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { useContext } from 'react';
 import CartContext from '../Context/CartContext';
+import Usercontext from '../Context/UserContext';
 
 const Home = () => {
   let ctx = useContext(CartContext)
   console.log(ctx);
+  let userctx=useContext(Usercontext)
+  //userctx.searchvalue
 
   const [product, setproduct] = useState([]);
   const [error, seterror] = useState(false);
@@ -66,10 +70,11 @@ const Home = () => {
   let no_of_item=10;
   let endidx=currentPage * no_of_item
   let fntidx=endidx-no_of_item
-  let slicedproductarr=product.slice(fntidx,endidx)
-  let noofbutton=Math.ceil(product.length/no_of_item)
+  let filterarry=product.filter((ele)=>ele.title.toLowerCase().includes(userctx.searchvalue)|| ele.category.toLowerCase().includes(userctx.searchvalue))
+  let slicedproductarr=filterarry.slice(fntidx,endidx)
+  let noofbutton=Math.ceil(filterarry.length/no_of_item)
   let btnarray=new Array(noofbutton).fill(0)
-  console.log(btnarray);
+  //console.log(btnarray);
 
 
   const handlenext=()=>{
@@ -142,15 +147,15 @@ const Home = () => {
       <nav aria-label="Page navigation example">
         <ul className="pagination justify-content-center">
           <li onClick={handleprevious} className="page-item disabled">
-            <a className="page-link">Previous</a>
+            <a className="page-link text-bg-dark">Previous</a>
           </li>
           {/* <li className="page-item active"><a className="page-link" href="#">1</a></li> */}
           
           {btnarray.map((item,i)=>{
-            return <li onClick={()=>setcurrentPage(i+1)} className={currentPage===i+1?"page-item active":"page-item"}><Link className="page-link" href="#">{i+1}</Link></li>
+            return <li onClick={()=>setcurrentPage(i+1)} className={currentPage===i+1?"page-item active text-bg-dark":"page-item"}><Link className="page-link" href="#">{i+1}</Link></li>
           })}
           <li  onClick={handlenext} className="page-item">
-            <a className="page-link" href="#">Next</a>
+            <a className="page-link text-bg-dark" href="#">Next</a>
           </li>
         </ul>
       </nav>

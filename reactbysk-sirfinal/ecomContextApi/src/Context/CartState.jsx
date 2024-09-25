@@ -11,7 +11,7 @@ const CartState = (props) => {
 
     
 
-       
+                                                                              
         console.log(updans)
         let itemexit= cartdata.find((ele)=>ele.id===updans.id)
         if (itemexit){
