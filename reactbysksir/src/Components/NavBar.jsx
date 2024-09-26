@@ -36,6 +36,10 @@ const NavBar = () => {
         <li className="nav-item">
           <Link className="nav-link" to="/onchangeformwithradiobutton">OnchangeForm with radio button</Link>
         </li>
+
+        <li className="nav-item">
+          <Link className="nav-link" to="/reducer">Reducer Practice</Link>
+        </li>
         
       </ul>
     </div>

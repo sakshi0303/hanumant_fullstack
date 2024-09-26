@@ -14,6 +14,7 @@ import EffectsHooks from './Pages/EffectsHooks';
 import Receipe from './Pages/Receipe';
 import ViewReceipe from './Pages/ViewReceipe';
 import OnchangeForm from './Pages/OnchangeForm';
+import ReducerPractice from './Pages/ReducerPractice';
 // BrowserRouter --> it will tell the browser theat we will use routing in out application
 // routes: container that has router
 // download npm i react-router-dom
@@ -36,6 +37,7 @@ function App() {
         <Route path='/useeffect' element={<EffectsHooks/>}/>
         <Route path='/view' element={<ViewReceipe/>}/>
         <Route path='/onchangeformwithradiobutton' element={<OnchangeForm/>}/>
+        <Route path='/reducer' element={<ReducerPractice/>}/>
 
       </Routes>
       

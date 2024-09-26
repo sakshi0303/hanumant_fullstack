@@ -31,3 +31,41 @@ props sending from parent to child and child to parent is alot, therefore we use
 
 navbar: bootstram
 dummy json products : fetch('https://dummyjson.com/products')
+
+
+create project in github
+go to the terminal of the folder inside project
+// Folder with immediate file should be uploaded uniqqely
+git init  
+git config user.name "salshi"
+git config user.email "salshi@"
+git add .
+
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/sakshi0303/ecom1.git
+git push -u origin main
+
+
+vercer or render website inpirt the project and get the url
+
+
+with one hook it 
+ush alternate is Reducer hook 
+it has 2 arguemnet current state, function dispatch and by default 
+cosnt [state,dispatch ]=use Reducer(reducers,{count:0})
+
+
+cosnt reducers=(state,action)=>{
+
+if actin--"increment"{
+
+}
+}
+
+button onclick={()=>dispatch('increment')}
+
+reducer will always return 
+
+

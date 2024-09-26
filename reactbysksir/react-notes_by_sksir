@@ -100,10 +100,32 @@ import 'bootstrap/dist/js/bootstrap.bundle.min'
 
 // always use backgroud and delete afterwars
 //in javascript put in console., window.lcoaton="/"
-
+// reacts- hooks snippet 
 
 let navigate=useNavigate(x)
 
 >react icons=https://react-icons.github.io/react-icons/
 >npm i react-icons
+
+USE REDUCER-------Reducer hook (urdh) ------------->>>>>>>>
+
+>with one hook it perform multiple actions
+>useReducer in react is alternate and better version of use State
+>reducer function can be intitalised above component
+>it has 2 arguemnet current state, function dispatch and by default  state value
+    cosnt [state,dispatch ]=use Reducer(reducers,{count:0})
+    cosnt reducers=(state,action)=>{
+    if actin--"increment"{
+    }
+    }
+
+>button onclick={()=>dispatch('increment')}
+
+>reducer will always return 
+
+
+>redux toolkit ;; work mainly with reducer
+
+counter app, expess tracker
+
 
