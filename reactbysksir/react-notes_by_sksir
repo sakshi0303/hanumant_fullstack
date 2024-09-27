@@ -120,8 +120,7 @@ USE REDUCER-------Reducer hook (urdh) ------------->>>>>>>>
     }
 
 >button onclick={()=>dispatch('increment')}
-
->reducer will always return 
+>reducer will always return  (important)
 
 
 >redux toolkit ;; work mainly with reducer
@@ -129,3 +128,15 @@ USE REDUCER-------Reducer hook (urdh) ------------->>>>>>>>
 counter app, expess tracker
 
 
+-------REDUC TOOL KIT quick start // https://redux-toolkit.js.org/tutorials/quick-start 
+
+
+> npm install @reduxjs/toolkit react-redux
+/// counter app search on  redux toolkit quick start // https://redux-toolkit.js.org/tutorials/quick-start   (select javascript)
+> only one store MALL configure stro
+> multiple shops
+> Provide store={Store} at index.js react-redux it should be store only 
+>ExpenseSlice.js
+> //  ctx=useSelector((state)=>state.expence) it has all slices one by one
+> let dispact=useDispatch()
+> inside reducer: we dont have to return 

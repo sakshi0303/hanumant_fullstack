@@ -5,13 +5,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import CounterState from './Context/CounterState';
 
+import { Store } from './Store/Store'
+import { Provider } from 'react-redux'
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   //<React.StrictMode> print all element in console
+    <Provider store={Store}>
     <CounterState>
     <App />
     </CounterState>
+    </Provider>
   
 );
 
