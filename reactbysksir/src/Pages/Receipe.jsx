@@ -4,6 +4,7 @@
 // container has taken bydault 80% of width conatiner will go to left
 // row and container are bootram predined classes whose values can be changes
 // go to bootstramp and get the card item and return via map
+// tailwind and redux
 import React, { useRef } from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
