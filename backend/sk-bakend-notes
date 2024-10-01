@@ -1,0 +1,58 @@
+npm i express
+npm init ( to create package.json)
+
+>> in backend we use only .js files
+
+> server.js (in web search npm express) create server
+> re
+> nodemon server.js  ------TO RUN SERVER
+---------------------DB creation-------------
+>db.jsx
+> npm i mongoose
+> npm mongoose
+>module.export
+// database-> collection-> data
+// connect method return promise
+// twitterapp database
+// never put semicolon in dbconecton, it will not connect
+
+in server.js
+require()
+
+> 3 folder: controllers, models, routes
+
+------------UserSchema ------------------------------------------------------------------
+> userSchema: collection file inside models
+> timestamps:true
+
+>const mongoose=require('mongoose')
+const UserSchema=new mongoose.Schema({
+    name:{
+        type:String,
+        require:true,
+        unique:true,
+    }},{timestamp:true})
+
+>module.exports=mongoose.model('user',UserSchema)
+
+
+------------Controller ------------------------------------------------------------------
+> controllers:: all fucntion
+const updateuser=()=>{
+
+}
+module.exports=updateuser
+
+
+------- routes: ------------------------------------------------------------------
+const express=require('express')
+const router=express.Router()
+router.post('/create',registerUser)
+
+>>>>in server.jsx
+> let UserRouter=require('./routes/UserRoutes')
+>app.use('/users',UserRouter)
+ // #put, same Object
+// #patch: new create Object
+
+---------------
