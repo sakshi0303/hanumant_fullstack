@@ -10,6 +10,9 @@ var salt = bcrypt.genSaltSync(10);
 let User=require('../models/UserSchema')
 const registerUser=async(req,res)=>{
     let {name, email,password,address}=req.body
+    if (!password){
+        return res.json({msg:"password is mandartory field",success:false})
+    }
     try{
         let Userexist=await User.findOne({email})
         if (Userexist){
@@ -29,8 +32,29 @@ const registerUser=async(req,res)=>{
 }
 }
 
-const loginUser=(req,res)=>{
-    res.send("login api working good")
+const loginUser=async(req,res)=>{
+
+    let {email,password}=req.body
+    try{
+        let checkuser= await User.findOne({email})
+        console.log(checkuser)
+        if (checkuser){
+
+            let checkpassword=await bcrypt.compareSync(password,checkuser.password)
+            if (checkpassword){
+                return res.json({msg:"user login successfully",success:true,usr:checkuser})
+            }else{
+                return res.json({msg:"invalid password",success:false})
+            }
+
+        }else{
+            res.json({msg:"user not fond",success:false})
+        }
+
+    }catch(error){
+        res.json({msg:"error in login in user",success:false,error:error.message})
+
+    }
 
 }
 
