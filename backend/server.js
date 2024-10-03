@@ -6,6 +6,8 @@ const port=8080
 const connecttodb=require('./db')
 connecttodb()
 
+app.use(express.json())
+
 let UserRouter=require('./routes/UserRoutes')
 app.use('/users',UserRouter)
 
