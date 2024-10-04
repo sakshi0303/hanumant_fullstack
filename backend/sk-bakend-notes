@@ -60,17 +60,48 @@
 //  User.create({
 // User.findOne({email})
 
-npm bcryptjs
-var bcrypt = require('bcryptjs');
-var salt = bcrypt.genSaltSync(10);
+// npm bcryptjs
+// var bcrypt = require('bcryptjs');
+// var salt = bcrypt.genSaltSync(10);
 
-let hashpassword= await bcrypt.hashSync(password, salt);
-let user= await User.create({
-    name,email,
-    password:hashpassword,
-    address
-})
+// let hashpassword= await bcrypt.hashSync(password, salt);
+// let user= await User.create({
+//     name,email,
+//     password:hashpassword,
+//     address
+// })
 
-app.use(express.json())
+// app.use(express.json())
 
-User
+
+
+TOKENNNNN----
+all user will have differnt token
+at the time of token generatonn we will ise userid
+
+jwt:::// in app extra security
+jsonwebtoken npm  ::: id deleting with jwt_secret
+> npm i jsonwebtoken
+>In login usercontroller after password check 
+>
+var jwt = require('jsonwebtoken');
+var token = jwt.sign({ foo: 'bar' }, 'shhhhh');
+>hash password using bcrypt.js and save it in the (mongoose)db:
+#token generation: json web token (delete by id)
+
+
+
+MIDDLEWARE's are functions that modify the request and response that can be used between the routes
+app.use(expres.json)
+
+req.userid
+
+
+(req,res,next)
+
+if user login, his id will be endoced and a token is 
+mongodb:
+
+form email and submit 
+>
+>

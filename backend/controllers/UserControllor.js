@@ -7,6 +7,9 @@
 var bcrypt = require('bcryptjs');
 var salt = bcrypt.genSaltSync(10);
 
+var jwt = require('jsonwebtoken');
+var JWT_SECRET="idjwttoaknsakshi"
+
 let User=require('../models/UserSchema')
 const registerUser=async(req,res)=>{
     let {name, email,password,address}=req.body
@@ -42,7 +45,8 @@ const loginUser=async(req,res)=>{
 
             let checkpassword=await bcrypt.compareSync(password,checkuser.password)
             if (checkpassword){
-                return res.json({msg:"user login successfully",success:true,usr:checkuser})
+                var token = jwt.sign({ _id:checkuser.id }, JWT_SECRET);
+                return res.json({msg:"user login successfully",success:true,usr:token})
             }else{
                 return res.json({msg:"invalid password",success:false})
             }
@@ -63,8 +67,25 @@ const updateUser=(req,res)=>{
 
 }
 
-const deleteUser=(req,res)=>{
-    res.send("delete api working good")
+const deleteUser=async(req,res)=>{
+    let id=req.params._id
+    let _id=req.user
+    try{
+        if (id===_id){
+            await User.findByIdAndDelete(_id)
+            return res.json({msg:"user deleted successfully",success:true,})
+    
+        }else{
+            return res.json({msg:"You can delete your own account",success:false})
+        }
+
+    }catch(e){
+        return res.json({msg:"Error while delteing user",success:false,error:e.message})
+
+    }
+
+    // let data=await User.findByIdAndDelete(id)
+    // res.json({msg:"user deleted",usr:data})
 
 }
 
