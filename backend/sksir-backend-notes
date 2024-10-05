@@ -1,0 +1,113 @@
+// // // npm i express,nodemon,react-router-dom
+// // // npm init ( to create package.json)x
+// // // >> in backend we use only .js files
+
+// // // > server.js (in web search npm express) create server
+// // // > re
+// // // > nodemon server.js  ------TO RUN SERVER
+// // // ---------------------DB creation-------------
+// // // >db.jsx
+// // // > npm i mongoose
+// // // > npm mongoose
+// // // >module.export
+// // // database-> collection-> data
+// // // connect method return promise
+// // // twitterapp database
+// // // never put semicolon in dbconecton, it will not connect
+
+// // in server.js
+// // require()
+
+// // > 3 folder: controllers, models, routes
+
+// // ------------UserSchema ------------------------------------------------------------------
+// // > userSchema: collection file inside models
+// // > timestamps:true
+
+// // >const mongoose=require('mongoose')
+// // const UserSchema=new mongoose.Schema({
+// //     name:{
+// //         type:String,
+// //         require:true,
+// //         unique:true,
+// //     }},{timestamp:true})
+
+// // >module.exports=mongoose.model('user',UserSchema)
+
+
+// // ------------Controller ------------------------------------------------------------------
+// // > controllers:: all fucntion
+// // const updateuser=()=>{
+
+// // }
+// // module.exports=updateuser
+
+
+// // ------- routes: ------------------------------------------------------------------
+// // const express=require('express')
+// // const router=express.Router()
+// // router.post('/create',registerUser)
+
+// // >>>>in server.jsx
+// // > let UserRouter=require('./routes/UserRoutes')
+// // >app.use('/users',UserRouter)
+// //  // #put, same Object
+// // // #patch: new create Object
+
+// // ---------------------------------------------------------------------------------
+
+// //  User.create({
+// // User.findOne({email})
+
+// // npm bcryptjs
+// // var bcrypt = require('bcryptjs');
+// // var salt = bcrypt.genSaltSync(10);
+
+// // let hashpassword= await bcrypt.hashSync(password, salt);
+// // let user= await User.create({
+// //     name,email,
+// //     password:hashpassword,
+// //     address
+// // })
+
+// // app.use(express.json())
+
+
+
+// TOKENNNNN----
+// >>all user will have differnt token
+// >>at the time of token generatonn we will use different userid
+
+// jwt:::// in app extra security
+// jsonwebtoken npm  ::: converting login user id to tokens  with jwt_secret
+// > npm i jsonwebtoken
+// >In login usercontroller after password check we can generate the token with jwt_secret
+// >var jwt = require('jsonwebtoken');
+// >var token = jwt.sign({ _id:existinguser.id }, jwt_secret);
+
+// We can maintain securty in our application by folloiwng two ways--->
+// > bcrypt.js for hashing the password before store in db
+// > JWT (json web-token) converting unique id into token;
+//     >When user will login, a JWT token will be given to the user which is unique to its own _id,
+//     > that token will be used to generate delete request via postman and req header authorisation will contain that same token
+//     > a middleware (res,req,next) will be create and it will decode the JWT token 
+//             >   let token=req.headers.authorization
+//             // decoded token of "_id" of the peron who has logged in
+//             >var decoded = jwt.verify(token, JWT_SECRET);
+//             >console.log("DECODED ",decoded) // DECODED  { _id: '66ffc0628557e0b658654a08', iat: 1728037936 }
+//             >req.user=decoded._id
+//             >next()
+//     > 
+
+
+
+// MIDDLEWARE's are functions that modify the request and response that can be used between the routes
+// app.use(expres.json)
+
+
+// if user login, his id will be endoced and a token is 
+// mongodb:
+
+// form email and submit 
+// >
+// >
