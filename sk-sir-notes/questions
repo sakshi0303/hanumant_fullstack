@@ -1,42 +1,41 @@
-translate
-what is diffence between node.js, express
-translate
-hoisting
-what type of pages we can createin javascript
-differnce bwettn block:inline, block
+Q:translate
+Q:what is diffence between node.js, express
+Q:hoisting
+Q:what type of pages we can create in javascript
+Q:differnce bwettn block:inline, block
 p: 
-how many ways we can write css
-hooks
-virtual DOM
-var,let, cost 
-Ques:: higherorderfunction
->how many ways we can 
+Q:how many ways we can write css
+Q:hooks
+Q:virtual DOM
+Q:var,let, const 
+Q:higherorderfunction and callback function
+Q:how many ways we can 
 >>create a component
 >>function component
-what is promises in javascript
+Q:what is promises in javascript
 > what is sync and async
 > obj{
     name:"sakshi;
     age:46
-}--> we have to delete the age then what we need to do?? ANSWER----delete obj.age
--->spread operator [...obj]
---> hoisting in javascript: 
+}--> we have to delete the age then what we need to do?? ANSWER---->delete obj.age
+Q:spread operator [...obj]
+Q:hoisting in javascript: 
 xyz()
 let xyz=()=>{
     log("hello")
 }--> Answer: 
 
-Q: Hoisting
 
-@ arrow and normal function and hoisting 
-virtual DOM:reconsilation -> lightwight
 
-DOM and when it is created
-@ Closure::
-@reducer in redux
+Q: arrow and normal function and hoisting 
+Q:virtual DOM:reconsilation -> lightwight
 
-differnce between quedoelement and quedoclasas
-Quest: hook are predefined fucntions that are
+Q:DOM and when it is created
+Q: Closure::
+Q:reducer in redux
+
+differnce between peudoelement and quedoclasas
+Quest: hook are predefined functions that are
 
 
 Question: react.js and react features
@@ -78,3 +77,4 @@ Q: page refersh and page rendering differnece
 Q: In Any component  when props and state changes then react create a new virtual DOM and update the DOM when state or props changes.
 dufreebce between: block and inline block(left and right)
 Q: differnce between mongoddb and node.js key value: JSON type object()
+Q: difference between class and functional Component

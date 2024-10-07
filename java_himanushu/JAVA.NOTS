@@ -1,0 +1,166 @@
+JAVA:
+#systrace:: SHOTCUT for sopln
+
+>OBJECT ORIENTED , PLATFORM INDEPENDENT(IT CAN RUN IN ANY PLATFORM VISUALcode,intellige,eciplse NETBEAN,ANY CODE EDITOR)  PROGRAMING LANGUAGE 
+>1995 JIMS GARWINS
+>COFEE
+> NON PRIMITIE: CLASS, ARRAY, ENUM, STRING 
+
+WHY PLATFORM INDEPENDENT:
+JAVA COMPILER::: CONSERT SRC CODE TO BYTE CODE(.class) and it will check the synaztax and all error at a time and diplay all error at once 
+BYTE CODE WILL RUN IN any given platorm
+whe
+
+>class firmst name will be capital and we will save file with .java extension
+
+> javac Main.java ---> Main.class(bytecode-> which is not readable)
+> java Main.java --> Run(output)
+> JDK (java developement Kit- oracle website ), 
+>JRE (java run environemtn), JVM(java virtual machine)
+> JDK internally hold JRE and JVM and JAVA library
+> Java Run time: it create a enviroment whiich is responsible for run the CODE
+> jdk is like package,json, which is not readable
+> Java virtual machine--> byte code to execute and create redults
+
+> compleier converst src code to byte codeand jvm execute bytecode .class and execute the result
+
+>> Question:
+Q; differnece between compileer and interpreter:
+    >compile, checks the syntax and show all error at once ( we can complile one time and then use java Main.java) 
+    > JAVA COMPILER(transalate all at once)::: CONSERT SRC CODE TO BYTE CODE(.class) and it will check the synaztax and all error at a time and diplay all error at once 
+
+    Interpreator(line by line): javascript: responsible for check the code line by line , erd: 20 lines code
+    line 5 error, after 5th linecode will not run and it  iwll throw error
+
+
+> Java library: collection of predefined functions(packahe,class, interface)
+> JVM execute  the byte code and generate the result
+
+
+Class:::
+
+>Class is a strutured layout in java which is responsible for creating the OBJECT
+>collecton of variables, methos,d block of constructor
+
+package: its a collection of classes and interfaces
+interfaces are the collection of variable and methods
+variabel: public static,default,private
+>primitive: character, boolean, number, float, double
+> statick  "static c" variable,blck, constrotor can be called/ access by class
+> Non statkc "int b" will be access by obj name 
+> public stactic(access by class) void(return ) main (string args[](argument passed as parametersx))
+> this is starting point of PROGRAM
+? java 17 after java 6 we have to use this 
+
+public class Main{
+    static int a=10;
+    int b=20;
+
+    public static void Main(String args[])
+    {
+        Main.a;
+        Main obj=new Main();
+        obj.b();
+    }
+}
+
+
+
+DOWNLOAD:
+arms mac1  dmg file
+
+ check hjava mervion on macbook pro --/usr/libexec/java_home -V
+
+>/Users/sakshisrivastava
+> ls -all
+>open .zshrc
+>export JAVA_HOME=$(/usr/libexec/java_home -v 21.0.4)
+>export PATH=$JAVA_HOME/bin:$PATH
+>echo $JAVA_HOME
+>/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home
+
+> java -version
+> go to hanumant folder 
+> touch 
+
+
+----------------------
+
+
+Data Types:::
+
+1int= 1bit=8 byte
+mobile - 7838125076L
+
+Data type is used for defining the type of data., it is of two types
+1) Primitive (single value data format): 
+    > Integer (int,long(9 place above),byte,short-create file stream)
+    > Float  float(uptill 2-3 points) , double
+    > Character char
+    > Boolean
+2)Non Primitive(multiple value data format):
+    -Class
+    -ENUM  -enumeration, collection framework as a data type
+    -String
+    -Interface
+
+Method:
+    - method are the actions which execute to generate the result
+    <IMPORTANT>
+    -they are two type  : STATIC, NON STATIC
+    ->> STATIC METHOD ARE THE method which is declared with the static keyword
+        static method will be accessible with classname and they will get the memory within the class
+    ->>NON-STATIC is acessed by obj of a class and it will take memory space of an OBJECT 
+    --> and obj will access both member of the class(static and non static) but it is not advised
+
+
+    Syntax:
+    // parameters are used to transfer data from one method to another method
+        ReturnType Methodname ( parameters ) 
+
+
+Variables(8 byte):
+
+    -are the containers which is used to store the data
+
+    Variables of two types:
+        -> Static Variables
+        -> Non static variables
+    
+    >static String name='sakshi';
+    >float age=30.345f
+    >double age=234.23324d
+
+
+------------------------------------------------
+
+Object:
+    >object are container which hold non statc methods,variables,contructor component of the class.
+    > we can create the object with the help of class 
+    > Main obj=new Main();
+
+
+
+-----------------------------------------------------
+> Filename will be Class Name and first letter of class is capital
+>
+public class Main {
+    public static void main(String agrs[]){
+        String str="hello world";
+        System.out.println(str);
+    }
+}
+
+concatination
+    >System.out.println("a*b="+c);
+
+
+-----------------------------------------------------
+> to run
+    > javac Main.java
+    > java Main.java
+
+-----------------------------------------------------
+
+SCANNER::
+    > scanner is used to take the input from the user
