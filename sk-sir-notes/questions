@@ -10,7 +10,7 @@ Q:virtual DOM
 Q:var,let, const 
 Q:higherorderfunction and callback function
 Q:how many ways we can 
->>create a component
+>>create a component class based 
 >>function component
 Q:what is promises in javascript
 > what is sync and async
@@ -49,6 +49,8 @@ Higherorder and callback function
 xyz(abc) -> higherorder(callback)
 
 hook are predined 
+hooks are functions that are used to update the state of the functional copmonetent , it does not work with class component
+hooks are functions
 
 lifecycle method in react
 what is react hook
@@ -70,7 +72,7 @@ Q: differnce between settimeout, setinterval? in call back function setinterval(
 when button is click how we will stop setinterval()-- w e use clearIntervals
 Q: differnce between props, contextAPI,Redux
 Q: postion: absolut centering a div with position
-Qredux: global state meanagement 
+Q: redux: global state meanagement 
 Q what is prop drilling (more dependency of prop)
 Q: what do you mean by single page application : after clicking on submit button 
 Q: page refersh and page rendering differnece
@@ -78,3 +80,353 @@ Q: In Any component  when props and state changes then react create a new virtua
 dufreebce between: block and inline block(left and right)
 Q: differnce between mongoddb and node.js key value: JSON type object()
 Q: difference between class and functional Component
+DOM is a tree like struture 
+
+
+-----------------------
+
+
+Virtual DOM: it is a representation of actual DOM (copy of actual DOM)
+> it is used to improve the performance of updates and changes to the actual DOM by reducing the no of expensive DOM manipulation
+>When a component state or props changes react creat a new virtual DOM tree and compare it to the previous tree and then apply only minimuam set of changes necceary to actual DOM  this imporves the performance of application
+> Javacript : html> head> body >div(h1=x),nav directly changes in DOM
+> React: makes a copy of DOM known as Virtual DOM and update the vakue of x=11  i
+
+npm: node package manager
+npm i -g create-react-app
+npx create-react-app frontendlowercase
+
+
+
+
+HOISTING---::::
+
+Hoisting is the deafutlt behaivor of JS where all the funcion and varible declaration are move to the top of there scope
+
+Q1: 
+
+x=10
+console.log(10)
+var x
+
+ANswer:::::
+var x-undefined ----- HOISTING on the top of the scope
+x=10  ----- reassign
+console.log(x)-  ANSWER -----10
+var x
+
+------------------------------------------------------------------------------------------------------
+
+Q2:
+IS let and const are hosting????
+-- both let and const are hoisted but they sta in  temporal dead zone
+
+x=10                 #### temparay dead zone
+console.log(x)
+--------------------------
+let x----- ERROR  ## anything above this line will throw errror, bellow area will run fine
+
+Answer:::::::
+let x
+x=10
+console.log(c)--- ERROR
+
+letx- undined
+
+
+------------------------------------------------------------------------------------------------------
+
+Q3
+
+function calling xyx()
+
+fucntion declaring 
+funcion xyz(){
+    console.log("hello")   ----> Answer
+}
+
+
+
+Answer:: Through Hoisting declaration will be on the top of the scope by deafult
+funcion xyz(){
+    console.log("hello")   ----> Answer
+}
+ xyx()   
+
+------------------------------------------------------------------------------------------------------
+
+Question4:
+
+x()
+var x=()=>{
+    console.log("hello")
+}
+
+Answer:
+
+var x  ----->>>> x is undefined 
+x()     ------------> THROW AN ERROR == " X is NOT an Function"
+x=()=>{
+    console.log("hello")
+}
+------------------------------------------------------------------------------------------------------------------------------------
+
+arrow function return directly in an single value
+var x=(a,b)=>a+b // returnbs in one line without return keywork
+
+let arr=[10,9,6,10]
+arr.find(()=> ele==10) // return first occurance of 10 and return
+let ans=x(10,5)
+console.log(ans)
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Question5:
+
+function  abc(){
+    for(let i=1,i<=10,i++){
+        console.log(i)
+    }
+    console.log(i)
+}
+
+abc()
+
+
+Answer:
+
+let and const are blockd scope, cannot access outside the score
+console.log(i)
+1
+2
+3
+4
+---
+10
+ERROR (i is not defined))<--- Answer
+
+------------------------------------------------------------------------------------------------------------------------------------
+Question6:
+
+function  abc(){
+    for(var i=1,i<=10,i++){
+        console.log(i)
+    }
+    console.log(i)
+}
+
+abc()
+
+
+OUTPUT--->  var is non a blocked scoped {} it is global scope
+
+1
+2
+3
+4
+--
+--
+--
+10
+11 ---> i value last value
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Question7:
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+let , var, const are functional scoped: {}
+
+if, else are block scope :{ }
+
+
+fucntion xyz(){
+    var x=100
+
+    console.log(x)
+    -------------
+    let x=100 terorarl dead zone --- ERROR with no output 
+    console.log(x)
+}
+
+fucntion xyz(){
+    var x #undefine
+
+    console.log(x)  #undefined
+    -------------
+    var x=100 terorarl dead zone --- ERROR with no output 
+    console.log(x) #100
+}
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+fucntion xyz(){
+    
+
+    console.log(x)  #ERROR --> X is not defined
+    -------------
+    x=100  
+    console.log(x) 
+}
+
+fucntion xyz(){
+    
+
+    
+    let x=100  
+    
+}
+xyz()
+console.log(x) ---> ERROR  x in NOT defined
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+deadzon is disabled  let x is undefined but javascript will throw error x is undefined
+console.log(x)
+x=10
+-----------
+let x
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+console.log(x)             
+var x=function(){
+    console.log("hello") -
+}
+x() // h
+
+Answer 
+var x
+console.log(x)  ----------------> answer--- undefined
+x=function(){
+    console.log("hello") -
+}
+x() ----------------> answer--- hellow
+
+
+-----------------
+undefined x by deafult
+
+
+if i wrote 
+console.log(x)------ ERROR " X IS NOT DEFINED"
+
+
+let -reassign  and not redecle
+
+var-- reassign and redeclare
+
+const- not reassign  and not redeclare
+
+
+----------------------
+High order function 
+function one(ans){
+    console.log("one")
+}
+
+function two(ans){
+    console.log("one")
+}
+
+
+one(two)
+
+
+function that takes another function as an argument are known as higher order function --one
+
+fucntion thtat are passed into another fucntion as an argument are know as callback backtion---two
+
+--- state and props
+
+-----------------------------------------------------------------------------------------------------------------------------------
+--
+this by default refers to windows
+otherwise it will referes to tparent 
+
+
+functional scope will not allow  window to access its x as well
+fucntioin xyz(){
+    var x=10
+    console.log(x)==10
+}
+xyz()
+
+console.log(x)= ERROR- NOT DEFINED
+
+console.log(window.x)==undefined in obj if key is not present it always give undefined
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+--
+
+
+var x=100
+fucntion xyz(){
+    console.log(x)----> undefined
+    var x=10
+}
+xyz()
+console.log(x) -----> 100 
+
+-----------------------------------------------------------------------------------------------------------------------------------
+--
+
+
+let obj={
+    name:szlso
+    age:1234
+}
+console.log(obj.class)-------> ERROR undefined
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+--
+
+Closure
+innerfunction have access of the variable/fucniton of the outer function 
+
+
+fucntion xyz(){
+    let x=5 -----> global variable
+
+    return function abs(){
+        console.log(x)   -------> CLosure, inner function abs has access to outer function xyz variables
+    }
+}
+
+xyz()()  ----> direct call to the return part ---- IMMEDIATELY INVOKED Function
+
+// a function is called and invoked immediately
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+--
+
+div at exact inbweteen with the help of position
+position absolute:: on the basis of body by default
+parent_div{
+    position:relative
+}
+div{
+    position:absolute
+    left:50%
+    top:50%
+    transform:translate(-50%,-50%) #x,y
+}
+
+
+---------------
+transform:: behavior changes of the object
+    -rotate
+    -skew
+    -scale
+    tarnslate:m) ta(x direction , y diretion)
+
