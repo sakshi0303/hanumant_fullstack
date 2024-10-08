@@ -1,10 +1,13 @@
 JAVA:
-#systrace:: SHOTCUT for sopln
+#systrace:: SHOTCUT for sopln   printbox with classname
+//psvm:: for s=public statci void main
+// sysout: enpty printbox
 
 >OBJECT ORIENTED , PLATFORM INDEPENDENT(IT CAN RUN IN ANY PLATFORM VISUALcode,intellige,eciplse NETBEAN,ANY CODE EDITOR)  PROGRAMING LANGUAGE 
 >1995 JIMS GARWINS
 >COFEE
 > NON PRIMITIE: CLASS, ARRAY, ENUM, STRING 
+>
 
 WHY PLATFORM INDEPENDENT:
 JAVA COMPILER::: CONSERT SRC CODE TO BYTE CODE(.class) and it will check the synaztax and all error at a time and diplay all error at once 
@@ -64,7 +67,8 @@ public class Main{
     }
 }
 
-
+string in double code
+character in single code
 
 DOWNLOAD:
 arms mac1  dmg file
@@ -163,4 +167,36 @@ concatination
 -----------------------------------------------------
 
 SCANNER::
-    > scanner is used to take the input from the user
+    > Scanner class is used to take the input from the user
+    > import java.util.Scanner
+    > Scanner sc=new Scanner(System.in)
+    > System.in will take the values as input
+    > if varibales are defined inside main class, then we have to make a method to display the result.and call that method in main method.
+    > if the variables are defined in main method then the output is showed and calculated in the main method only
+
+>if we will take the input as a integer so we willl use .nextInt()
+>float ----> .nextFloat()
+>long ----> .nextLong()
+>for charater and string, whole sentence ----> .nextLine()
+> byte(stream) ----> .nextByte()
+> short(stream) ----> .nextShort()
+
+
+-----------------------------------------------------
+
+>> Block: set of staments which is inclosed in curly braces
+these are 2 types:
+-static block  
+-non static block
+
+-static block  are the block which i
+
+-------------------------
+
+Q1-differnece between block and constructor and which has a highest priority
+Ans-block and constructor both have highest priority in execution
+    - static block has more prioirty than constructor(why? static has no parameter static(), but constror have parameter)
+    - constructor has more priority than non stactic block(why? constructor initalise once, block insitialise multiple times)
+   
+-------------------------
+

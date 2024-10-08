@@ -83,10 +83,14 @@ Q: difference between class and functional Component
 DOM is a tree like struture 
 
 
+Reat:
+    > single page application   
+    > page rerendering
+    > reusable components
 -----------------------
 
 
-Virtual DOM: it is a representation of actual DOM (copy of actual DOM)
+Virtual DOM: it is a representation of actual DOM (copy of actual DOM) rerending happens due to this
 > it is used to improve the performance of updates and changes to the actual DOM by reducing the no of expensive DOM manipulation
 >When a component state or props changes react creat a new virtual DOM tree and compare it to the previous tree and then apply only minimuam set of changes necceary to actual DOM  this imporves the performance of application
 > Javacript : html> head> body >div(h1=x),nav directly changes in DOM
@@ -106,7 +110,7 @@ Hoisting is the deafutlt behaivor of JS where all the funcion and varible declar
 Q1: 
 
 x=10
-console.log(10)
+console.log(x)
 var x
 
 ANswer:::::
@@ -119,7 +123,7 @@ var x
 
 Q2:
 IS let and const are hosting????
--- both let and const are hoisted but they sta in  temporal dead zone
+-- both let and const are hoisted but they stay in  tempeoral dead zone(disabled)
 
 x=10                 #### temparay dead zone
 console.log(x)
@@ -253,29 +257,24 @@ fucntion xyz(){
 }
 
 fucntion xyz(){
-    var x #undefine
-
+    
     console.log(x)  #undefined
     -------------
-    var x=100 terorarl dead zone --- ERROR with no output 
+    var x=100 
     console.log(x) #100
 }
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
 fucntion xyz(){
-    
-
     console.log(x)  #ERROR --> X is not defined
     -------------
     x=100  
     console.log(x) 
 }
+xyz()
 
 fucntion xyz(){
-    
-
-    
     let x=100  
     
 }
@@ -284,7 +283,7 @@ console.log(x) ---> ERROR  x in NOT defined
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
-deadzon is disabled  let x is undefined but javascript will throw error x is undefined
+deadzone is disabled  let x is undefined but javascript will throw error x is undefined
 console.log(x)
 x=10
 -----------
@@ -314,7 +313,7 @@ x() ----------------> answer--- hellow
 undefined x by deafult
 
 
-if i wrote 
+
 console.log(x)------ ERROR " X IS NOT DEFINED"
 
 
@@ -348,10 +347,10 @@ fucntion thtat are passed into another fucntion as an argument are know as callb
 -----------------------------------------------------------------------------------------------------------------------------------
 --
 this by default refers to windows
-otherwise it will referes to tparent 
+otherwise it will referes to parent 
 
 
-functional scope will not allow  window to access its x as well
+functional scope will not allow  window to access the value of x as well
 fucntioin xyz(){
     var x=10
     console.log(x)==10
@@ -428,5 +427,5 @@ transform:: behavior changes of the object
     -rotate
     -skew
     -scale
-    tarnslate:m) ta(x direction , y diretion)
+    tarnslate-->:move(x direction , y diretion)
 
