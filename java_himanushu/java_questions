@@ -1,5 +1,9 @@
+
 Q1-differnece between block and constructor and which has a highest priority
-Ans-block and constructor both have highest priority in execution
-    - static block has more prioirty than constructor(why? static has no parameter static(), but constror have parameter)
-    - constructor has more priority than non stactic block(why? constructor initalise once, block insitialise multiple times)
-    
+Ans Static, non static , constructor
+    - static has most precendence
+    - class will be create
+    - obj of the class is called, ( same time non static block and constructor will be invoked)
+    - non static block
+    -constructor
+Q // this refers to the current class or component
