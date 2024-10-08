@@ -6,7 +6,7 @@ const router=express.Router()
 
 // #http://localhost:8080/users/update
 router.post('/create',registerUser)
-router.put('/update/:_id',updateUser)
+router.put('/update/:_id',checkToken,updateUser)
 router.delete('/delete/:_id',checkToken,deleteUser)
 
 router.post('/login',loginUser)

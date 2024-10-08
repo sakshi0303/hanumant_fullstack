@@ -62,8 +62,28 @@ const loginUser=async(req,res)=>{
 
 }
 
-const updateUser=(req,res)=>{
-    res.send("update api working good")
+const updateUser=async(req,res)=>{
+    // res.send("update api working good")
+    let userid=req.user
+    let _id=req.params._id;
+    if(userid!==_id){
+       return res.json({msg:"unauthorised",success:false})
+    }
+    let {name,password,address,ProfilePic,CoverPic}=req.body
+    let hashpassword;
+    if (password){
+        hashpassword = bcrypt.hashSync(password, salt);
+    }
+    
+    try{
+        let data=await User.findByIdAndUpdate(userid,{$set:{name,password:hashpassword,address,ProfilePic,CoverPic}},{new:true})
+        return res.json({msg:"data updated successdully",success:true,data})
+
+
+    }catch(e){
+        return res.json({msg:"error in updating data",success:false,error:e.message})
+
+    }
 
 }
 
