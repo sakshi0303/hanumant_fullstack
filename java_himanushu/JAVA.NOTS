@@ -211,7 +211,31 @@ Ans Static, non static , constructor
     -constructor
 ----------------------------------------------------------------------------------------------------
 
->>> this always for parametrised constructor keyword refers to the current class or component and this is used to load the data into variables
 >>> parameters are the variables that transfer data from one method to another method
+>>Non parametriesed constructor are the constructore which does not take any argument
+>> we have to create method and obj to display the output stored.
 
+> parameters are the variables which are used to transfer data from one method to another
+Q:::: to perform the paramertised construcntor we have to use this keyword
+>>> this always for parametrised constructor keyword refers to the current class or component and this is used to loading the data into variables
 ----------------------------------------------------------------------------------------------------
+
+
+OPERATORES::
+
+operators are used to perform the operations on the object or component.
+there are 4 types of operators
+    1) Arthematic ::: +,-,/,*,%
+    2) Logical ::: &&,||,!
+    3) Relational::: <=,>=,>,<,!=
+    4) Increment and Decrement::: ++,--
+
+Control Structure::::
+
+    Control Structure are used to control the execution flow of the PROGRAM
+    these are three types::
+        1) Selections Statement : if,else-if,else nested if-else 
+        2) Iterative Statement:: while, dowhile,for
+        3) Branching Statement:: swtich,return ,break
+    
+    

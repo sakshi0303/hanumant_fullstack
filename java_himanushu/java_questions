@@ -7,3 +7,7 @@ Ans Static, non static , constructor
     - non static block
     -constructor
 Q // this refers to the current class or component
+
+
+Q:::: to perform the paramertised construcntor we have to use this keyword
+>>> this always for parametrised constructor keyword refers to the current class or component and this is used to load the data into variables
