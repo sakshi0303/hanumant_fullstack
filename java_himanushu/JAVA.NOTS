@@ -9,6 +9,16 @@ JAVA:
 > NON PRIMITIE: CLASS, ARRAY, ENUM, STRING 
 >
 
+Core Java---
+inferface
+inheritance
+polymorism
+innerclass
+lambda expression - to increase the performance in projects
+array,enum,string
+Collection frameword: set,List,Queue,stack,LinkedList,PriorityQueue, DoubleEndedQueue(anywhere in line we can push or pop)
+
+
 WHY PLATFORM INDEPENDENT:
 JAVA COMPILER::: CONSERT SRC CODE TO BYTE CODE(.class) and it will check the synaztax and all error at a time and diplay all error at once 
 BYTE CODE WILL RUN IN any given platorm
@@ -238,4 +248,15 @@ Control Structure::::
         2) Iterative Statement:: while, dowhile,for
         3) Branching Statement:: swtich,return ,break
     
-    
+// in vscode first class  that has psvm among three classes is always consider main class 
+
+int arr[]={1,2,3}; #1D array
+
+Q : if interger input is taken before string input then it skip the string input
+Ansert: // int res=Integer.parseInt(sc.nextLine());
+        float res=Float.parseFloat(sc.nextLine());
+
+
+in 1 file, if more than 1 classes are made then, 
+    -1st class should be public and has psvm method,    
+    -and other two classes insided ame file should not be public
