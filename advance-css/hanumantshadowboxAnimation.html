@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            background-color: burlywood;
+            color: white;
+        }
+        .container{
+            width: 300px;
+            height: 230px;
+            background-color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .container:hover{
+            transform: scale(1.05);
+            background-color: rgb(12, 12, 21);
+            transition:all ease 0.3s
+        }
+        .iconDiv{
+            width: 80px;
+            height: 80px;
+            background-color: yellow;
+            border-radius: 50%;
+            /* box-shadow: x y blur spread color inset; */
+           
+        }
+        .shadowDiv{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            
+        }
+        .container:hover .shadowDiv{
+            /* transform: scale(1.2); */
+            animation: spread 1.3s linear 2;
+        }
+        @keyframes spread{
+            0%{
+                transform: scale(1);
+                box-shadow: 0 0 10px 5px wheat;
+                opacity: 1;
+            }
+            100%{   
+                transform: scale(1.4);
+                box-shadow: 0 0 10px 5px black;
+                opacity: 0.2;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="iconDiv">
+            <div class="shadowDiv"></div>
+        </div>
+        <h3>Lorem ipsum dolor sit amet.</h3>
+        <h3>Lorem ipsum Te laborum.</h3>
+    </div>
+</body>
+</html>

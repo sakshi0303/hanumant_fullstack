@@ -1,0 +1,70 @@
+<!-- # left : calc(100%-150px)  # 150px is the height of the box
+# forward will stop instead of infinite animation: move 3s linear forward
+
+# gradiant
+@click path maker
+# https://bennettfeely.com/clippy/
+
+> . peudo element, hover
+> . 
+box-shadow: x y blur spread  color insert
+> . . peudo class before, after
+> . .  -->
+
+<!-- animation can run effect multuiple times -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .box{
+            background-color: red;
+            height: 150px;
+            width: 150px;
+            animation: run 4s linear infinite;
+            position: absolute;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+        @keyframes run{
+            0%{
+                top: 0;
+                left: 0;
+                transform: rotate(3600deg)
+            }
+            25%{
+                top: 0;
+                left:calc(100% - 150px) ;
+            }
+            50%{
+                top: calc(100vh - 150px);
+                left:calc(100% - 150px) ;
+            }
+            75%{
+                top: calc(100vh - 150px);
+                left:0;
+            }
+            100%{
+                top: 0;
+                left:0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
