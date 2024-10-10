@@ -16,3 +16,9 @@ Q : if interger input is taken before string input then it skip the string input
 Ansert: // int res=Integer.parseInt(sc.nextLine());
         float res=Float.parseFloat(sc.nextLine());
 
+Q: differnce between local and instance variable??
+// final vaiables are the variables wihich is instalised with value and we cannot modify it at a run time
+
+//Differnce between: 
+//	local variable are variable which is declared inside a methood.abstract
+//	instance variable are the variable which is written outside of method

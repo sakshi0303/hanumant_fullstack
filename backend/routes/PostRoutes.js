@@ -1,13 +1,12 @@
 const express=require('express')
 const { createPost, deletePost, updatePost, getAllPost, getYourPost } = require('../controllers/PostController')
-
 const router=express.Router()
-
-router.post('/create',createPost)
-router.delete('/delete/:_id',deletePost)
-router.put('/update/:_id',updatePost)
+const checkToken=require('../middleware/checkToken') 
+router.post('/create',checkToken,createPost)
+router.delete('/delete/:_id',checkToken,deletePost)
+router.put('/update/:_id',checkToken,updatePost)
 router.get('/getallpost',getAllPost)
-router.get('/getyourpost',getYourPost)
+router.get('/getyourpost',checkToken,getYourPost)
 
 
 

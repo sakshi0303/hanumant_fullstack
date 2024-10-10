@@ -10,12 +10,22 @@ JAVA:
 >
 
 Core Java---
+Oct 10: 
+package
+access modifies
+relations
+    > referencse
+    > is a relation inheritance
+    > inner class
+
+
 inferface
-inheritance
 polymorism
 innerclass
 lambda expression - to increase the performance in projects
 array,enum,string
+local variable
+static -> local and instance varible
 Collection frameword: set,List,Queue,stack,LinkedList,PriorityQueue, DoubleEndedQueue(anywhere in line we can push or pop)
 
 
@@ -260,3 +270,49 @@ Ansert: // int res=Integer.parseInt(sc.nextLine());
 in 1 file, if more than 1 classes are made then, 
     -1st class should be public and has psvm method,    
     -and other two classes insided ame file should not be public
+
+Interface:::
+    >the process of interlinking classes using implement keyword
+    > it is a collection of abstract method and concrete method
+    > abstract method are the method which is declared with abstract keyword , they dont have the method body eg abtract void add(int x,int y);
+    > abstract method is defined in abstract class and interfaces only. 
+    > abstract method will be called by classes that implement this interface
+    > we cannot instantiate interface
+Package::
+    >it is a collection of classes and interfaces
+    >it is of two types:
+        > Pre defined package (packages which is avaible from java library, java.util,java.lang,jakarta.servlet.http, )
+        > User Defined package (created by users )
+
+Access Modifiers:
+    which defines the availablity of class or compononet throughout the project
+    > public -> accessed throughout the project
+    > private -> access only withon a class
+    > protected -> access within the package.
+    > default -> access within the package but also avalible to chilld class
+
+> import is to make the classes available to the other classes
+> we can call import with packagename.*; for all 
+> pacakagename.classname for specific //import p1.AccessModifiers;
+> import p1.* or p1.classname and then make the obj of the class and print inside the main mehod or any method obj.name
+package p2;
+import p1.AccessModifiers;
+//import p1.AccessModifiers;
+public class AccessModifier2 {
+//	public void access() {
+//		System.out.println(obj.name);
+//		
+//	}
+	public static void main(String args[]) {
+		AccessModifiers obj=new AccessModifiers();	
+		System.out.println(obj.name);			
+	}
+}
+
+// final vaiables are the variables wihich is instalised with value and we cannot modify it at a run time
+
+//Differnce between: 
+//	local variable are variable which is declared inside a methood.abstract
+//	instance variable are the variable which is written outside of method
+
+
