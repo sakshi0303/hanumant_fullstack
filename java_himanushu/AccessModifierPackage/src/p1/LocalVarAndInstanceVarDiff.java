@@ -5,16 +5,19 @@ package p1;
 //	local variable are variable which is declared inside a methood.abstract
 //	instance variable are the variable which is written outside of method
 
+
 public class LocalVarAndInstanceVarDiff {
 	final int x=12323;  //instance variable
 	static String y="instance variable";		//instance variable	
 	
 	
+	
 	public void add() {
 		int age=12; // local variable
-		String name="local-variable"; // local varible
+		String name="local-variable"; // local variable
 		System.out.println(age);
 		System.out.println(name);
+		
 
 	
 	}
@@ -29,7 +32,10 @@ public class LocalVarAndInstanceVarDiff {
 		String a="normalvariable";
 		
 		LocalVarAndInstanceVarDiff obj= new LocalVarAndInstanceVarDiff();
+		AccessModifiers objac=new AccessModifiers();
+		
 				System.out.println(a);
+				System.out.println(objac.def);
 				obj.add();
 				System.out.println(obj.x);
 				System.out.println(LocalVarAndInstanceVarDiff.y);

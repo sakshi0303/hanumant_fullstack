@@ -22,3 +22,10 @@ Q: differnce between local and instance variable??
 //Differnce between: 
 //	local variable are variable which is declared inside a methood.abstract
 //	instance variable are the variable which is written outside of method
+
+Q:Access Modifiers:
+    which defines the availablity of class or compononet throughout the project
+    > public -> accessed throughout the project by creating obj
+    > private -> access only withon a class
+    > protected -> access within the package and outside the package by extend keyword
+    > default -> access within the package by creating object

@@ -1,4 +1,5 @@
 JAVA:
+//cmd+shift+o-- for instialling all the packages used in class
 #systrace:: SHOTCUT for sopln   printbox with classname
 //psvm:: for s=public statci void main
 // sysout: enpty printbox
@@ -286,11 +287,11 @@ Package::
 
 Access Modifiers:
     which defines the availablity of class or compononet throughout the project
-    > public -> accessed throughout the project
+    > public -> accessed throughout the project by creating obj
     > private -> access only withon a class
-    > protected -> access within the package.
-    > default -> access within the package but also avalible to chilld class
-
+    > protected -> access within the package and outside the package by extend keyword
+    > default -> access within the package by creating object
+> we can sysout only inside method
 > import is to make the classes available to the other classes
 > we can call import with packagename.*; for all 
 > pacakagename.classname for specific //import p1.AccessModifiers;
@@ -298,11 +299,8 @@ Access Modifiers:
 package p2;
 import p1.AccessModifiers;
 //import p1.AccessModifiers;
-public class AccessModifier2 {
-//	public void access() {
-//		System.out.println(obj.name);
-//		
-//	}
+public class AccessModifier2 extend AccessModifier {
+
 	public static void main(String args[]) {
 		AccessModifiers obj=new AccessModifiers();	
 		System.out.println(obj.name);			
@@ -316,3 +314,15 @@ public class AccessModifier2 {
 //	instance variable are the variable which is written outside of method
 
 
+------------------------------
+
+Relations:::::
+
+
+The process of establishing communication between the components are called Relations:
+> it is of three type:
+    > Reference (has a relation) interlinking objects
+    > Inheritance (is a relation) interlinking classes
+    > InnerClass 
+> within same package we dont need to import classes or variible of differnt classes
+> to access the resourcess within same package we only need to create obj of differnt class 
