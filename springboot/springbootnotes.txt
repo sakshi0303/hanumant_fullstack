@@ -1,0 +1,282 @@
+Couse : https://www.youtube.com/watch?v=uTySfxxq77I
+
+12 hour Couse
+
+Springboot annotation helps developer to make the applicaion fast
+@springbootApplication
+@Controller
+@RestController
+@requestMapping
+@getmapping
+@postmapping
+@putmapping
+@deletemapping
+@Conponent
+@autowired
+@Service
+@repository
+
+
+Why Spring Boot:
+    >ealier we use Servlet-jsp(java servlet pages), spring--> springMVC--> Springboot
+
+java servlet: jsava servlet pages:
+    Definition: A Servlet is a Java program that runs on a server and handles HTTP requests and responses. It acts as a middle layer between client requests and server responses.
+
+Steps:    
+1) we have create maven project>
+2) select maven-archetype-webapp from org.apache
+>) groupid: com.sakshijava.restapi
+>)artifact: springrestapi  ///only spring not spring boot TO USE SPRING< SERVLET-JSP> Spring mvc
+>) BUILD SUccess
+
+------------------------------------------------------------------------------	------------------------------------------------------------------------------
+	
+
+why spingboot::??
+
+	in spring project::
+		>) make java folder inside src> main>java, take care of the version manually
+		> we have to manually add all the dependencies in pom.xml( spring context-api, spring-web, spring web-mvc, jakarta-servlet apis)  with its versions from >https://mvnrepository.com/  
+		> in spring-web  can use @aanotation and use it @restcontroller @getmapping @bean
+		> we have add the tomcat appache server externally to deploy our application as well and configure the tocat local server adddress in out system
+		> we need to create DispatcherServlet class (First COntroller) it mapping the request and redirct or invoke perticular contoller (h1controller, hellocontroller)
+
+	In springboot everything is automatically embedded
+		> Tomcat appache server automatically embedded
+		>dispacherServlet class autometically embesdded
+		
+	
+	In Spring Intialiser
+	> after downloading and extracting
+	> in eclise right click import ,> existing mavanproject> select address of project downloaded from spring initaliser in download folder
+	> select pom.xml
+	> finish a project and a project will be created
+	QUESTIOM:: IMPLEMENT A REST API WHICH RETURN HELLO SPING BOOT with SPING INTIALISER
+	> create new class HelloController.java inside springboot.restapi.springbootrestapi package
+	> make a method inside hellocontroller class public String Hello(){ return "hello spring boot";}
+		package springboot.restapi.springbootrestapi;
+		import org.springframework.web.bind.annotation.GetMapping;
+		import org.springframework.web.bind.annotation.RestController;
+		
+		@RestController
+		public class HelloController {
+			
+			@GetMapping("/hello")
+			public String Home() {
+				return "hello spring boot";
+			}
+		
+		}
+	> run as java application  - select project name and main class as springboot.restapo.springbootrestapi
+	> Tomcat initialized with port 8080 (http) http://localhost:8080/hello
+	> in pom.xml we have springbot-starter-web and springboot-started-test
+	
+	------------------------------------------------------------------------------	------------------------------------------------------------------------------
+	
+	QUESTION: IMPLEMENT A REST API AND RETURN HELLO SPRINGBOOT WITHOUT SPINGInitialsor and  WITH SIMPLE MAVEN PROJECT SKIPPING ACHETYPE SELECTION
+	Question:::How to make spring-boot project without spring-initaliser? What is spring-boot
+		> through Simple maven project( skip archetype selection)
+        > add parent devepnedency and spring-boot-starter-web and parnetn dependency
+        >parent version will be applicable to all the child depenedcy
+				<parent>
+				  <groupId>org.springframework.boot</groupId>
+				    <artifactId>spring-boot-starter-parent</artifactId>
+				    <version>3.3.4</version>
+				</parent>
+				<dependencies>
+                    <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+                    <dependency>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-web</artifactId>
+                    </dependency>
+			    </dependencies>
+        > HellowController method and @GetMapping @RestController
+		> make one StarterApp.java file -it will have main meton psvm and SpringApplication obj
+		> Make one class  StarterApp 
+            package withoutSpringIntialiser;
+            //import org.springframework.boot.SpringApplication;
+            //import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+            //@EnableAutoConfiguration
+            //@ComponentScan -- scann the hellocontorller.java file and find restcontrollor
+            import org.springframework.boot.autoconfigure.SpringBootApplication;
+            @SpringBootApplication
+            public class StarterApp {
+                public static void main(String[] args) {
+                    // TODO Auto-generated method stub
+                    SpringApplication SpringApplication=new SpringApplication(StarterApp.class);
+                    SpringApplication.run(args);
+                }
+
+            }
+        >DOWNLOAD spring-boot-devTools DEPENDENCY IN SPRINGBOOT this dependeccy will make the server run in the backgroud and changes will be shown immediately
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <version>3.3.4</version>
+        </dependency>
+        > to stop the tomcat server there is a stop sign to stop the server
+
+	------------------------------------------------------------------------------	------------------------------------------------------------------------------
+	
+	Question: differnce between spring-web and spring-boot-starter-web??
+	answer: spring-boot-starter-web already have spring-web and it has tomcat server, dispacterServlet class,sping-webmvc
+		> remove version of sping-boot-starter-web
+		
+------------------------------------------------------------------------------	------------------------------------------------------------------------------
+	
+Q GOT THIS ERROR  was no org.springframework.boot.web.servlet.server.ServletWebServerFactory:
+@EnableAutoConfiguration
+
+------------------------------------------------------------------------------	------------------------------------------------------------------------------
+	
+
+Question>> SprignApplication Run
+
+IOC Container
+
+run has alot of method:
+    > WebApplicationContext
+    > ApplicationContext
+    >ConfigurableApplicationContext
+> Container access all the (obj which is manage by springboot)
+> make Student class and generate contructore(using super class and with fields ) and getter and setter and public string studentname="salshi";
+> instead of creating studetn class object , we will use annotation @Component at the top of Student class --> it will create object for you and [ush into the container]
+> in staterapp, 
+@SpringBootApplication
+public class StarterApp {
+	public static void main(String[] args) {
+		SpringApplication SpringApplication=new SpringApplication(StarterApp.class);
+		ConfigurableApplicationContext container = SpringApplication.run();
+		Student student =container.getBean(Student.class);
+		System.out.println(student);
+		System.out.println(student.getStudentname());
+//		@Bean
+//		public Student createobj() {
+//			return new Student();
+//		}
+> IMPORTANT: WE have to give @Component on the student class so, that spring boot  can create the obj present in configurableApplication context
+>
+
+>if we dont want to write @component on the student class, then we have to manually create the obj in the StatterApp pages
+>Bean is able to create the objexct and push into the container
+>@CompleteScan is used to scann all the classes inside staterApp package
+>All run obj are the container which is able to manage the obj creatoin of the classes
+
+--
+
+
+------------------------------------------------------------------------------
+----------------------------------------------------------------------------	------------------------------------------------------------------------------
+	
+
+to change the port of the spring boot server
+- inside src/main/resourcess
+    make one application.properties
+    server.port=8086
+
+if the prospective gets close
+> go to window
+> show view
+> package expolorer
+
+if we need to view hidden file
+> three drops next to folder name
+>filter
+> uncheck .*resources
+
+------------------------------------------------------------------------------
+
+if some other class is there inside starterapp.class,
+then also it will run , provided that new class shouold have @springbootApplication aannotation
+
+------------------------------
+
+Jar Verses Flat Jar Difffernce ------------------------------
+
+>>>when we complie src code converted into byte code and .class file is created
+
+>>>alot of these predefinied class file are saved inside these jar files
+>>>collection of .class files are called as Jar file
+
+>>>we can create our own project jar file and save inside target folder
+>>>this jar file i can give to other person to use it
+
+> Rightclick project run As> Maven install/ Maven build-goal=clean install and jar file will be created insode target folder
+
+
+to run the jar file in some system
+> cmd comand line prompt
+> java -jar withoutSpringIntialiser-0.0.1-SNAPSHOT.jar
+> zip and unzip in the folder to see the content. there are some content which are missing
+> we will see it is normal jar and no dependency is added hellocontroller
+> so we need to have flat jar
+> differnce bwetten jar and flat jar
+
+flat jar: it will have all project files : application.protieies file, pop file,all .class file
+to create flat jar 
+>download sping-boot-maven-plugin form mvn repositority,
+> change the pom.xml file as well
+  </dependencies>
+  <build>
+	<plugins>
+		<plugin>	
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-maven-plugin</artifactId>
+		</plugin>
+	</plugins>
+  </build>
+    </project>  
+> right click on main class and run as maven install- it will generate .jar file in target folder
+> go to terminal and inside that project folder run below command
+> java -jar withoutSpringIntialiser-0.0.1-SNAPSHOT.jar
+> it will execute the project on terminal or in anyone else system
+> file localhost/8086/home:: check api will work
+
+
+--------------------------------------------------------------------------------------------------------------
+
+Differnence between application.properties and application.yaml file
+> group name: folder name
+> artifact: project name 
+
+
+Through Spring Intialiser:
+    - we will get all the manual things fdirectly
+    - application.properties
+
+    - in run as : configuration setting:
+        com.example.demo.DemoApplication is the main pagaakge where springapplication.run is called
+        projectid: project folder
+
+    -in application.properties:
+        server.port=9090
+        myapp.name=sakshi
+        myapp.version=3.2
+        myapp.desc=this is desc
+    
+    in MyApp class:
+        > puclic String myapp_name; puclic float myapp_version; puclic String myapp_desc;
+        > create getter and setter , constructor with fields, constructor with super class
+        > define @Component anchor tag
+             @Value("${myapp.name}")
+                public String myappname;
+        > in spingapplication.run class diplay the value
+                ConfigurableApplicationContext container=SpringApplication.run(DemoApplication.class, args);
+                MyApp myapp=container.getBean(MyApp.class);
+                System.out.println(myapp);
+                System.out.println(myapp.myappname);
+--Application.properties should be inside 
+    src/main/resources or 
+    Spingintialiser project diretory or 
+    src/main/resources/config it will work
+    application.properties  inside """""config folder"""""" at any location within a porject will work
+-- otherwise it will through error and springboot wont be able to read appication.properties file
+-- we have to give springboot directory  @PropertySource("/static/application.properties")
+
+the name of the application.properties should be same otherwise it will through error
+----------------------------------------------------------------------------------------------------------
+application.yaml or YML
+> written in jsom format
+> application.properties to YML
+

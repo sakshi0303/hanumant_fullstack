@@ -1,0 +1,8 @@
+Server:
+  port:8900
+
+myapp:
+  name:SakshiAppYml
+  version:3.2
+  description: this is yml version app file store in json syntax
+
