@@ -29,6 +29,19 @@ const UserSchema=new mongoose.Schema({
 },{
     timestamps:true
 })
+UserSchema.add({
+    followers:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'user'
+
+    },
+    following:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'user'
+
+    }
+
+})
 
 module.exports=mongoose.model('user',UserSchema)
 

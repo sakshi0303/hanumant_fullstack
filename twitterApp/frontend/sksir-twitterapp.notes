@@ -10,16 +10,37 @@ pnf
 
 connect frontend and backend
 postman register api
- await fetch('')
+ await fetch('') check in signup
+let obj={
+      name:nameref.current.value,
+      password:passwordref.current.value,
+      email:emailres.current.value
+    }
+    console.log(obj);
+    let data=await fetch('http://localhost:8080/users/create',{
+      method:'POST',
+      headers:{
+        'content-type':'application/json'
+      },
+      body:JSON.stringify(obj)
+    });
+    let res=await data.json()
+    console.log(res)
+    if (res.success){
+      toast.success(res.msg,{position:'top-center'})
+      navigate('/login')
 
+    }else{
+      toast.error(res.msg,{position:'top-center'})
+
+    }
 Cors:
  //cross origin resourse sharing
   > npm i coars 
   > in backend nodemon server.jsx
 const cors=require('cors')
-
- const cors=require('cors')
  app.use(cors())
+ backend in running in 3030 post frontend is running in 8080 port so cors will allow to transfer data
 
 doanload redux toolkit 
 > src store.jsx
@@ -33,3 +54,6 @@ react-toastify
 
 > make the https://redux-toolkit.js.org/tutorials/quick-start
 npm install @reduxjs/toolkit react-redux in frontend
+
+make store.js
+useselector 
