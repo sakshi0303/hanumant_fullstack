@@ -1,0 +1,35 @@
+npm i react-router-dom
+search form in twailwind tap
+copy whoel component
+form login form
+form signup form 
+tailwing install 
+make component and pages folder . convert to 
+pnf 
+
+
+connect frontend and backend
+postman register api
+ await fetch('')
+
+Cors:
+ //cross origin resourse sharing
+  > npm i coars 
+  > in backend nodemon server.jsx
+const cors=require('cors')
+
+ const cors=require('cors')
+ app.use(cors())
+
+doanload redux toolkit 
+> src store.jsx
+
+> download cors()
+
+fetch api of postman
+react-toastify
+ npm install --save react-toastify
+
+
+> make the https://redux-toolkit.js.org/tutorials/quick-start
+npm install @reduxjs/toolkit react-redux in frontend
