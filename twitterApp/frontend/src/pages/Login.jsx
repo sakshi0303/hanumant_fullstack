@@ -1,6 +1,46 @@
-import React from "react";
-import { Link } from "react-router-dom";
+// login using axios and onchange event
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios"
+import { toast } from "react-toastify";
+
+import { useDispatch } from "react-redux";
+import { setSate } from "../store/UserSlice";
+
 const Login = () => {
+  let dispatch=useDispatch()
+
+  const [details, setdetails] = useState({
+    email:'',
+    password:''
+  });
+  let navigate=useNavigate();
+  // setDetails({...details,password:"1234"})
+
+  const handleChange=(e)=>{
+    console.log(e.target.name);
+    console.log(e.target.value);
+    setdetails({...details,[e.target.name]:e.target.value}); //dynamic key-value
+
+  }
+  //npm i axios
+  const handleSubmit=async()=>{
+    let res=await axios.post('http://localhost:8080/users/login',details)
+    console.log(res.data);
+    if (res.data.success){
+      toast.success(res.data.msg,{position:'top-center'})
+      dispatch(setSate(res.data.user))
+
+      //navigate('/')
+
+    }else{
+      toast.error(res.data.msg,{position:'top-center'})
+
+    }
+
+
+  }
+
   return (
     <div className="flex items-center justify-center h-screen w-full px-5 sm:px-0">
       <div className="flex bg-white rounded-lg shadow-lg border overflow-hidden max-w-sm lg:max-w-4xl w-full">
@@ -17,9 +57,11 @@ const Login = () => {
               Email Address
             </label>
             <input
+              name="email"
               className="text-gray-700 border border-gray-300 rounded py-2 px-4 block w-full focus:outline-2 focus:outline-blue-700"
               type="email"
               required
+              onChange={handleChange}//event
             />
           </div>
           <div className="mt-4 flex flex-col justify-between">
@@ -29,8 +71,10 @@ const Login = () => {
               </label>
             </div>
             <input
+            name="password"
               className="text-gray-700 border border-gray-300 rounded py-2 px-4 block w-full focus:outline-2 focus:outline-blue-700"
               type="password"
+              onChange={handleChange} //event
             />
             <a
               href="#"
@@ -40,7 +84,7 @@ const Login = () => {
             </a>
           </div>
           <div className="mt-8">
-            <button className="bg-blue-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-blue-600">
+            <button onClick={handleSubmit} className="bg-blue-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-blue-600">
               Login
             </button>
           </div>

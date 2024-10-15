@@ -1,19 +1,25 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+let UserDetail=JSON.parse(localStorage.getItem("TwitterLogin"))
 const initialState = {
-  value: 0,
+  login:UserDetail?UserDetail.login:false,
+  user:UserDetail?UserDetail.user:'',
+  token:UserDetail?UserDetail.token:'',
 }
 
 export const UserSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
-    increment: (state) => {
+    setSate: (state,action) => {
+      console.log(action);
       // Redux Toolkit allows us to write "mutating" logic in reducers. It
       // doesn't actually mutate the state because it uses the Immer library,
       // which detects changes to a "draft state" and produces a brand new
       // immutable state based off those changes
-      state.value += 1
+      state.token=action.payload
+      state.login=true
+      window.localStorage.setItem("TwitterLogin",JSON.stringify({login:true,token:action.payload,user:''}))
     },
     decrement: (state) => {
       state.value -= 1
@@ -25,6 +31,6 @@ export const UserSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = UserSlice.actions
+export const { setSate, decrement, incrementByAmount } = UserSlice.actions
 
 export default UserSlice.reducer

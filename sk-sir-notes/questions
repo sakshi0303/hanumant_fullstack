@@ -429,3 +429,15 @@ transform:: behavior changes of the object
     -scale
     tarnslate-->:move(x direction , y diretion)
 
+---------------- Dynamic values populate ----------------
+let name="Couse"
+let value="fullstack"
+let obj={}
+obj.name=value {name:"fullsstack "}
+obj[name]=value {couse:"fullsstack "}
+handlesubmit
+handlechange(e)
+
+npm i axios
+in axio: we dont need to convert into JSON
+in axios: is faster 
