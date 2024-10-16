@@ -109,9 +109,10 @@ const deleteUser=async(req,res)=>{
 
 }
 
-const getuserinfo=async()=>{
+const getuserinfo=async(req,res)=>{
     try {
         let userid=req.user;
+        // let user =await User.findById(userid).select(_id)
         let user =await User.findById(userid)
         return res.json({msg:"taken is successfully fetched",success:true,user})
     } catch (error) {
@@ -125,5 +126,6 @@ module.exports={
     registerUser,
     loginUser,
     updateUser,
-    deleteUser
+    deleteUser,
+    getuserinfo
 }

@@ -7,7 +7,7 @@ const initialState = {
   token:UserDetail?UserDetail.token:'',
 }
 
-const fetchUserById = createAsyncThunk(
+export const fetchUserById = createAsyncThunk(
   'users/fetchByIdStatus',
   async (token) => {
     const response = await userAPI.fetchById(userId)

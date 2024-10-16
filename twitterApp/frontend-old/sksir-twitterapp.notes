@@ -6,10 +6,11 @@ form signup form
 tailwing install 
 make component and pages folder . convert to 
 pnf 
+in app.jsx 
 
 npm i
 npm i 'react-router-dom'
-npm install @reduxjs/toolkit react-redux
+npm install @reduxjs/toolkit react-redux for storing the user info after login
 npm i react-redux
 npm install react-redux
  npm install --save react-toastify
@@ -133,3 +134,6 @@ const handleChange=(e)=>{
 
   }
 
+to call api to backed in reduc userslice
+createAsyncThunk::
+https://redux-toolkit.js.org/api/createAsyncThunk
