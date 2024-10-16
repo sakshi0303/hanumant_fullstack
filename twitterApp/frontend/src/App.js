@@ -1,28 +1,23 @@
-
-import './App.css'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import PNF from './pages/PNF';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { useSelector } from 'react-redux';
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
-  let ctx = useSelector((state)=>state.user)
-  console.log(ctx)
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-            <Route path='/' element={<Home/>} />
-            <Route path='/login' element={<Login/>} />
-            <Route path='/register' element={<Signup/>} />
-            <Route path='/*' element={<PNF/>} />
-        </Routes>
-        <ToastContainer/>
-      </BrowserRouter>
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
