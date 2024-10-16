@@ -1,9 +1,10 @@
-import React from 'react'
 
-const Pnf = () => {
+import React from "react";
+const PNF = () => {
   return (
-    <div className='text-center bg-black'>Pnf 404</div>
-  )
-}
-
-export default Pnf
+    <div>
+        page not found
+    </div>
+  );
+};
+export default PNF;

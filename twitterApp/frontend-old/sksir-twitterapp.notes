@@ -7,6 +7,12 @@ tailwing install
 make component and pages folder . convert to 
 pnf 
 
+npm i
+npm i 'react-router-dom'
+npm install @reduxjs/toolkit react-redux
+npm i react-redux
+npm install react-redux
+ npm install --save react-toastify
 
 connect frontend and backend
 postman register api

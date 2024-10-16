@@ -1,42 +1,47 @@
-import axios from "axios";
+// login using axios and onchange event
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios"
 import { toast } from "react-toastify";
-import { fetchUserById, setState } from "../store/UserSlice";
+
+import { useDispatch } from "react-redux";
+import { setSate } from "../store/UserSlice";
 
 const Login = () => {
-  let dispatch = useDispatch()
-  let navigate = useNavigate()
-  const [details, setDetails] = useState({
-    email:"",
-    password:""
+  let dispatch=useDispatch()
+
+  const [details, setdetails] = useState({
+    email:'',
+    password:''
   });
+  let navigate=useNavigate();
+  // setDetails({...details,password:"1234"})
 
-  // setDetails({...details,password:"12345"})
-  // console.log(details)
+  const handleChange=(e)=>{
+    console.log(e.target.name);
+    console.log(e.target.value);
+    setdetails({...details,[e.target.name]:e.target.value}); //dynamic key-value
 
-  
-
-  const handleChange = (e)=>{
-    // setDetails({email:"",password:""})
-    setDetails({...details,[e.target.name]:e.target.value});
   }
-
-  const handleSubmit = async()=>{
-    let res = await axios.post('http://localhost:8080/users/login',details);
-    console.log(res.data)
-    if(res.data.success){
+  //npm i axios
+  const handleSubmit=async()=>{
+    let res=await axios.post('http://localhost:8080/users/login',details)
+    console.log(res.data);
+    if (res.data.success){
       toast.success(res.data.msg,{position:'top-center'})
-        dispatch(setState(res.data.token))
-        dispatch(fetchUserById(res.data.token))
-      // navigate('/')
-    }
-    else{
+      dispatch(setSate(res.data.token))
+      dispatch(fetchUserById(res.data.token))
+
+      //navigate('/')
+
+    }else{
       toast.error(res.data.msg,{position:'top-center'})
-      setDetails({email:"",password:""})
+
     }
+
+
   }
+
   return (
     <div className="flex items-center justify-center h-screen w-full px-5 sm:px-0">
       <div className="flex bg-white rounded-lg shadow-lg border overflow-hidden max-w-sm lg:max-w-4xl w-full">
@@ -53,11 +58,11 @@ const Login = () => {
               Email Address
             </label>
             <input
-            name="email"
+              name="email"
               className="text-gray-700 border border-gray-300 rounded py-2 px-4 block w-full focus:outline-2 focus:outline-blue-700"
               type="email"
               required
-              onChange={handleChange}
+              onChange={handleChange}//event
             />
           </div>
           <div className="mt-4 flex flex-col justify-between">
@@ -65,27 +70,26 @@ const Login = () => {
               <label className="block text-gray-700 text-sm font-bold mb-2">
                 Password
               </label>
-
             </div>
             <input
-            onChange={handleChange}
-            name='password'
+            name="password"
               className="text-gray-700 border border-gray-300 rounded py-2 px-4 block w-full focus:outline-2 focus:outline-blue-700"
               type="password"
+              onChange={handleChange} //event
             />
-            <Link
+            <a
               href="#"
               className="text-xs text-gray-500 hover:text-gray-900 text-end w-full mt-2"
             >
               Forget Password?
-            </Link>
+            </a>
           </div>
           <div className="mt-8">
             <button onClick={handleSubmit} className="bg-blue-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-blue-600">
               Login
             </button>
           </div>
-          {/* <Link
+          {/* <a
             href="#"
             className=" flex items-center justify-center mt-4 text-white rounded-lg shadow-md hover:bg-gray-100"
           >
@@ -116,10 +120,10 @@ const Login = () => {
                 </h1>
               </div>
             </div>
-          </Link> */}
+          </a> */}
           <div className="mt-4 flex items-center w-full text-center">
             <Link
-              to="/register"
+              to='/signup'
               className="text-xs text-gray-500 capitalize text-center w-full"
             >
               Don&apos;t have any account yet?

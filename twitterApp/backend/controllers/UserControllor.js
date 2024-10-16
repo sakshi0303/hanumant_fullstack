@@ -46,7 +46,7 @@ const loginUser=async(req,res)=>{
             let checkpassword=await bcrypt.compareSync(password,checkuser.password)
             if (checkpassword){
                 var token = jwt.sign({ _id:checkuser.id }, JWT_SECRET);
-                return res.json({msg:"user login successfully",success:true,usr:token})
+                return res.json({msg:"user login successfully",success:true,token:token})
             }else{
                 return res.json({msg:"invalid password",success:false})
             }
@@ -106,6 +106,18 @@ const deleteUser=async(req,res)=>{
 
     // let data=await User.findByIdAndDelete(id)
     // res.json({msg:"user deleted",usr:data})
+
+}
+
+const getuserinfo=async()=>{
+    try {
+        let userid=req.user;
+        let user =await User.findById(userid)
+        return res.json({msg:"taken is successfully fetched",success:true,user})
+    } catch (error) {
+        return res.json({msg:"error in getting userinfo",success:false,error:error.message})
+        
+    }
 
 }
 

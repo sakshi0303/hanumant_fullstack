@@ -313,16 +313,135 @@ public class AccessModifier2 extend AccessModifier {
 //	local variable are variable which is declared inside a methood.abstract
 //	instance variable are the variable which is written outside of method
 
+Oct 15th::
+method overriding
+overloading
+
+Oct 16th:
+interface
+polymorshim
+abstract class
+innerclass
+
+lambda expression
+exception handling
+	-check/uncheck
+array
+string 
+Collection framework
+	-innerbuf
+file-stream
+cloning
+
+advance java:
+jdbc
+servlet
+jsp
+jstl
+
+
 
 ------------------------------
 
 Relations:::::
-
 
 The process of establishing communication between the components are called Relations:
 > it is of three type:
     > Reference (has a relation) interlinking objects
     > Inheritance (is a relation) interlinking classes
     > InnerClass 
+    
 > within same package we dont need to import classes or variible of differnt classes
 > to access the resourcess within same package we only need to create obj of differnt class 
+
+------------------------------------------------------------------------------------------------------------------------
+
+Inheritance:::
+the process of interlinking class using extend keyword
+
+- is a relation
+-single level inheritance 2 classs and main class (parent class inherit its property in one child class)
+- multi-level-inheritance 3 or more class and Main class (parent class inherit its properties to mutiple child classes 
+- hirarichal inheritance
+- 
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+-----void is used for printing and it returns nothing
+--- whenever we use extend keyword always create the obj of the child
+
+--- package name always start with smaller case
+parameters are the values which used to transfer the data from one place to another
+OverRiding::
+	-Parent-class-method who has same name, same parameters and same return type as of child-class-method,
+	 At the time of obj creation of child class, replaced by parent class method will be replaced by child class method.
+	-more than one method with same method name in parent class and child class. Parent class method will be replaced by child class at the time of obj creation
+OverLoading::
+	-More than one method with same name , different parameters and different return type are called and at the time of obj creation java will decide itself what is called on the basis of parameters
+	// overloading :more than 1 method with same method-name in same-class but  different parameters is known as POverloading
+
+Overloading with Constructor::
+	--interlinking of constructor within same class using this keyword 
+	--interlinking id constructor from different class using super keyword
+	
+-this keyword is used to repent the current class components. it is used to load the data into the variables
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Interface:::
+
+
+- interface is the process of interlinking classes using implement keyword
+- it is the collection of abstract method and concrete method and variables
+- we will declare interface using imterface keyword
+- interface class and astract class obj cannot be made
+- we can declare abstract method only in interface and abstract class, 
+- when we implement interface with abstract method, in class--> we have to make them concrette method
+-abstract method does not have any body,but haveing a parameter
+- by default interface has public ,abstract static method with no body
+- body of the method will be given in the implement class while overloading
+-Like abstract classes, interfaces cannot be used to create objects (in the example above, it is not possible to create an "Animal" object in the MyMainClass)
+interface rules-->
+Interface methods do not have a body - the body is provided by the "implement" class
+On implementation of an interface, you must override all of its methods
+Interface methods are by default abstract and public
+Interface attributes are by default public, static and final
+An interface cannot contain a constructor (as it cannot be used to create objects)
+Why And When To Use Interfaces?
+1) To achieve security - hide certain details and only show the important details of an object (interface).
+
+2) Java does not support "multiple inheritance" (a class can only inherit from one superclass). However, it can be achieved with interfaces, because the class can implement multiple interfaces. Note: To implement multiple interfaces, separate them with a comma (see example below).
+
+
+Abstract Method::
+	-abstract method is the method which uses abstract keyword and it does not have body
+	-concrete method are the method which does not have a abstract keyword and have a body
+We will not be able to insitate interface and abstract class
+- abstract refers to the idea like love,freedom
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Polymorphism---
+
+
+Many forms
+the ability of single programing components to work with multiple programing components is called as Polymorphism or classs
+it is of 2 types:
+	> Dynamic Polymorphysm
+	> Static Paolymorphism
+
+>>Muticlass inheritance causes ambiguity problem so we use interface
+> 
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+Abstract class
+abstract class is the collection of variables , abstract method, concreete method , block and constructor
+abstract does not use interface
+we will declare abstract class using abstract keyword and it hold the abstract method
+we  cannot declare the object of abstract class
+
+
+
+in normal class we cannot have abstract method but in abstract class we can have abstract method
+- outerclass cannot be private, innerclass can be private
