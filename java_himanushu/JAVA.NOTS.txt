@@ -13,6 +13,8 @@ JAVA:
 Core Java---
 Oct 10: 
 package
+inferface
+polymorism
 access modifies
 relations
     > referencse
@@ -20,10 +22,10 @@ relations
     > inner class
 
 
-inferface
-polymorism
+
 innerclass
 lambda expression - to increase the performance in projects
+
 array,enum,string
 local variable
 static -> local and instance varible
@@ -321,8 +323,11 @@ Oct 16th:
 interface
 polymorshim
 abstract class
-innerclass
-
+encapsulation
+innerclass a,b,c->th eavaiblabilty of single call to work with other class
+genreation, parent class method and override method of class b
+Oct: 17L
+specialisation
 lambda expression
 exception handling
 	-check/uncheck
@@ -441,7 +446,46 @@ abstract does not use interface
 we will declare abstract class using abstract keyword and it hold the abstract method
 we  cannot declare the object of abstract class
 
-
-
 in normal class we cannot have abstract method but in abstract class we can have abstract method
 - outerclass cannot be private, innerclass can be private
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Generalisation------
+
+
+> generalisation is the process in which parent class holding the refernce of child class object
+ParentClass obj=(ParentClass) new ChildClass(); // it  takes parnt class all components and only the overidieng method of child
+object will hold all the members of parent class and only overide method of child class
+> it wil not happen with cabstract classs
+> type cast eg--advance class
+
+// it only takes the overiding method of child 
+
+
+Implicit casting (generalization): Java automatically converts a smaller type (like int) into a larger type (like double), as the larger type can store all possible values of the smaller type. This is a widening process, allowing more general usage.
+
+Explicit casting (specialization): You are manually converting a larger type (like double) into a smaller type (like int). This is a narrowing process, focusing on a smaller, more specific type that may discard or lose some information. Since this conversion may lead to data loss or precision issues, it requires an explicit directive from the programmer.
+
+
+spclisation ::
+the process of constructing child class by taking on feature of parent chils
+
+
+--------------------------------
+
+innerclass
+-the process of declaring class inside another class is called innerclass
+-it is of two type:
+    -member innerclass
+        the innerclass which act as a memeber of the other class
+        it if 2 type:
+            - static member innerclass  
+                    - 
+
+            -non static member innerclass
+    -anonymous innerclass
+
+-outer class cannot be static and it is only public
+-inner class can be static and private,protected and public

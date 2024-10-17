@@ -4,7 +4,7 @@ import { fetchUserById } from '../store/UserSlice';
 
 const Home = () => {
   let dispatch=useDispatch();
-  let userdetails=useSelector((state)=>(state.user))
+  let userdetails=useSelector((state)=>state.user)
   console.log(userdetails)
   let token=userdetails.token
 

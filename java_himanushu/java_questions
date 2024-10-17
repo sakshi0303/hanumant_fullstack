@@ -29,3 +29,12 @@ Q:Access Modifiers:
     > private -> access only withon a class
     > protected -> access within the package and outside the package by extend keyword
     > default -> access within the package by creating object
+
+Q new keyword and forname 
+>new keyword is the process of creating object at the runtime, we cannot change its value later
+
+>forname is the process of creating object at complie time and we can modify it later in the code
+
+--Oct 18:
+-specilisation
+-n
