@@ -137,3 +137,20 @@ const handleChange=(e)=>{
 to call api to backed in reduc userslice
 createAsyncThunk::
 https://redux-toolkit.js.org/api/createAsyncThunk
+
+
+login
+1) Api fetch--> response--> msg,token,success
+ reactstore{login:false,token:'',user-''} 
+ localstorage(login
+2)store(setdetails(token))
+ > navigate()
+> Home
+setdetails:{ login: true, token:sdf,user:''}
+localstorage.setItem(login:true,toekn:'sdf', user='')
+
+in home page:
+ > api calling in store extrareducer
+-to get user details
+2)update user
+------------------------------
