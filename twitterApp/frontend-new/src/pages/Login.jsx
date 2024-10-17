@@ -2,12 +2,13 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { fetchUserById, setstate } from "../store/UserSlice";
+import {  setstate } from "../store/UserSlice";
 
 const Login = () => {
     let dispatch=useDispatch()
+    let navigate=useNavigate()
     
 
     const [details, setdetails] = useState({
@@ -21,8 +22,8 @@ const Login = () => {
         if (res.data.success){
             toast.success(res.msg,{position:'top-center'})
             dispatch(setstate(res.data.token))
-            dispatch(fetchUserById(res.data.token))
-
+            //dispatch(fetchUserById(res.data.token))
+            navigate('/')
 
         }else{
             toast.error(res.mes,{position:'top-center'})

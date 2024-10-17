@@ -24,8 +24,6 @@ const SignUp = () => {
         body:JSON.stringify(obj)}
         )
         let res=await data.json()
-
-
         console.log(res);
         if (res.success){
             toast.success(res.msg,{position:'top-center'})

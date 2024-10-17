@@ -45,7 +45,7 @@ export const UserSlice = createSlice({
       // Add user to the state array
       console.log(action.payload);
       state.user=action.payload;
-      localStorage.setItem("twitterLogin",JSON.stringify({...state,user:action.payload}))
+      //localStorage.setItem("twitterLogin",JSON.stringify({...state,user:action.payload}))
       
     })
 
