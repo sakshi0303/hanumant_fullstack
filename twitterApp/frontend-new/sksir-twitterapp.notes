@@ -153,3 +153,29 @@ in home page:
  > api calling in store extrareducer to get user detail based on token
 2)update user in userstore
 ------------------------------
+Skil: bootstram , tailwind sccs
+Implemented a mobile responsive design using css/styled component to ensure seemless user Experiance
+ExpenseTracer:
+ >user can track the expenses 
+ >users can add ,edit  and delete expenses
+ >date based on filter for extenbility
+> implemeted a mobile-responsive design using CSS/ styled  component to ensure seemless user Expense
+Key Skills:
+Ecom::
+ -state management using React Hook and Context Api
+ -integration of third party libraries (eg: axios ,material UI, react-tostify) for enhanced functionality and responsive design
+-  Implemented a dynamic search bar that allow user to search products by title and Category or description
+
+TwitteApp:
+UserAuthentication:
+- Build a Restful API using Express JS, node JS for handling request related to post users and comments
+- implemented user registration and login using bcrypt.js for hashed password and JWT(json web token) for secure access controls
+- CRUD: Enable User to create new post,edit existing post,delete post and view all post
+- 
+Skill,:
+HTML, CSS, JavaScript,Node.js,mongodb, ExpressJS, ReactJS, Bootstram, Tailwind, api testingm redux, github
+
+skills project and o
+linkedin and github link
+
+
