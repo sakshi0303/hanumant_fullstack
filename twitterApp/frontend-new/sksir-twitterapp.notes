@@ -142,15 +142,14 @@ https://redux-toolkit.js.org/api/createAsyncThunk
 login
 1) Api fetch--> response--> msg,token,success
  reactstore{login:false,token:'',user-''} 
- localstorage(login
-2)store(setdetails(token))
+ localstorage-- nothing in localstorage
+2)Userslice store(setdetails(token))
  > navigate()
 > Home
-setdetails:{ login: true, token:sdf,user:''}
-localstorage.setItem(login:true,toekn:'sdf', user='')
+setdetails:{ login: true, token:sdf,user:''}  #user has data  in store
+localstorage.setItem(login:true,toekn:'sdf', user='') #user is blank for securyu in local storage
 
 in home page:
- > api calling in store extrareducer
--to get user details
-2)update user
+ > api calling in store extrareducer to get user detail based on token
+2)update user in userstore
 ------------------------------
