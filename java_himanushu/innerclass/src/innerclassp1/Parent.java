@@ -37,7 +37,11 @@ public class Parent {
 		Parent obj =new Parent();
 		obj.m1();
 		Parent.Subclass objsubclas=new Parent.Subclass();
-		objsubclas.m
+		objsubclas.m3();
+		objsubclas.m2();
+//		objsubclas.name
+//		objsubclas.age;
+		
 	}
 	
 

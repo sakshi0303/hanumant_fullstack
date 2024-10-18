@@ -480,12 +480,77 @@ innerclass
 -it is of two type:
     -member innerclass
         the innerclass which act as a memeber of the other class
+        --innerclass cannot have static method
         it if 2 type:
             - static member innerclass  
                     - 
 
             -non static member innerclass
+                 a memeber innerclass which is declared withoud static keyword: it is of two types::
+                -instance member innerclass
+                    -the non static instance member innerclasss which is declared outside the method known instance member innerclas
+
+                -local member innerclass
+                    -
     -anonymous innerclass
 
 -outer class cannot be static and it is only public
 -inner class can be static and private,protected and public
+---------------- ;
+nonstatic member innerclass: a memeber innerclass which is declared withoud static keyword:
+it is of two types::
+
+vcariable is static and nonstatic- 2 types::::local and instance 
+
+In Java, an inner class is a class that is defined inside another class. An inner class can access the members of the outer class, including private members, and it can be used to implement callbacks and event handlers. There are four types of inner classes in Java:
+
+>Member Inner Class: It is a non-static class that is defined at the member level of a class. It has access to all the members of the outer class, including private members.
+
+>Local Inner Class: It is a class that is defined inside a method or a block of code. It has access to the final variables of the method or block in which it is defined.
+
+>Anonymous Inner Class: It is a class that is defined inline and has no name. It is used to implement interfaces or extend classes without creating a separate class.
+
+>Static Nested Class: It is a static class that is defined inside another class. It does not have access to the non-static members of the outer class.
+
+Inner classes have several advantages:
+
+Encapsulation: Inner classes can be used to encapsulate implementation details of a class, making the code more modular and maintainable.
+
+Access Control: Inner classes can access private members of the outer class, allowing for more precise control over the visibility of members.
+
+Callbacks and Event Handlers: Inner classes can be used to implement callbacks and event handlers, making it easier to handle events in graphical user interfaces.
+
+Code Organization: Inner classes can be used to organize code by grouping related classes together.
+
+-------------------------------
+Instance member innerclass:
+Outerclassname.innerclassname obj=outerclassobjname.innerclassname
+//rules:::
+//			1) objoutter will have access to only outer class component
+//			2) objinner  will have access to only inner class component
+//			3) static members of innerclass can access to static memeber of the outer class
+//			4) non static memeber of the innerclass can access to non static memeber of the  inner class
+-------------------------------
+local memeber inner classs
+    - the class which is decalred inside a method
+    - the obj of the innerclass will be created inside the method
+
+anonomous innerclass::
+a innerclass which does not have a class name
+it is of two types::
+    1) Annonomous as Class extention
+        > we perform using classx
+    2) Annomous as implementation class
+        > we perform using interface
+        > we do interface implementation for eg: 
+            InterfaceName{
+                public abstract void display(int x);
+
+            }
+            InterfaceName interface_obj=new InterfaceName(){
+                public void display(int x) {
+					System.out.println(x);
+            };
+            interface_obj.display(10);
+            }
+            }
