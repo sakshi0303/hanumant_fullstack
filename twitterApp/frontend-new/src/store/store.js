@@ -2,6 +2,6 @@ import { configureStore } from '@reduxjs/toolkit'
 import UserReducer from './UserSlice'
 export const store = configureStore({
   reducer: {
-    counter:UserReducer,
+    user:UserReducer,
   },
 })

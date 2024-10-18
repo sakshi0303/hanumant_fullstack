@@ -11,6 +11,9 @@ var jwt = require('jsonwebtoken');
 var JWT_SECRET="idjwttoaknsakshi"
 
 let User=require('../models/UserSchema')
+var crypto=require('crypto')
+const nodemailer = require("nodemailer")
+
 const registerUser=async(req,res)=>{
     let {name, email,password,address}=req.body
     if (!password){
@@ -122,10 +125,58 @@ const getuserinfo=async(req,res)=>{
 
 }
 
+const forgotpassword=async(req,res)=>{
+    
+    let {email}=req.body;
+    let user=await User.findOne({email})
+    if (user){
+        var resetToken = crypto.randomBytes(64).toString('hex'); // we can use npm randomstring as wee search stack overflow generate token with crypto
+        //var resetToken =await randomstring.generate(18);
+        user.resetToken=resetToken
+        await user.save();
+        //method2
+        // await User.findByIdAndUpdate(user._id,{$set:{resetToken}})
+
+        let datasend=sendMail(email,resetToken)
+        res.json({msg:"token saved successfully",resetToken,success:true})
+
+    }else{
+        res.json({msg:" user not found ",success:false})
+
+    }
+
+}
+
+async function sendMail(email,resetToken){
+
+    const transporter = nodemailer.createTransport({
+        // host: "smtp.ethereal.email",
+        host: "smtp.gmail.com",
+        port: 587,
+        secure: false, // true for port 465, false for other ports
+        auth: {
+          user: "srvsakshi03@gmail.com",
+          pass: "njge qmqg luaa spxs",
+        },
+      });
+
+      const info = await transporter.sendMail({
+        from: '"Sakshi 👻" <srvsakshi03@gmail.com>', // sender address
+        to: email, // list of receivers
+        subject: "Request token for password resent✔", // Subject line
+        text: "Hi", // plain text body
+        html: `<b>hello this is your reset password link click the link below http://localhost:8080/users/resetToken/${resetToken}</b>`, // html body
+      });
+    
+      console.log("Message sent: %s", info.messageId);
+
+}
+
 module.exports={
     registerUser,
     loginUser,
     updateUser,
     deleteUser,
-    getuserinfo
+    getuserinfo,
+    forgotpassword
 }

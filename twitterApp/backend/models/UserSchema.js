@@ -39,6 +39,10 @@ UserSchema.add({
         type:mongoose.Schema.Types.ObjectId,
         ref:'user'
 
+    },
+    resetToken:{
+        type:String,
+        default:null
     }
 
 })

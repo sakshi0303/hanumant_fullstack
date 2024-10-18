@@ -179,3 +179,73 @@ skills project and o
 linkedin and github link
 
 
+
+
+fogetpassword:::
+like edemon
+
+random token generate: npm crypto
+backend : 
+npm i crypto // to add random token
+generate randin tijeb: reset:token
+
+hexas : charatesdz
+
+
+redux-saga
+redux-flux
+
+
+npm install randon string
+
+nodemailer: to send 
+in npm nodemail, go to docs::
+ --https://nodemailer.com/about/
+npm i nodemailer
+
+manager google account
+app pass--- search pass or else 
+if not found : security , 2 step verification
+
+app name: nodemailer 
+google will generate app password: copy that and save :: njge qmqg luaa spxs
+
+nodemailer
+Created on 1:16 PM
+
+const transporter = nodemailer.createTransport({
+  host: "smtp.ethereal.email",
+  port: 587,
+  secure: false, // true for port 465, false for other ports
+  auth: {
+    user: "srvsakshi03@gmail.com",
+    pass: "jn7jnAPss4f63QBp6D", // nodemailer generate app passsword
+  },
+});
+
+// async..await is not allowed in global scope, must use a wrapper
+async function main() {
+  // send mail with defined transport object
+  const info = await transporter.sendMail({
+    from: '"Maddison Foo Koch 👻" <maddison53@ethereal.email>', // sender address
+    to: "bar@example.com, baz@example.com", // list of receivers
+    subject: "Hello ✔", // Subject line
+    text: "Hello world?", // plain text body
+    html: "<b>Hello world?</b>", // html body
+  });
+
+  console.log("Message sent: %s", info.messageId);
+  // Message sent: <d786aa62-4e0a-070a-47ed-0b0666549519@ethereal.email>
+}
+
+
+
+> we need a token  we create forgot-password router email is send in body
+find user, gernrenate user, update user in the backend with resenttoken
+
+
+-> nodemailer function sendmail
+config set email,password
+
+
+if function is declared below before calling we dont use arrraow function we have to use normal funciton 
