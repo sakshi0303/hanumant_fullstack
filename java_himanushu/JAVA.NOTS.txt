@@ -10,6 +10,11 @@ JAVA:
 > NON PRIMITIE: CLASS, ARRAY, ENUM, STRING 
 >
 
+// evening 4-6 pm 
+-erro handling
+> specialiation 
+> arry, string
+
 Core Java---
 Oct 10: 
 package
@@ -281,6 +286,34 @@ Interface:::
     > abstract method is defined in abstract class and interfaces only. 
     > abstract method will be called by classes that implement this interface
     > we cannot instantiate interface
+
+    Coding rules of Interface:
+Rule-1 : we use "interface" keyword to construct interfaces
+syntax:
+interface Interface_name
+{
+//Interface_body
+}
+
+Rule-2 : The programming components which are declared within the interface are automatically "public".
+Note:
+=>The programming components which are declared in classes
+without any access modifiers are considered as "default".
+
+Rule-4 : The variables which are declared within the interface are
+automatically static and final variables.
+
+Rule-5 : The methods which are declared within the interface are
+automatically NonStatic abstract methods.
+(static abstract methods are not available)
+
+Rule-6 : Interfaces cannot be instantiated in Java,which means we cannot
+create object for Interfaces.
+
+Rule-7 : Interfaces are implemented to classes using "implements" keyword and the classes are known as implementation classes.
+
+Rule-8 : These implementation classes must construct the body for all
+abstract methods of Interface.
 Package::
     >it is a collection of classes and interfaces
     >it is of two types:
@@ -635,13 +668,53 @@ it is of two types::
             }
 ----------------------------
 
---
+----------------------------------------------------------------------------------------------------------------------------------------------
 if (value.equals("greater")) {}
 
 lambda expression :
 - the process of declaring method without its name is called as lambda function
-- it is also known as anymonous method and it works only with abstract method of interface 
+- it is also known as anymonous method and it works only with  one abstract method of interface 
 
+Functionalinterface: a interface with only one abstract method
 
 Factory Method::
 - the proces sof constructing object by hiding the object creation process is called as Factory Method
+
+@FunctionalInterface
+public interface Interface1 {
+	public abstract void m1(int x,int y);
+    //	public abstract void m2(int y); lambda expression only need one abstract method in inter interface knowsn as functional interface
+	// for more than one abstreact method in interface we can use anonymous function
+	public static String m2(String name) {
+		return name;
+	}
+	public static void main(String args[]) {
+		//lambda-expession
+		// factory method: the process of constructing method by hiding object creation method
+//		Interface1 obj= (x)->{
+//			System.out.println(2*x);
+//			
+//		};
+//		obj.m1(10);
+		Interface1 obj=(x,y)-> System.out.println(2*x*y);
+		obj.m1(3, 1);
+	}
+}
+lambda expression also do implementation of factory class
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Exception Handling:: it is the process which is used to handle the exception . It is of two types:
+    > Unchecked Exception
+        - the exception which is not identified at compile time is called as unchecked Exception
+    > Checked Exception
+        - the exception which is identified at compile time is called as checked Exception
+     To handle exception we use try,catch,finally
+
+
+Exception: whenever an error occur, server stops ,so that the server will keep on running
+    
+try{
+
+}catch(e){
+
+}
