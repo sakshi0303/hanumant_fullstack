@@ -12,7 +12,7 @@ public class Main {
 		System.out.println(ChildClass.m1("hanumantchild"));
 		
 		System.out.println(obj.allchild("SUV"));
-		obj.m
+		//obj.m
 		
 		
 		

@@ -478,21 +478,73 @@ the process of constructing child class by taking on feature of parent chils
 innerclass
 -the process of declaring class inside another class is called innerclass
 -it is of two type:
-    -member innerclass
+    >>-member innerclass
         the innerclass which act as a memeber of the other class
         --innerclass cannot have static method
         it if 2 type:
-            - static member innerclass  
-                    - 
+            >>- static member innerclass  
+                    - static kkeyword ahead of member innerclass
 
-            -non static member innerclass
+            >>-non static member innerclass
                  a memeber innerclass which is declared withoud static keyword: it is of two types::
-                -instance member innerclass
+                >>-instance member innerclass
                     -the non static instance member innerclasss which is declared outside the method known instance member innerclas
+                    public class ClassOuterCalss{
+                        public static void outer1() {
+                        System.out.println(outer_x);
+                    }        
+                    public void outerm2() {
+                        System.out.println(outer_x);
+                        System.out.println(outer_y);
+                    }
+                        private class classInnerclass{
+                                public static void innerm1() {
+                                    System.out.println(x);     
+                                }   
+                                public void innerm2() {
+                                    System.out.println(x);
+                                    System.out.println(y);
+                                }
+                        }
+                    public static void main(String[] args) {
+                        // TODO Auto-generated method stub
+                        InstanceMemberInnerClassMain objoutter=new InstanceMemberInnerClassMain();
+                        InstanceMemberInnerClassMain.InnerClass objinner=objoutter.new InnerClass();
+                        
+                        //		//rules:::
+                        //			1) objoutter will have access to only outer class component
+                        //			2) objinner  will have access to only inner class component
+                        //			3) static members of innerclass can access to static memeber of the outer class
+                        //			4) non static memeber of the innerclass can access to non static memeber of the  inner class
 
-                -local member innerclass
-                    -
-    -anonymous innerclass
+                    	}
+
+                    }
+                  
+                >>-local member innerclass
+                    - instide the method we will create the object
+                    -the innerclass which is declared inside the method
+
+                    public class ClassInsideMethod {
+                            int x=10;
+                            public void getdata() {
+                                class InnerClass{
+                                    public void displayx() {
+                                        System.out.println(x);                                       
+                                    }                                    
+                                }                                
+                                InnerClass innerobj =new InnerClass();
+                                innerobj.displayx();
+                            }                            
+                            public static void main(String args[]) {
+                                ClassInsideMethod outerobj=new ClassInsideMethod();
+                                outerobj.getdata();
+                            }
+
+                        }
+    >>-anonymous innerclass
+        >>- anonymous as class extention
+        >>-anonymous as implementation class
 
 -outer class cannot be static and it is only public
 -inner class can be static and private,protected and public
@@ -540,8 +592,35 @@ a innerclass which does not have a class name
 it is of two types::
     1) Annonomous as Class extention
         > we perform using classx
+
+        Class ClasName{
+            public static void m1(int a){
+                System.out.println(90);
+            }
+
+            public  String m2(String n){
+                return "class";
+            }
+        }
+
+        Class Main{
+            ClassName obj=new ClassName(){
+
+                // error static method cannot be overrider
+                //public static void m1(int a){
+                //    System.out.println(a);
+                //}
+                public  String m2(String n){
+                    return n;
+                }
+            }
+
+            //obj.m1(10);--> error
+            obj.m2("sakshi");
+        }
     2) Annomous as implementation class
         > we perform using interface
+        > the process of declaring the implementation class without name is known as  Annomous as implementation class
         > we do interface implementation for eg: 
             InterfaceName{
                 public abstract void display(int x);
@@ -554,3 +633,15 @@ it is of two types::
             interface_obj.display(10);
             }
             }
+----------------------------
+
+--
+if (value.equals("greater")) {}
+
+lambda expression :
+- the process of declaring method without its name is called as lambda function
+- it is also known as anymonous method and it works only with abstract method of interface 
+
+
+Factory Method::
+- the proces sof constructing object by hiding the object creation process is called as Factory Method
