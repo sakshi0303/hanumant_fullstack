@@ -10,6 +10,8 @@ var salt = bcrypt.genSaltSync(10);
 var jwt = require('jsonwebtoken');
 var JWT_SECRET="idjwttoaknsakshi"
 
+require('dotenv').config()
+
 let User=require('../models/UserSchema')
 var crypto=require('crypto')
 const nodemailer = require("nodemailer")
@@ -155,8 +157,8 @@ async function sendMail(email,resetToken){
         port: 587,
         secure: false, // true for port 465, false for other ports
         auth: {
-          user: "srvsakshi03@gmail.com",
-          pass: "njge qmqg luaa spxs",
+          user: process.env.NodeMailerEmail,
+          pass: process.env.NodeMailerPasswod,
         },
       });
 
@@ -164,8 +166,10 @@ async function sendMail(email,resetToken){
         from: '"Sakshi 👻" <srvsakshi03@gmail.com>', // sender address
         to: email, // list of receivers
         subject: "Request token for password resent✔", // Subject line
-        text: "Hi", // plain text body
-        html: `<b>hello this is your reset password link click the link below http://localhost:8080/users/resetToken/${resetToken}</b>`, // html body
+       
+        //html: `<b>hello this is your reset password link click the link below http://localhost:8080/users/resetToken/${resetToken}</b>`, // html body
+        text: `<b>hello this is your reset password link click the link below http://localhost:8080/users/resetToken/${resetToken}</b>`, // html body
+   
       });
     
       console.log("Message sent: %s", info.messageId);

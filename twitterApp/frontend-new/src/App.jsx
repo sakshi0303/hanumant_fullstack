@@ -6,6 +6,7 @@ import PNf from './pages/PNf';
 import SignUp from './pages/SignUp';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import MouseTracker from './pages/MouseTracker';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/signup' element={<SignUp/>}/>
+        <Route path='/MouseTracker' element={<MouseTracker/>}/>
         <Route path='/*' element={<PNf/>}/>
       </Routes>
       <ToastContainer />

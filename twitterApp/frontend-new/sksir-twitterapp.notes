@@ -249,3 +249,46 @@ config set email,password
 
 
 if function is declared below before calling we dont use arrraow function we have to use normal funciton 
+
+--------------
+in frontendt: .env is there by default
+
+in backend download .env 
+npm i dotenv
+.env file creation  -->
+
+in usercontroller
+require('dotenv').config()
+process.env.xyz
+
+.gitignore
+node_modules
+.env
+
+NodeMailerEmail=srvsakshi03@gmail.com
+NodeMailerPasswod=njge qmqg luaa spxs
+
+
+
+Frontend
+-->click-->forgetpassword-->page-->enter your emsil -Submit ----(api post)--> BACKEND
+                                                                                    1) userfind(email)
+                                                                                     2)token
+                                                                                     3) token push user : resettoken:token
+                                                                                     4)email to the user with link
+                                                                                        (localhost:8080/users/resetToekn/{Token}) 
+                                                                                            |
+                                                                                            |
+                                                                                            |
+                                                                                            gmail
+ userfind(resetToken:token)       -----                    api(get)-----    (localhost:8080/users/resetToekn/{Token}) 
+ page frontend(enter new password)
+ submit api(put)                                                                                       
+
+Pages::
+ >static 
+ >dynamic
+
+ ejs
+
+ window.location.href
