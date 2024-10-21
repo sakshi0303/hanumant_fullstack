@@ -364,12 +364,15 @@ specialisation
 lambda expression
 exception handling
 	-check/uncheck
-array
+array 
 string 
 Collection framework
 	-innerbuf
 file-stream
 cloning
+multithreading
+multiprocessing
+multitasking
 
 advance java:
 jdbc
@@ -620,15 +623,6 @@ In Java, an inner class is a class that is defined inside another class. An inne
 
 >Static Nested Class: It is a static class that is defined inside another class. It does not have access to the non-static members of the outer class.
 
-Inner classes have several advantages:
-
-Encapsulation: Inner classes can be used to encapsulate implementation details of a class, making the code more modular and maintainable.
-
-Access Control: Inner classes can access private members of the outer class, allowing for more precise control over the visibility of members.
-
-Callbacks and Event Handlers: Inner classes can be used to implement callbacks and event handlers, making it easier to handle events in graphical user interfaces.
-
-Code Organization: Inner classes can be used to organize code by grouping related classes together.
 
 -------------------------------
 Instance member innerclass:
@@ -736,13 +730,79 @@ Exception Handling:: it is the process which is used to handle the exception . I
 
 Exception: whenever an error occur, server stops ,so that the server will keep on running
     
-try{
-    
-
-}catch(e){
-
-
-
+public class TryCatch2 extends Exception{
+	public TryCatch2 (String name) {
+		super(name);
+	}
+	public static void main(String args[]) {
+		try {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the salary");
+		int Salary=sc.nextInt();
+		if (Salary>=0 & Salary<=1200) {
+			TryCatch2 obj=new TryCatch2("salary is too low");
+			throw obj;
+		}
+		}catch(TryCatch2 obj) { //user-defined exception
+			System.out.println(obj.getMessage());
+		}catch(InputMismatchException ime) {
+			System.out.println(ime);
+			
+		}
+		catch(Exception e) { // pre-defined exceptions
+			e.printStackTrace();
+		}	
+	}
+}
+-------------------------------------------------------------------------------------------------------------------------------
+TRy with resorce::
+    -  "try-with-resources" statement is a special form of the try statement that automatically closes resources when they are no longer needed.
+    public class TryWithResourcesExceptionExample {
+        public static void main(String[] args) {
+            try (BufferedReader reader = new FaultyBufferedReader(new FileReader("example.txt"))) {
+                // Exception thrown during file reading
+                throw new IOException("Error during file reading");
+            } catch (IOException e) {
+                // This block will handle the primary exception during file reading
+                System.out.println("Primary Exception: " + e.getMessage());
+                
+                // Retrieve and display suppressed exceptions
+                Throwable[] suppressedExceptions = e.getSuppressed();
+                for (Throwable suppressed : suppressedExceptions) {
+                    System.out.println("Suppressed Exception: " + suppressed.getMessage());
+                }
+            }
+        }
 }
 
+------------------------------------------------------------------------------------------------------------------------------
 
+new keyword: creation of obj at compile time and we can change the value after that, compile time,fast
+newinstance : it is method constructor.newinstance() , runtime , uwing reflection, slow, 
+        import java.lang.reflect.Constructor;
+
+public class NewAndNewInstance {
+	public static void main(String[] args) {
+		//NewAndNewInstance obj=new NewAndNewInstance();
+		try {
+		Constructor<NewAndNewInstance> constructor=NewAndNewInstance.class.getDeclaredConstructor();
+//		NewAndNewInstance obj=(NewAndNewInstance) Class.forName("NewAndNewInstance").newInstance(); --depricated
+		NewAndNewInstance obj = constructor.newInstance();
+		System.out.println("Instance created using Constructor.newInstance(): " + obj);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}}}
+
+forname: it loads the class at runtime 
+
+------------------------------------------------------------------------------------------------------------------------------
+
+>> Speclisation 
+>>> sealed class
+>>> string and array
+
+------------------------------------------------------------------------------------------------------------------------------
+
+>>> multithreading
+
+>>> 

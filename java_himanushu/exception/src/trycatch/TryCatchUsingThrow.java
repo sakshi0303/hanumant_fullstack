@@ -3,9 +3,9 @@ package trycatch;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class TryCatch extends Exception{
+public class TryCatchUsingThrow extends Exception{
 	
-	public TryCatch(String name) {
+	public TryCatchUsingThrow(String name) {
 		super(name);
 	}
 	
@@ -19,23 +19,29 @@ public class TryCatch extends Exception{
 			
 			System.out.println("enter the salary");
 			int Salary=sc.nextInt();
-			if (Salary<12000 & Salary>=0 ) {
+			if (Salary<=120 & Salary>=0 ) {
 				
-				TryCatch obj=new TryCatch("salary is too low");
+				TryCatchUsingThrow obj=new TryCatchUsingThrow("salary is too low");
 				throw obj; // obj throw in the catch block
 				
 			}
 			if (Salary<0) {
-				TryCatch obj=new TryCatch("salalry cannot be negative");
+				TryCatchUsingThrow obj=new TryCatchUsingThrow("salalry cannot be negative");
 				throw obj;
 			}
 			
+			if (Salary > 120) {
+			     throw new IllegalArgumentException("Age must less that 120");
+			  }
+			//throw new ArithmeticException("Division by zero");
 			
-		}catch(TryCatch obj) {
-		
+			
+		}catch(TryCatchUsingThrow obj) {
 			System.out.println(obj.getMessage());
 		}catch(InputMismatchException ime) {
 			System.out.println("salary should be in int type");
+		}catch(Exception e) {
+			e.printStackTrace();
 		}
 
 	}
