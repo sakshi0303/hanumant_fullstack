@@ -1,0 +1,62 @@
+npm init
+
+server.js
+
+npm i Express
+
+server.jsx
+
+        let express=require('express');
+        let port=1900
+        let path=require('path')
+        let app=express();
+
+        app.set('view engine','ejs') ------------>>>> IMp
+
+        let websitepath=path.join(__dirname,'pages/Home.html')
+        app.get('/',(req,res)=>{
+            let obj={
+                name:"sakshi",
+                age:230
+            }
+            let arr=[23,32,4324,13] 
+            res.render('index',{obj,arr})     ------------>>>> IMp
+            //res.render('index',{obj,arr})
+             res.sendFile(websitepath)
+
+
+        })
+
+        app.listen(port,()=>{
+            console.log(`server is running on port${port}`);
+        })
+
+
+2) "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1"
+    npm i Experess   ------------>>>> IMp
+    npm i ejs Embedded javascript templates  ------------>>>> IMp
+
+3) make pages Home.html
+
+4) make views folder and make index.ejs file
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1> this is Home Page using EJS</h1>
+
+    <p>
+        Your name <%= obj.name %>
+        Your age <%= obj.age %>
+        Your arr <%= arr %>
+
+    </p>
+    </body>
+    </html>

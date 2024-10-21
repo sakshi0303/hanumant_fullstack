@@ -515,22 +515,18 @@ innerclass
         the innerclass which act as a memeber of the other class
         --innerclass cannot have static method
         it if 2 type:
-            >>- static member innerclass  
-                    - static kkeyword ahead of member innerclass
+            >>- Static member innerclass  
+                    - static keyword ahead of member innerclass
 
-            >>-non static member innerclass
-                 a memeber innerclass which is declared withoud static keyword: it is of two types::
-                >>-instance member innerclass
-                    -the non static instance member innerclasss which is declared outside the method known instance member innerclas
                     public class ClassOuterCalss{
-                        public static void outer1() {
-                        System.out.println(outer_x);
-                    }        
-                    public void outerm2() {
-                        System.out.println(outer_x);
-                        System.out.println(outer_y);
-                    }
-                        private class classInnerclass{
+                            public static void outer1() {
+                                System.out.println(outer_x);
+                            }        
+                            public void outerm2() {
+                                System.out.println(outer_x);
+                                System.out.println(outer_y);
+                            }
+                        private static class classInnerclass{ #nonstactic class
                                 public static void innerm1() {
                                     System.out.println(x);     
                                 }   
@@ -541,8 +537,34 @@ innerclass
                         }
                     public static void main(String[] args) {
                         // TODO Auto-generated method stub
-                        InstanceMemberInnerClassMain objoutter=new InstanceMemberInnerClassMain();
-                        InstanceMemberInnerClassMain.InnerClass objinner=objoutter.new InnerClass();
+                        ClassOuterCalss.classInnerclass objinner=new ClassOuterCalss.classInnerclass();// can access static inner class directly by outerclass name
+                        
+
+            >>-non static member innerclass
+                 a memeber innerclass which is declared withoud static keyword: it is of two types::
+                >>-instance member innerclass
+                    -Non Static instance member innerclasss which is declared outside the method known instance member innerclas
+                    public class ClassOuterCalss{
+                            public static void outer1() {
+                                System.out.println(outer_x);
+                            }        
+                            public void outerm2() {
+                                System.out.println(outer_x);
+                                System.out.println(outer_y);
+                            }
+                        private class classInnerclass{ #nonstactic class
+                                public static void innerm1() {
+                                    System.out.println(x);     
+                                }   
+                                public void innerm2() {
+                                    System.out.println(x);
+                                    System.out.println(y);
+                                }
+                        }
+                    public static void main(String[] args) {
+                        // TODO Auto-generated method stub
+                        ClassOuterCalss objoutter=new ClassOuterCalss();
+                        ClassOuterCalss.classInnerclass objinner=objoutter.new classInnerclass();
                         
                         //		//rules:::
                         //			1) objoutter will have access to only outer class component
@@ -557,6 +579,7 @@ innerclass
                 >>-local member innerclass
                     - instide the method we will create the object
                     -the innerclass which is declared inside the method
+                    -one type intialiszton
 
                     public class ClassInsideMethod {
                             int x=10;
@@ -678,7 +701,7 @@ lambda expression :
 Functionalinterface: a interface with only one abstract method
 
 Factory Method::
-- the proces sof constructing object by hiding the object creation process is called as Factory Method
+- the proces of constructing object by hiding the object creation process is called as Factory Method
 
 @FunctionalInterface
 public interface Interface1 {
@@ -714,7 +737,12 @@ Exception Handling:: it is the process which is used to handle the exception . I
 Exception: whenever an error occur, server stops ,so that the server will keep on running
     
 try{
+    
 
 }catch(e){
 
+
+
 }
+
+

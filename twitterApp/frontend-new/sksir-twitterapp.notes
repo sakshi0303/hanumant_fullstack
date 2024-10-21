@@ -292,3 +292,56 @@ Pages::
  ejs
 
  window.location.href
+
+
+ static and dyn dynamic page]]]
+
+ app.get()
+ res.send('<html></html>);
+
+ 2) const path=require('path')
+
+ let pathloc=path.join(__dirname,'pages/Home.html');
+ res,sebdFile(i)
+
+ app.get('/',(req,res)=>{
+
+  res.sendFile(pathloc)
+ }))
+
+
+ 3) Dynamic data :: template engines pug and eug
+
+ const path=require('path')
+
+ let pathloc=path.join(__dirname,'pages/Home.html');
+ res,sebdFile(i)
+
+ app.get('/',(req,res)=>{
+  let obj={
+    name:"sakshi",
+    age:32
+  }
+
+
+  res.sendFile(pathloc)
+ }))
+ npm i ejs
+ we need one folder : views
+Embedded JavaScript templates
+ index.ejs
+app.set('view engine','ejs')
+res.render('index',{obj})
+to get the in home.html
+
+<%= obj.name %>
+
+--------
+
+npm i ejs
+
+in server .js 
+app.set('')
+
+view filer 
+newpassword.ejs
