@@ -5,7 +5,7 @@ Ans Static, non static , constructor
     - class will be create
     - obj of the class is called, ( same time non static block and constructor will be invoked)
     - non static block
-    -constructor
+    - constructor
 Q // this refers to the current class or component
 
 

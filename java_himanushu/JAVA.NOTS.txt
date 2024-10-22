@@ -796,12 +796,79 @@ public class NewAndNewInstance {
 forname: it loads the class at runtime 
 
 ------------------------------------------------------------------------------------------------------------------------------
+Oct22
 
 >> Speclisation 
->>> sealed class
+>>> sealed class permits 
+> singleton class
+> wrapper class
 >>> string and array
-
+>> multithreading
 ------------------------------------------------------------------------------------------------------------------------------
+sealed class
+    > We can add sealed keyword infront of the class
+    > in sealed class we cannot extends the class without the permission of the sealed class
+    > class A permits B,C,d
+    > Class B extends A
+    > we create obj of the child class
+    > sealed class without abstract class
+    > absrtact class with sealed classs
+    > child class can only be final , sealed and non-sealed
+    > sealed class have a more control of the classs
+    
+   
+public abstract sealed class  sealedwithabstract permits Circle,Rectangle {
+	public abstract double area();
+	
+	public void displayarea() {
+		System.out.println("the area ="+area());
+	}
+
+}
+
+final class Circle extends sealedwithabstract{
+	private double radius;
+	
+	private Circle(double radius) {
+		this.radius=radius;	
+	}
+	public double area() {
+		return 2*3.5*radius;
+	}
+	public static void main(String[] args) {
+		Circle obj=new Circle(3);
+		obj.displayarea();
+
+	}
+}
+
+-----------------------------------------------------------------------------------------------------------------------------
+singleton class
+Declare a private static variable to hold the single instance of the class.
+Make the constructor of the class private, so that no other instances can be created.
+Provide a public static method to return the single instance of the class, creating it if necessary.
+
+ a class which generate only one obj
+
+public class Singlton {
+	
+	private final static Singlton instance=new Singlton(); 
+	private Singlton() {	
+	}
+	public static Singlton getinstance() {
+		return instance;	
+	}
+}
+
+Singlton obj=Singlton.getinstance();
+		System.out.println(obj);
+
+
+ //rule one: 
+//	one private constructor
+//	one variable  with final so that no other class can make an instance
+//	both variable with static so that it can access method with class name
+
 
 >>> multithreading
 
