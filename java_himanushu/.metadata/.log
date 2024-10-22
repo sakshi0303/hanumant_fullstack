@@ -201,3 +201,71 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY ch.qos.logback.classic 1 0 2024-10-21 10:59:15.813
 !MESSAGE Logback config file: /Users/sakshisrivastava/Desktop/hanumant_fullstackfinal/hanumant_fullstack/java_himanushu/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.0.20240217-1525.xml
+!SESSION 2024-10-22 13:28:27.647 -----------------------------------------------
+eclipse.buildId=4.31.0.20240307-1200
+java.version=17.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/sakshisrivastava/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/sakshisrivastava/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2024-10-22 13:28:32.154
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-10-22 13:29:19.600
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2024-10-22 14:29:36.818 -----------------------------------------------
+eclipse.buildId=4.31.0.20240307-1200
+java.version=17.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/sakshisrivastava/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/sakshisrivastava/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2024-10-22 14:29:42.417
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-10-22 14:41:56.113
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2024-10-22 14:48:23.388 -----------------------------------------------
+eclipse.buildId=4.31.0.20240307-1200
+java.version=17.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/sakshisrivastava/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/sakshisrivastava/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2024-10-22 14:48:26.993
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-10-22 14:48:31.323
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2024-10-22 14:52:12.350 -----------------------------------------------
+eclipse.buildId=4.31.0.20240307-1200
+java.version=17.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/sakshisrivastava/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/sakshisrivastava/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2024-10-22 14:52:15.750
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-10-22 14:52:19.094
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2024-10-22 15:47:13.834 -----------------------------------------------
+eclipse.buildId=4.31.0.20240307-1200
+java.version=17.0.10
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/sakshisrivastava/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.java.product -keyring /Users/sakshisrivastava/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2024-10-22 15:47:15.138
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-10-22 15:47:57.804
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-10-22 15:48:14.226
+!MESSAGE Logback config file: /Users/sakshisrivastava/Desktop/hanumant_fullstackfinal/hanumant_fullstack/java_himanushu/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.0.20240217-1525.xml

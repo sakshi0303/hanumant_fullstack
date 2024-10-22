@@ -1,5 +1,5 @@
 const express=require('express')
-const { registerUser, updateUser, deleteUser, loginUser, getuserinfo,forgotpassword } = require('../controllers/UserControllor')
+const { registerUser, updateUser, deleteUser, loginUser, getuserinfo,forgotpassword, gettokenmail, resetPassword } = require('../controllers/UserControllor')
 const checkToken = require('../middleware/checkToken')
 
 const router=express.Router()
@@ -12,5 +12,7 @@ router.delete('/delete/:_id',checkToken,deleteUser)
 router.post('/login',loginUser)
 router.get('/getuserinfo',checkToken,getuserinfo)
 router.post('/forgot-password',forgotpassword)
+router.get('/reset-token/:token',gettokenmail)
+router.post('/reset-token/:token',resetPassword)
 
 module.exports=router

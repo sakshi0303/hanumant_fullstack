@@ -176,11 +176,35 @@ async function sendMail(email,resetToken){
 
 }
 
+const gettokenmail=(req,res)=>{
+    let token=req.params.token;
+    let user=User.findOne({resetToken:token})
+    if (user){
+        res.render('newPassword',{token})
+    }
+    else{
+        res.send('<h1>user not found</h1>')
+    }
+    // res.sendFile
+}
+
+const resetPassword=(req,res)=>{
+
+
+
+
+
+}
+
+
+
 module.exports={
     registerUser,
     loginUser,
     updateUser,
     deleteUser,
     getuserinfo,
-    forgotpassword
+    forgotpassword,
+    gettokenmail,
+    resetPassword
 }

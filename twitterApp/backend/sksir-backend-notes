@@ -111,3 +111,20 @@
 // form email and submit 
 // >
 // >
+
+
+// is server wont run in frontend or backend
+// //npm cache clean --force
+// //rm -rf node_modules package-lock.json
+// // npm install -g npm@latest
+// // npx nodemon server.js
+
+// //
+// in frontend:
+// lsof -i :3000
+// rm -rf node_modules package-lock.json
+// npm cache clean --force
+// npm install react-scripts@latest
+// npm config delete proxy
+// npm config delete https-proxy
+// npm install

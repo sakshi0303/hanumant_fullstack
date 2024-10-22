@@ -250,7 +250,7 @@ config set email,password
 
 if function is declared below before calling we dont use arrraow function we have to use normal funciton 
 
---------------
+--------------------------------------------------------------------------------------------------------------------------------------
 in frontendt: .env is there by default
 
 in backend download .env 
@@ -347,42 +347,24 @@ view filer
 newpassword.ejs
 
 
-how to intrudce yourself::
-  >good morning
-  > my name is aakshi
-  > i was born is lucknow and bought up in delhi
-  > family backgroud(mom and dad) -optinaal
-  > about yourself
-  > last hightest qualification
-  > Ambotion: dream job: sucesfully i wanted to work as a full stack developer in MNC
-  > Strength: my expertance: my streangth is optimistic,Enthusiastic(full of life,smart perosn , hardworking person)
-  > Hobbies: travelling, listening to music, i am fond of travelling
-  > Weakness:: i  work beyond my time, its bad but i am working on it. - optional, 
+forgotpassword? 
++newpage+ enter email  submit
+--api(post)
+--body(email
+1 email-find user)
+2 token generate
+3 user push token
+4: mail send
 
-  confidence
-  prunciation
-  grammer
-  body
-
-GD class
-personlity classes
-voice modulation
-mock interviews
-presentation class
-Extempory random topic
-Conversation 
-Picture Discription
-
-Story writing habbit from words
-audio video session
-
-telephonic interviews
-CV
-
-Email wr=obiting
-Sub+verb+ obj
-he words Hard roud-o-clock.
-with single subject we have to write 's'
+2 gmail//localhost: get params(toekn)
+Enter new pasword: submit
+--> api (post)
+body(new password )
+token
+backend: token find user
+oasswirdupdate
+token-NodeMailerEmail
+res.render
 
 
-
+cloudnary
