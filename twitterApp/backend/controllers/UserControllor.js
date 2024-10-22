@@ -14,7 +14,9 @@ require('dotenv').config()
 
 let User=require('../models/UserSchema')
 var crypto=require('crypto')
-const nodemailer = require("nodemailer")
+const nodemailer = require("nodemailer");
+const { log } = require('console');
+const { json } = require('express');
 
 const registerUser=async(req,res)=>{
     let {name, email,password,address}=req.body
@@ -188,7 +190,30 @@ const gettokenmail=(req,res)=>{
     // res.sendFile
 }
 
-const resetPassword=(req,res)=>{
+const resetPassword=async(req,res)=>{
+    try {
+        let password=req.body.password;
+    let token=req.params.token;
+    console.log("newpassword ",password);
+    console.log("token ",token);
+    
+    let user=await User.findOne({resetToken:token})
+    console.log(user);
+
+    if (user){
+        let hashedpassword=bcrypt.hashSync(password,salt)
+        user.password=hashedpassword;
+        user.resetToken=null;
+        await user.save()
+       return res.json({msg:"password updated successfully",success:true})
+        
+    }else{
+        return res.json({msg:"token expired",success:false})
+    }
+        
+    } catch (error) {
+        return res.json({msg:"error in resetpassword with token",success:false})
+    }
 
 
 

@@ -6,6 +6,7 @@ const port=8080
 //cross origin resourse sharing
 const cors=require('cors')
 
+app.set('view engine','ejs')
 
 const connecttodb=require('./db')
 connecttodb()

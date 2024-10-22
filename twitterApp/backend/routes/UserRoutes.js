@@ -12,7 +12,8 @@ router.delete('/delete/:_id',checkToken,deleteUser)
 router.post('/login',loginUser)
 router.get('/getuserinfo',checkToken,getuserinfo)
 router.post('/forgot-password',forgotpassword)
-router.get('/reset-token/:token',gettokenmail)
-router.post('/reset-token/:token',resetPassword)
+router.get('/resetToken/:token',gettokenmail)
+router.post('/resetToken/:token',resetPassword)
+
 
 module.exports=router
