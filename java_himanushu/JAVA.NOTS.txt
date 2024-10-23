@@ -364,10 +364,11 @@ specialisation
 lambda expression
 exception handling
 	-check/uncheck
-array 
-string 
-Collection framework
+array  and string oct 23 
+java Collection framework
 	-innerbuf
+file -storage
+netwroking in java
 file-stream
 cloning
 multithreading
@@ -379,9 +380,21 @@ jdbc
 servlet
 jsp
 jstl
+searialisation
 
+java Collection framework
 
+>> multithreading
+>>collection 8 hours
+>>>> Speclisation
+> wrapper class
 
+object orianted
+classobj,
+encapsulation
+polymorphism
+inheritance
+abstraction
 ------------------------------
 
 Relations:::::
@@ -798,12 +811,13 @@ forname: it loads the class at runtime
 ------------------------------------------------------------------------------------------------------------------------------
 Oct22
 
->> Speclisation 
+ 
 >>> sealed class permits 
 > singleton class
-> wrapper class
 >>> string and array
->> multithreading
+
+
+
 ------------------------------------------------------------------------------------------------------------------------------
 sealed class
     > We can add sealed keyword infront of the class
@@ -921,8 +935,44 @@ strings:
        li.add("word") //["hello","word"]
 
        
-    
+----------Warapper class:::
 
->>> multithreading
+the pre-defined variables that makes primitive data type avaible to the user in a form of obj
+>>> multithreading::
 
 >>> 
+Array:::
+    > it is a collection of similar datatype
+    > it is organised based on index value
+    > array is immuatable and we cannot cahnge the values once declare with size, therfore collection is introduced
+    > 2 types:
+        > Single dimensional : the array which has single dimension []
+            int arr[]=new int[10]
+            int arr[]={12,23,4}
+        > Multidemensional arrray : the array hich has to or more domension [[],[],[]]
+            int arr[][]=new int[rows][cols]
+            String arr[][]=new String[2][4]
+
+            int arr1[]= {5,6};		
+            for (int num:arr1) {
+                System.out.println(num);
+            }		
+            int doubarr[][]= {{2,5},{3,8},{4,8}};		
+            for (int i=0;i<=doubarr.length-1;i++) {
+                for (int j=0;j<=doubarr[0].length-1;j++) {
+                    System.out.println(doubarr[i][j]);
+                }			
+            }
+            
+            int arr[][]=new int [3][3];
+            int arr[][]= {{12,14,29},{23,31,35},{78,61,21}};
+            
+            for (int i=0;i<arr.length;i++) {
+                for (int j=0;j<arr[0].length;j++) {
+                    System.out.print(arr[i][j]+" ");
+                }
+                System.out.println();
+            }
+
+
+-----------------------------------------------------------------------------------------------------------------------------

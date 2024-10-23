@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>file and filereader js: https://javascript.info/file</title>
+</head>
+<body>
+    <input onchange="inputChange(event)" type="file">
+    <button onclick="submit()">submit</button>
+    <img src="" id="img" alt="">
+
+
+    <script>
+        let image = document.querySelector('img')
+        function inputChange(e){
+            let value = e.target.files[0];
+            console.log(value)
+            //to show image directly using createObject url method
+            // image.src = URL.createObjectURL(value)
+
+            //covert or read file
+            let reader = new FileReader();
+            reader.readAsDataURL(value);
+            reader.onload = ()=>{
+                console.log(reader.result)
+                image.src = reader.result
+            }
+            reader.onerror = ()=>{
+                console.log(reader.error)
+            }
+            console.log(image)
+            
+        }
+    </script>
+
+    
+</body>
+</html>
