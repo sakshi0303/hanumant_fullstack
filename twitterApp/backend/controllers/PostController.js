@@ -72,15 +72,19 @@ const updatePost=(async(req,res)=>{
 
 const getAllPost=(async(req,res)=>{
     try{
-        let data=await Post.find();
-        return res.json({msg:"all post",success:true,data})
+        //let data=await Post.find().populate("userid");
+        // populate will work with find
+        // new:true works with update
+        let posts=await Post.find().populate({path:'userid',select:['name','ProfilePic']});
+
+        return res.json({msg:"all post fetched successfully",success:true,posts})
 
     }catch(error){
-        return  res.json({msg:"error in geting all post",success:false})
+        return  res.json({msg:"error in geting all post",success:false,error:error.message})
 
     }
    
-    res.send("getallpost is working ")
+    //res.send("getallpost is working ")
 })
 
 

@@ -367,4 +367,38 @@ token-NodeMailerEmail
 res.render
 
 
-cloudnary
+cloudnary::
+
+
+IMAGE HANDLIngling
+upload.html
+baby.js
+buton onlick=""
+inpuut oonchange
+
+let value=e.target,files[0]
+file in object tyoe
+
+InputMismatchException// oto show  img directly useing 
+url.createObjectUrl(value)
+
+let reader=new FileReader();
+reader.readAsDtaURL(value)
+promise return
+reaser.onload(){
+  image.src=reader.result
+}
+reader.oneroro()
+
+
+let image=document.querySelector('im)
+
+time-ago JavaScript
+https://www.npmjs.com/package/javascript-time-ago
+
+
+material UI
+instagram post
+> joy UI
+//npm install @mui/joy @emotion/react @emotion/styled
+//npm install @mui/icons-material
