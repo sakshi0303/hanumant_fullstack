@@ -178,9 +178,10 @@ async function sendMail(email,resetToken){
 
 }
 
-const gettokenmail=(req,res)=>{
+const gettokenmail=async(req,res)=>{
     let token=req.params.token;
-    let user=User.findOne({resetToken:token})
+    console.log("gettokenmail",token);
+    let user=await User.findOne({resetToken:token})
     if (user){
         res.render('newPassword',{token})
     }
@@ -194,11 +195,11 @@ const resetPassword=async(req,res)=>{
     try {
         let password=req.body.password;
     let token=req.params.token;
-    console.log("newpassword ",password);
-    console.log("token ",token);
-    
+    console.log("newpassword resetPassword ",password);
+    console.log("token resetPassword ",token);
+    //let user=User.findOne({resetToken:token})
     let user=await User.findOne({resetToken:token})
-    console.log("",user);
+    console.log("user: ",user);
 
     if (user){
         let hashedpassword=bcrypt.hashSync(password,salt)
