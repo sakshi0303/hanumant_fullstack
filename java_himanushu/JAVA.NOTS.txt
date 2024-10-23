@@ -869,6 +869,59 @@ Singlton obj=Singlton.getinstance();
 //	one variable  with final so that no other class can make an instance
 //	both variable with static so that it can access method with class name
 
+-----------------------------------------------------------------------------------------------------------------------------
+strings:
+    string is the sequence collections of characters
+    method1: String s1="fdddf";
+    method2: String s1=new String("fdfs");
+    strings are mutable
+
+    methods:
+        -toString() :  it return the string representation of the object -> s1.toString()
+        -charAt(): it will fetch value based on index value, its start from index0 -> s1.charAt(2)
+        -length(): find the length of the string, its start from index1
+        -concat(): one string to another --> s1.concat(s2)
+        -StringBuffer : to make string mutuable, thread safe, eg: multi-threaded environments slow StringBuffer sb=new StringBuffer("dfgsd")
+        -StringBuilder : to make string mutable, not thread safe, eg: works in single threaded enviroment fast StringBuilder sb1=new StringBuilder("hello")
+               StringBuffer sb=new StringBuffer("hello");
+                    sb.append("world");
+                    sb.insert(6,"beautiful");
+                    sb.reverse();
+                    sb.replace(0, 2, "him");
+                    System.out.println(sb);
+
+
+
+        -StringJoiner : StringJoiner sj=new StringJoiner(", ")
+        sj.add("hello").add("banana").add("apple")
+        System.out.println(sj.toString())
+        output::: hello, banana, apple, 
+        
+        
+        -String Tokenizer: 
+            String Tokenizer sk=new StringTokenizer("hello world good morning"," ")
+            while (sk.hasMoreToken()){
+                System.out.println(sk.nextToken())
+            }
+
+        hasMoreTokens() : hasMoreTokens() method will move the cursor on
+            StringTokenizer Object and check the token available or not.
+            If Token available returns "true",else resturns "false"
+
+
+       Q>> Differnce between append, concat, add()
+       in concate= String s3=s1.concate(s2) --> new string saved the value
+
+        // we use StringBuffer sb=new StringBuffer("hello")
+       append= sb.append("world") --> same object sb is not "hello worls"
+
+       add:: it uses with collections 
+       like List<String> li=new ArrayList<>(); // list in interface , arraylist is the class
+       li.add("hello")
+       li.add("word") //["hello","word"]
+
+       
+    
 
 >>> multithreading
 

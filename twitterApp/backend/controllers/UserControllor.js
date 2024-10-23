@@ -198,7 +198,7 @@ const resetPassword=async(req,res)=>{
     console.log("token ",token);
     
     let user=await User.findOne({resetToken:token})
-    console.log(user);
+    console.log("",user);
 
     if (user){
         let hashedpassword=bcrypt.hashSync(password,salt)
