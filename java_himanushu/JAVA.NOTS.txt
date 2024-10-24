@@ -375,6 +375,7 @@ multithreading
 multiprocessing
 multitasking
 
+Oct 24--->
 advance java:
 jdbc
 servlet
@@ -976,3 +977,83 @@ Array:::
 
 
 -----------------------------------------------------------------------------------------------------------------------------
+Utility:
+the clss which performs operations on other object
+-eg string Builder and buffer: we perform insert,reverse,append
+
+generic::
+    -it is a class or method which is ready to accept any data type
+
+
+Collection::
+    > it is a interface which is coming from java.util package
+    > it is a root of framework- it containes all the 
+    > it contains 3 classes 
+        1)Set<Integer> hs=new HashSet<>(); hashset is a class which implements list
+                    new LinkedHashSet<>();
+                    new TreeSet<>();
+
+    
+        2)list  
+                List<> li=new ArrayList<>();
+                List<> li=new LinkedList<>();
+                List<> l3=new Stack<>(); #peek() , pop()
+                List<> l3=new Vector<>();
+
+        3) queue
+
+        4) map
+ 
+
+    > framework: a stucure which already contructed and avaible for the application developement
+    set()-> its a interface coming from java.util and it organised value without any specific index value and does not hold duplicate values
+
+    >linkedin hashset organise elements in insertion overrider
+    > tree set : assending or decending order
+
+Apache Tomcat is the web container to deploy our web application and test in local test machine
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+HashSet:
+// set is an interface coming from java,util package
+// it does not hold any duplicate values
+// it is not organized at specific index value
+
+Unordered.
+Allows null values.
+Best for general-purpose usage where ordering is not important.
+LinkedHashSet:
+
+Maintains insertion order.
+Slightly slower than HashSet due to maintaining a linked list internally.
+TreeSet:
+
+Sorted set.
+Does not allow null values.
+Useful when sorting is required.
+
+-------------------------------------------------------------------------------------------------------------------------
+List:
+list is an interface coming from java.util package
+    >it containes duplicate values
+    > it maintains the insertion order 
+    > it starts with 0 index
+
+Types of list in java:
+1) ArrayList - insertion order, contains duplicate value, good for reading operation
+    List<> li=new ArrayList<>();
+2) LinkedList - two pointer connecting head-node-tail, good for updation and deletion
+    List<> li=new LinkedList<>();
+3) stack- lifo: 
+    List<> l3=new Stack<>(); pop(),peek()
+3) vector( syncronised, thread safe)
+    List<> l3=new Vector<>();
+
+
+
+difernce between collections and collection:
+Colelction framework
+collections is interface which comes from java.util package
+
