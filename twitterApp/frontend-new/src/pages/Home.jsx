@@ -57,17 +57,14 @@ const Home = () => {
  
   return (
 
-    <div className='w-screen bg-orange-50 flex gap-2'>
+    <div>
       <h1>this is home</h1>
 
-      <div>
+      <div className='w-screen bg-orange-50 flex gap-2'>
         <div className='left w-1/6 bg-red-50'>
-        
-
          
-        <Sidebar/>
+        <Sidebar getallpost={getallpost}/>
       
-
         </div>
         <div className='right w-max'>
         <div className='grid grid-cols-12 gap-2'>
@@ -119,10 +116,10 @@ sx={{'--Card-radius': (theme) => theme.vars.radius.xs }}
     <Avatar
       size="sm"
       src="/static/logo.png"
-      sx={{ p: 0.5, border: '2px solid', borderColor: 'background.body',backgroundColor:'grey' }}
+      sx={{ p: 0.5, border: '2px solid', borderColor: 'background.body' }}
     />
   </Box>
-  <Typography sx={{ fontWeight: 'lg' }}>MUI</Typography>
+  <Typography className='capitalize' sx={{ fontWeight: 'lg' }}>{ele.userid.name}</Typography>
   <IconButton variant="plain" color="neutral" size="sm" sx={{ ml: 'auto' }}>
     <MoreHoriz />
   </IconButton>
@@ -130,14 +127,12 @@ sx={{'--Card-radius': (theme) => theme.vars.radius.xs }}
 <p>{ele.title}</p>
 
 <CardOverflow>
+<div className="w-full h-[200px]">
 
-{ele.image &&<AspectRatio>
-    <img src={ele.image} alt="" loading="lazy" />
-  </AspectRatio>}
+{ele.image && <img src={ele.image}   className=" w-[100%] h-[100%] object-contain" alt="" loading="lazy" /> }
 
-  {ele.video &&<AspectRatio>
-    <img src={ele.video} alt="" loading="lazy" />
-  </AspectRatio>}
+  {ele.video && <img src={ele.video}  className=" w-[100%] h-[100%] object-contain"  alt="" loading="lazy" />}
+  </div>
 </CardOverflow>
 <CardContent orientation="horizontal" sx={{ alignItems: 'center', mx: -1 }}>
   <Box sx={{ width: 0, display: 'flex', gap: 0.5 }}>

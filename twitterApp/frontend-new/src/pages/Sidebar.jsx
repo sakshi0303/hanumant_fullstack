@@ -5,7 +5,7 @@ import axios from 'axios';
 import { useSelector } from 'react-redux';
 
 
-const Sidebar = () => {
+const Sidebar = (props) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     let token=useSelector((state)=>state.user.token)
 
@@ -59,6 +59,15 @@ const Sidebar = () => {
 
         let data=res.data
         console.log(data);
+        setIsModalOpen(false);
+        props.getAllUSersPost();
+        setdetails({
+          title:'',
+          description:'',
+          image:'',
+          video:''
+
+        })
 
 
 
@@ -74,13 +83,13 @@ const Sidebar = () => {
                     <textarea name = "description" onChange={handleInputChanger} className='py-2 px-4 border border-amber-200'  id=""></textarea>
                   <div className='flex gap-2 items-center'>
                   <label  htmlFor="image" className='bg-green-950 my-2 py-2 px-4 rounded-md'>upload Image</label>
-                    <input name="image" onChange={handleFileChanger} className='py-2 px-4 border border-amber-200 my-1' type="file" id='image'  hidden/>
+                    <input name="image" onChange={handleFileChanger} className='py-2 px-4 border text-white border-amber-200 my-1' type="file" id='image'  hidden/>
                     <label  htmlFor="video" className='bg-green-950 py-2 px-4 rounded-md'>upload Video</label>
-                    <input name="video" onChange={handleFileChanger} className='py-2 px-4 border border-amber-200' type="file" id='video'  hidden/>
+                    <input name="video" onChange={handleFileChanger} className='py-2 px-4 border text-white border-amber-200' type="file" id='video'  hidden/>
                   </div>
                   <div className='flex gap-1'>
-                       { <img src="" className='w-40 h-40 m-auto' alt="" />}
-                        <video src=""  className='w-40 h-40 m-auto border border-red-400'></video>
+                       {details.image && <img src={details.image} className='w-40 h-40 m-auto' alt="" />}
+                        { details.video && <video src={details.video}  className='w-40 h-40 m-auto border border-red-400'></video>}
                   </div>
                     <button onClick={handleSubmit} className='bg-green-950 py-2 px-4 rounded-md my-2'>Submit</button>
                 </form>
