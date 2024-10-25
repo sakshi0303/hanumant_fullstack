@@ -48,3 +48,9 @@ pending::
 
 
 
+
+difernce between collections and collection:
+Colelction framework
+collections is interface which comes from java.util package
+
+collection is the class

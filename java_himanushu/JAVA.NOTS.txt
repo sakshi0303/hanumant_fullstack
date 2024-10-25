@@ -1053,7 +1053,33 @@ Types of list in java:
 
 
 
-difernce between collections and collection:
-Colelction framework
-collections is interface which comes from java.util package
 
+download:
+    -tomcat setup ::: https://www.youtube.com/watch?v=2KD7L8j1tio
+    > search tomcat setup in eclipse  macm1
+            >cd /Users/sakshisrivastava/Downloads/apache-tomcat-11.0.0/bin
+            >ls -al *.sh  
+            > chmod +x *.sh
+            > ./startup.sh 
+            > http://localhost:8080/
+            > ./shutdown.sh
+
+            to change to port 8080
+                > go to config
+                > vi server.xml
+                > <Connector port="8085" prot
+                > cd bin
+                > ./startup.sh
+                > http://localhost:8085/
+                > ./shutdown.sh
+    -ojdbc jar files
+    -SQL Plus
+
+    We need eclipse-enterprise version to show server
+    > install eclipse -ide --------IMPORTANT
+    
+    for window> help> new solftware install
+    https://download.eclipse.org/releases/2024-03/
+
+    > java --version java 21.0.4
+    > javac --version javac 21.0.4
