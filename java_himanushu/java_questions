@@ -36,19 +36,16 @@ Q new keyword and forname
 >forname is the process of creating object at complie time and we can modify it later in the code
 
 --Oct 18:
--specilisation
 -n
 
 
 Oct 25th
 pending::
 > specification
->for eeach remaingin
+>for each remaining
 > threading
-> specilisation
 > 
 Java Collection framework
-	-innerbuf
 file -storage
 netwroking in java
 file-stream
@@ -75,3 +72,4 @@ Colelction framework
 collections is interface which comes from java.util package
 
 collection is the class which is used to perform sorting process using sort method -->> NOT clesr idea
+

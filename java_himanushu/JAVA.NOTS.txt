@@ -1077,9 +1077,28 @@ Queue:
         >LinkedBlockingQueue ---> threadsafe, bounded, capacity
         >ArrayBlockingQueue --->threadsafe, bounded or unblound
         >PriorityBlockingQueue--> threadsafe, bounded
-        
-    
 
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Map:: 
+    > it is interface which is extended from java.util package
+    > it has key and value parseInt
+    methods:
+        > keyset()
+        > values()
+        > entrySet()
+        > containSet
+        > clear()
+        > size()
+        > replace()
+        > remove()
+    Class interface that implements:::
+        > HashMap : unorder , allow null key and values
+        > LinkedMap : insertion order, non sycronised , allow null key and values
+        > TreeMap - ordered, non sycronised, no order, does not  allow null key and values
+        > HashTable -syncronised, thread-safe,does not  allow null key and values
+        > ConcurentHashMap--syncromised,thread-safe,does not  allow null key and values
 
 download:
     -tomcat setup ::: https://www.youtube.com/watch?v=2KD7L8j1tio
