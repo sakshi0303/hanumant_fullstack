@@ -4,6 +4,8 @@ JAVA:
 //psvm:: for s=public statci void main
 // sysout: enpty printbox
 
+// advance java venketesh mansani download pdf naresh it
+
 >OBJECT ORIENTED , PLATFORM INDEPENDENT(IT CAN RUN IN ANY PLATFORM VISUALcode,intellige,eciplse NETBEAN,ANY CODE EDITOR)  PROGRAMING LANGUAGE 
 >1995 JIMS GARWINS
 >COFEE
@@ -1043,15 +1045,40 @@ list is an interface coming from java.util package
 
 Types of list in java:
 1) ArrayList - insertion order, contains duplicate value, good for reading operation
-    List<> li=new ArrayList<>();
+    List<> li=new ArrayList<>(); add , set
 2) LinkedList - two pointer connecting head-node-tail, good for updation and deletion
-    List<> li=new LinkedList<>();
+    List<> li=new LinkedList<>(); previous,next,datanode
 3) stack- lifo: 
-    List<> l3=new Stack<>(); pop(),peek()
-3) vector( syncronised, thread safe)
+    List<> l3=new Stack<>(); pop(),peek(), push(),Empty(),search()
+3) vector( syncronised, thread safe) capacity,size,isEmpty,firstellement,lastelement, setelmentat,removeelementat,insertelement,addelenent,removeallelements
     List<> l3=new Vector<>();
 
+-------------------------------------------------------------------------------------------------------------------------
 
+Queue:
+    >Queue is an interface which extends from java.util package
+    > it follows FIFO rule
+    > elements are inserted at head of the queue and removed from the tail of the queue
+
+    Queue implements:
+        >LinkedList First in first out add,offer,remove,poll,elememt,peek()
+        >PriorityQueue Comparator.reverseOrder(),bydefault smallest to lowest size(),isEmpty(),contains(Object o)
+            Comparator.comparingInt(task -> task.priority)
+        >ArrayDeque as DoubleEndedQueue
+                addFirst- if some erroc occured, throws exception
+                ,offerFirst- if some error occur return false
+                addLast()
+                offerLast()
+                removeFirst()
+                pollFirst()
+                pollLast()
+                getFirst() -> return first element
+                peekFirst()-> return null, if the queue is empty
+        >LinkedBlockingQueue ---> threadsafe, bounded, capacity
+        >ArrayBlockingQueue --->threadsafe, bounded or unblound
+        >PriorityBlockingQueue--> threadsafe, bounded
+        
+    
 
 
 download:
@@ -1083,3 +1110,5 @@ download:
 
     > java --version java 21.0.4
     > javac --version javac 21.0.4
+
+
