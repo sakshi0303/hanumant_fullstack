@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 const Sidebar = (props) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     let token=useSelector((state)=>state.user.token)
+    const [selectedfile, setselectedfile] = useState("");
 
     const [details, setdetails] = useState({
         title:'',
@@ -34,8 +35,10 @@ const Sidebar = (props) => {
 
     }
 
-    const handleFileChanger=(e)=>{
+    const handleFileChanger=async(e)=>{
+
         let file=e.target.files[0];
+        //method1
         let reader=new FileReader();
         reader.readAsDataURL(file);
         reader.onload=()=>{
@@ -44,12 +47,27 @@ const Sidebar = (props) => {
         reader.onerror=()=>{
             console.log("error in reading file");
         }
+
+        //method2:
+        // setselectedfile([])
+
+        let formdata=new FormData();
+        formdata.append('file',setselectedfile);
+        formdata.append('upload_preset',process.env.REACT_APP_Upload_Preset)
+        let res1=await axios.post(`https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUD_Name}/upload`,formdata)
+        console.log((res1))
+        setdetails({...details,[e.target.name]:res1.data.secure_url})
+
+
+
+        
     }
 
     const handleSubmit=async(e)=>{
         e.preventDefault();
         console.log(details);
 
+        
         let res=await axios.post("https://localhost:8080/posts/create",details,{
            headers:{
             'Authorization':token
@@ -82,16 +100,16 @@ const Sidebar = (props) => {
                     <label  className='my-2' htmlFor="">Description</label>
                     <textarea name = "description" onChange={handleInputChanger} className='py-2 px-4 border border-amber-200'  id=""></textarea>
                   <div className='flex gap-2 items-center'>
-                  <label  htmlFor="image" className='bg-green-950 my-2 py-2 px-4 rounded-md'>upload Image</label>
+                  <label  htmlFor="image" className='bg-green-950 my-2 py-2 px-4 text-white rounded-md'>upload Image</label>
                     <input name="image" onChange={handleFileChanger} className='py-2 px-4 border text-white border-amber-200 my-1' type="file" id='image'  hidden/>
-                    <label  htmlFor="video" className='bg-green-950 py-2 px-4 rounded-md'>upload Video</label>
+                    <label  htmlFor="video" className='bg-green-950 py-2 px-4  text-white rounded-md'>upload Video</label>
                     <input name="video" onChange={handleFileChanger} className='py-2 px-4 border text-white border-amber-200' type="file" id='video'  hidden/>
                   </div>
                   <div className='flex gap-1'>
                        {details.image && <img src={details.image} className='w-40 h-40 m-auto' alt="" />}
                         { details.video && <video src={details.video}  className='w-40 h-40 m-auto border border-red-400'></video>}
                   </div>
-                    <button onClick={handleSubmit} className='bg-green-950 py-2 px-4 rounded-md my-2'>Submit</button>
+                    <button onClick={handleSubmit} className=' text-white bg-green-950 py-2 px-4 rounded-md my-2'>Submit</button>
                 </form>
             </Modal>
 

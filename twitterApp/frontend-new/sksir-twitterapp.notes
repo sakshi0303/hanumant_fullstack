@@ -463,3 +463,21 @@ file: file
 
 give the live pic url
 
+
+clodnary:
+.env
+REACT_APP_CLOUD_Name=dqtjqk1mn
+REACT_APP_Upload_Preset=twitterApp
+
+upload preset we will get in setting inside cloudnary
+in react it is not allowed to install dotenv file
+always start the server after creating .env environement
+
+in app.js:
+  > process.env.REACT_APP_CLOUD_Name
+in me
+
+
+data,secure url
+
+

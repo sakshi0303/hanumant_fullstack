@@ -9,9 +9,17 @@ import 'react-toastify/dist/ReactToastify.css';
 import MouseTracker from './pages/MouseTracker';
 
 function App() {
+  console.log(process.env.REACT_APP_CLOUD_Name);
+  console.log(process.env.REACT_APP_Upload_Preset);
+
+  // for vite react app
+  //console.log(import.meta.env.REACT_APP_CLOUD_Name);
+
   return (
+
     <div className="App">
       <BrowserRouter>
+
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>

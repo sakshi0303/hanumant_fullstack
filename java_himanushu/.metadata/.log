@@ -5646,3 +5646,35 @@ Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse
 
 !ENTRY org.eclipse.e4.ui.workbench 2 0 2024-10-25 09:48:26.696
 !MESSAGE Removing PartDescriptorImpl with the "org.eclipse.php.ui.projectOutline" id and the "PHP Project Outline" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+!SESSION 2024-10-26 11:37:14.771 -----------------------------------------------
+eclipse.buildId=4.33.0.20240905-0613
+java.version=21.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/sakshisrivastava/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.jee.product -keyring /Users/sakshisrivastava/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2024-10-26 11:37:16.158
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-10-26 11:37:19.610
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-10-26 11:37:19.914
+!MESSAGE Logback config file: /Users/sakshisrivastava/Desktop/hanumant_fullstackfinal/hanumant_fullstack/java_himanushu/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.1.20240411-1122.xml
+!SESSION 2024-10-26 13:59:21.927 -----------------------------------------------
+eclipse.buildId=4.33.0.20240905-0613
+java.version=21.0.4
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/sakshisrivastava/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.jee.product -keyring /Users/sakshisrivastava/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2024-10-26 13:59:23.777
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-10-26 13:59:26.933
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-10-26 13:59:27.272
+!MESSAGE Logback config file: /Users/sakshisrivastava/Desktop/hanumant_fullstackfinal/hanumant_fullstack/java_himanushu/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.6.1.20240411-1122.xml
