@@ -1,0 +1,1260 @@
+JAVA:
+//cmd+shift+o-- for instialling all the packages used in class
+#systrace:: SHOTCUT for sopln   printbox with classname
+//psvm:: for s=public statci void main
+// sysout: enpty printbox
+
+// advance java venketesh mansani download pdf naresh it
+
+>OBJECT ORIENTED , PLATFORM INDEPENDENT(IT CAN RUN IN ANY PLATFORM VISUALcode,intellige,eciplse NETBEAN,ANY CODE EDITOR)  PROGRAMING LANGUAGE 
+>1995 JIMS GARWINS
+>COFEE
+> NON PRIMITIE: CLASS, ARRAY, ENUM, STRING 
+>
+
+control+shift+o::: to add all dependency
+
+// evening 4-6 pm 
+-erro handling
+> specialiation 
+> arry, string
+
+Core Java---
+Oct 10: 
+package
+inferface
+polymorism
+access modifies
+relations
+    > referencse
+    > is a relation inheritance
+    > inner class
+
+
+
+innerclass
+lambda expression - to increase the performance in projects
+
+array,enum,string
+local variable
+static -> local and instance varible
+Collection frameword: set,List,Queue,stack,LinkedList,PriorityQueue, DoubleEndedQueue(anywhere in line we can push or pop)
+
+
+WHY PLATFORM INDEPENDENT:
+JAVA COMPILER::: CONSERT SRC CODE TO BYTE CODE(.class) and it will check the synaztax and all error at a time and diplay all error at once 
+BYTE CODE WILL RUN IN any given platorm
+whe
+
+>class firmst name will be capital and we will save file with .java extension
+
+> javac Main.java ---> Main.class(bytecode-> which is not readable)
+> java Main.java --> Run(output)
+> JDK (java developement Kit- oracle website ), 
+>JRE (java run environemtn), JVM(java virtual machine)
+> JDK internally hold JRE and JVM and JAVA library
+> Java Run time: it create a enviroment whiich is responsible for run the CODE
+> jdk is like package,json, which is not readable
+> Java virtual machine--> byte code to execute and create redults
+
+> compleier converst src code to byte codeand jvm execute bytecode .class and execute the result
+
+>> Question:
+Q; differnece between compileer and interpreter:
+    >compile, checks the syntax and show all error at once ( we can complile one time and then use java Main.java) 
+    > JAVA COMPILER(transalate all at once)::: CONSERT SRC CODE TO BYTE CODE(.class) and it will check the synaztax and all error at a time and diplay all error at once 
+
+    Interpreator(line by line): javascript: responsible for check the code line by line , erd: 20 lines code
+    line 5 error, after 5th linecode will not run and it  iwll throw error
+
+
+> Java library: collection of predefined functions(packahe,class, interface)
+> JVM execute  the byte code and generate the result
+
+
+Class:::
+
+>Class is a strutured layout in java which is responsible for creating the OBJECT
+>collecton of variables, methos,d block of constructor
+
+package: its a collection of classes and interfaces
+interfaces are the collection of variable and methods
+variabel: public static,default,private
+>primitive: character, boolean, number, float, double
+> statick  "static c" variable,blck, constrotor can be called/ access by class
+> Non statkc "int b" will be access by obj name 
+> public stactic(access by class) void(return ) main (string args[](argument passed as parametersx))
+> this is starting point of PROGRAM
+? java 17 after java 6 we have to use this 
+
+public class Main{
+    static int a=10;
+    int b=20;
+
+    public static void Main(String args[])
+    {
+        Main.a;
+        Main obj=new Main();
+        obj.b();
+    }
+}
+
+string in double code
+character in single code
+
+DOWNLOAD:
+arms mac1  dmg file
+
+ check hjava mervion on macbook pro --/usr/libexec/java_home -V
+
+>/Users/sakshisrivastava
+> ls -all
+>open .zshrc
+>export JAVA_HOME=$(/usr/libexec/java_home -v 21.0.4)
+>export PATH=$JAVA_HOME/bin:$PATH
+>echo $JAVA_HOME
+>/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home
+
+> java -version
+> go to hanumant folder 
+> touch 
+
+
+----------------------
+
+
+Data Types:::
+
+1int= 1bit=8 byte
+mobile - 7838125076L
+
+Data type is used for defining the type of data., it is of two types
+1) Primitive (single value data format): 
+    > Integer (int,long(9 place above),byte,short-create file stream)
+    > Float  float(uptill 2-3 points) , double
+    > Character char
+    > Boolean
+2)Non Primitive(multiple value data format):
+    -Class
+    -ENUM  -enumeration, collection framework as a data type
+    -String
+    -Interface
+
+Method:
+    - method are the actions which execute to generate the result
+    <IMPORTANT>
+    -they are two type  : STATIC, NON STATIC
+    ->> STATIC METHOD ARE THE method which is declared with the static keyword
+        static method will be accessible with classname and they will get the memory within the class
+    ->>NON-STATIC is acessed by obj of a class and it will take memory space of an OBJECT 
+    --> and obj will access both member of the class(static and non static) but it is not advised
+
+
+    Syntax:
+    // parameters are used to transfer data from one method to another method
+        ReturnType Methodname ( parameters ) 
+
+
+Variables(8 byte):
+
+    -are the containers which is used to store the data
+
+    Variables of two types:
+        -> Static Variables
+        -> Non static variables
+    
+    >static String name='sakshi';
+    >float age=30.345f
+    >double age=234.23324d
+
+
+------------------------------------------------
+
+Object:
+    >object are container which hold non statc methods,variables,contructor component of the class.
+    > we can create the object with the help of class 
+    > Main obj=new Main();
+
+
+
+-----------------------------------------------------
+> Filename will be Class Name and first letter of class is capital
+>
+public class Main {
+    public static void main(String agrs[]){
+        String str="hello world";
+        System.out.println(str);
+    }
+}
+
+concatination
+    >System.out.println("a*b="+c);
+
+
+-----------------------------------------------------
+> to run
+    > javac Main.java
+    > java Main.java
+
+-----------------------------------------------------
+
+SCANNER::
+    > Scanner class is used to take the input from the user
+    > import java.util.Scanner
+    > Scanner sc=new Scanner(System.in)
+    > System.in will take the values as input
+    > if varibales are defined inside main class, then we have to make a method to display the result.and call that method in main method.
+    > if the variables are defined in main method then the output is showed and calculated in the main method only
+
+>if we will take the input as a integer so we willl use .nextInt()
+>float ----> .nextFloat()
+>long ----> .nextLong()
+>for charater and string, whole sentence ----> .nextLine()
+> byte(stream) ----> .nextByte()
+> short(stream) ----> .nextShort()
+
+
+-----------------------------------------------------
+
+>> Block: set of staments which is inclosed in curly braces
+these are 2 types:
+-static block  
+-non static block
+
+- static block =---->
+
+static{
+
+}
+
+-non static block--->
+{
+
+}
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Q1-differnece between block and constructor and which has a highest priority
+Ans Static, non static , constructor
+    - static has most precendence
+    - class will be create
+    - obj of the class is called, ( same time non static block and constructor will be invoked)
+    - non static block
+    -constructor
+----------------------------------------------------------------------------------------------------
+
+>>> parameters are the variables that transfer data from one method to another method
+>>Non parametriesed constructor are the constructore which does not take any argument
+>> we have to create method and obj to display the output stored.
+
+> parameters are the variables which are used to transfer data from one method to another
+Q:::: to perform the paramertised construcntor we have to use this keyword
+>>> this always for parametrised constructor keyword refers to the current class or component and this is used to loading the data into variables
+----------------------------------------------------------------------------------------------------
+
+
+OPERATORES::
+
+operators are used to perform the operations on the object or component.
+there are 4 types of operators
+    1) Arthematic ::: +,-,/,*,%
+    2) Logical ::: &&,||,!
+    3) Relational::: <=,>=,>,<,!=
+    4) Increment and Decrement::: ++,--
+
+Control Structure::::
+
+    Control Structure are used to control the execution flow of the PROGRAM
+    these are three types::
+        1) Selections Statement : if,else-if,else nested if-else 
+        2) Iterative Statement:: while, dowhile,for
+        3) Branching Statement:: swtich,return ,break
+    
+// in vscode first class  that has psvm among three classes is always consider main class 
+
+int arr[]={1,2,3}; #1D array
+
+Q : if interger input is taken before string input then it skip the string input
+Ansert: // int res=Integer.parseInt(sc.nextLine());
+        float res=Float.parseFloat(sc.nextLine());
+
+
+in 1 file, if more than 1 classes are made then, 
+    -1st class should be public and has psvm method,    
+    -and other two classes insided ame file should not be public
+
+Interface:::
+    >the process of interlinking classes using implement keyword
+    > it is a collection of abstract method and concrete method
+    > abstract method are the method which is declared with abstract keyword , they dont have the method body eg abtract void add(int x,int y);
+    > abstract method is defined in abstract class and interfaces only. 
+    > abstract method will be called by classes that implement this interface
+    > we cannot instantiate interface
+
+    Coding rules of Interface:
+Rule-1 : we use "interface" keyword to construct interfaces
+syntax:
+interface Interface_name
+{
+//Interface_body
+}
+
+Rule-2 : The programming components which are declared within the interface are automatically "public".
+Note:
+=>The programming components which are declared in classes
+without any access modifiers are considered as "default".
+
+Rule-4 : The variables which are declared within the interface are
+automatically static and final variables.
+
+Rule-5 : The methods which are declared within the interface are
+automatically NonStatic abstract methods.
+(static abstract methods are not available)
+
+Rule-6 : Interfaces cannot be instantiated in Java,which means we cannot
+create object for Interfaces.
+
+Rule-7 : Interfaces are implemented to classes using "implements" keyword and the classes are known as implementation classes.
+
+Rule-8 : These implementation classes must construct the body for all
+abstract methods of Interface.
+Package::
+    >it is a collection of classes and interfaces
+    >it is of two types:
+        > Pre defined package (packages which is avaible from java library, java.util,java.lang,jakarta.servlet.http, )
+        > User Defined package (created by users )
+
+Access Modifiers:
+    which defines the availablity of class or compononet throughout the project
+    > public -> accessed throughout the project by creating obj
+    > private -> access only within a class
+    > protected -> access within the package and outside the package by extend keyword
+    > default -> access within the package by creating object
+> we can sysout only inside method
+> import is to make the classes available to the other classes
+> we can call import with packagename.*; for all 
+> pacakagename.classname for specific //import p1.AccessModifiers;
+> import p1.* or p1.classname and then make the obj of the class and print inside the main mehod or any method obj.name
+package p2;
+import p1.AccessModifiers;
+//import p1.AccessModifiers;
+public class AccessModifier2 extend AccessModifier {
+
+	public static void main(String args[]) {
+		AccessModifiers obj=new AccessModifiers();	
+		System.out.println(obj.name);			
+	}
+}
+
+// final vaiables are the variables wihich is instalised with value and we cannot modify it at a run time
+
+//Differnce between: 
+//	local variable are variable which is declared inside a methood.abstract
+//	instance variable are the variable which is written outside of method
+
+Oct 15th::
+method overriding
+overloading
+
+Oct 16th:
+interface
+polymorshim
+abstract class
+encapsulation
+innerclass a,b,c->th eavaiblabilty of single call to work with other class
+genreation, parent class method and override method of class b
+Oct: 17L
+specialisation
+lambda expression
+exception handling
+	-check/uncheck
+array  and string oct 23 
+java Collection framework
+	-innerbuf
+file -storage
+netwroking in java
+file-stream
+cloning
+multithreading
+multiprocessing
+multitasking
+
+Oct 24--->
+advance java:
+jdbc
+servlet
+jsp
+jstl
+searialisation
+
+java Collection framework
+
+>> multithreading
+>>collection 8 hours
+>>>> Speclisation
+> wrapper class
+
+object orianted
+classobj,
+encapsulation
+polymorphism
+inheritance
+abstraction
+------------------------------
+
+Relations:::::
+
+The process of establishing communication between the components are called Relations:
+> it is of three type:
+    > Reference (has a relation) interlinking objects
+    > Inheritance (is a relation) interlinking classes
+    > InnerClass 
+    
+> within same package we dont need to import classes or variible of differnt classes
+> to access the resourcess within same package we only need to create obj of differnt class 
+
+------------------------------------------------------------------------------------------------------------------------
+
+Inheritance:::
+the process of interlinking class using extend keyword
+
+- is a relation
+-single level inheritance 2 classs and main class (parent class inherit its property in one child class)
+- multi-level-inheritance 3 or more class and Main class (parent class inherit its properties to mutiple child classes 
+- hirarichal inheritance
+- 
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+-----void is used for printing and it returns nothing
+--- whenever we use extend keyword always create the obj of the child
+
+--- package name always start with smaller case
+parameters are the values which used to transfer the data from one place to another
+OverRiding::
+	-Parent-class-method who has same name, same parameters and same return type as of child-class-method,
+	 At the time of obj creation of child class, replaced by parent class method will be replaced by child class method.
+	-more than one method with same method name in parent class and child class. Parent class method will be replaced by child class at the time of obj creation
+OverLoading::
+	-More than one method with same name , different parameters and different return type are called and at the time of obj creation java will decide itself what is called on the basis of parameters
+	// overloading :more than 1 method with same method-name in same-class but  different parameters is known as POverloading
+
+Overloading with Constructor::
+	--interlinking of constructor within same class using this keyword 
+	--interlinking id constructor from different class using super keyword
+	
+-this keyword is used to repent the current class components. it is used to load the data into the variables
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Interface:::
+
+
+- interface is the process of interlinking classes using implement keyword
+- it is the collection of abstract method and concrete method and variables
+- we will declare interface using imterface keyword
+- interface class and astract class obj cannot be made
+- we can declare abstract method only in interface and abstract class, 
+- when we implement interface with abstract method, in class--> we have to make them concrette method
+-abstract method does not have any body,but haveing a parameter
+- by default interface has public ,abstract static method with no body
+- body of the method will be given in the implement class while overloading
+-Like abstract classes, interfaces cannot be used to create objects (in the example above, it is not possible to create an "Animal" object in the MyMainClass)
+interface rules-->
+Interface methods do not have a body - the body is provided by the "implement" class
+On implementation of an interface, you must override all of its methods
+Interface methods are by default abstract and public
+Interface attributes are by default public, static and final
+An interface cannot contain a constructor (as it cannot be used to create objects)
+Why And When To Use Interfaces?
+1) To achieve security - hide certain details and only show the important details of an object (interface).
+
+2) Java does not support "multiple inheritance" (a class can only inherit from one superclass). However, it can be achieved with interfaces, because the class can implement multiple interfaces. Note: To implement multiple interfaces, separate them with a comma (see example below).
+
+
+Abstract Method::
+	-abstract method is the method which uses abstract keyword and it does not have body
+	-concrete method are the method which does not have a abstract keyword and have a body
+We will not be able to insitate interface and abstract class
+- abstract refers to the idea like love,freedom
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Polymorphism---
+
+
+Many forms
+the ability of single programing components to work with multiple programing components is called as Polymorphism or classs
+it is of 2 types:
+	> Dynamic Polymorphysm
+	> Static Paolymorphism
+
+>>Muticlass inheritance causes ambiguity problem so we use interface
+> 
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+Abstract class
+abstract class is the collection of variables , abstract method, concreete method , block and constructor
+abstract does not use interface
+we will declare abstract class using abstract keyword and it hold the abstract method
+we  cannot declare the object of abstract class
+
+in normal class we cannot have abstract method but in abstract class we can have abstract method
+- outerclass cannot be private, innerclass can be private
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Generalisation------
+
+
+> generalisation is the process in which parent class holding the refernce of child class object
+ParentClass obj=(ParentClass) new ChildClass(); // it  takes parnt class all components and only the overidieng method of child
+object will hold all the members of parent class and only overide method of child class
+> it wil not happen with cabstract classs
+> type cast eg--advance class
+
+// it only takes the overiding method of child 
+
+
+Implicit casting (generalization): Java automatically converts a smaller type (like int) into a larger type (like double), as the larger type can store all possible values of the smaller type. This is a widening process, allowing more general usage.
+
+Explicit casting (specialization): You are manually converting a larger type (like double) into a smaller type (like int). This is a narrowing process, focusing on a smaller, more specific type that may discard or lose some information. Since this conversion may lead to data loss or precision issues, it requires an explicit directive from the programmer.
+
+
+spclisation ::
+the process of constructing child class by taking on feature of parent chils
+
+
+--------------------------------
+
+innerclass
+-the process of declaring class inside another class is called innerclass
+-it is of two type:
+    >>-member innerclass
+        the innerclass which act as a memeber of the other class
+        --innerclass cannot have static method
+        it if 2 type:
+            >>- Static member innerclass  
+                    - static keyword ahead of member innerclass
+
+                    public class ClassOuterCalss{
+                            public static void outer1() {
+                                System.out.println(outer_x);
+                            }        
+                            public void outerm2() {
+                                System.out.println(outer_x);
+                                System.out.println(outer_y);
+                            }
+                        private static class classInnerclass{ #nonstactic class
+                                public static void innerm1() {
+                                    System.out.println(x);     
+                                }   
+                                public void innerm2() {
+                                    System.out.println(x);
+                                    System.out.println(y);
+                                }
+                        }
+                    public static void main(String[] args) {
+                        // TODO Auto-generated method stub
+                        ClassOuterCalss.classInnerclass objinner=new ClassOuterCalss.classInnerclass();// can access static inner class directly by outerclass name
+                        
+
+            >>-non static member innerclass
+                 a memeber innerclass which is declared withoud static keyword: it is of two types::
+                >>-instance member innerclass
+                    -Non Static instance member innerclasss which is declared outside the method known instance member innerclas
+                    public class ClassOuterCalss{
+                            public static void outer1() {
+                                System.out.println(outer_x);
+                            }        
+                            public void outerm2() {
+                                System.out.println(outer_x);
+                                System.out.println(outer_y);
+                            }
+                        private class classInnerclass{ #nonstactic class
+                                public static void innerm1() {
+                                    System.out.println(x);     
+                                }   
+                                public void innerm2() {
+                                    System.out.println(x);
+                                    System.out.println(y);
+                                }
+                        }
+                    public static void main(String[] args) {
+                        // TODO Auto-generated method stub
+                        ClassOuterCalss objoutter=new ClassOuterCalss();
+                        ClassOuterCalss.classInnerclass objinner=objoutter.new classInnerclass();
+                        
+                        //		//rules:::
+                        //			1) objoutter will have access to only outer class component
+                        //			2) objinner  will have access to only inner class component
+                        //			3) static members of innerclass can access to static memeber of the outer class
+                        //			4) non static memeber of the innerclass can access to non static memeber of the  inner class
+
+                    	}
+
+                    }
+                  
+                >>-local member innerclass
+                    - instide the method we will create the object
+                    -the innerclass which is declared inside the method
+                    -one type intialiszton
+
+                    public class ClassInsideMethod {
+                            int x=10;
+                            public void getdata() {
+                                class InnerClass{
+                                    public void displayx() {
+                                        System.out.println(x);                                       
+                                    }                                    
+                                }                                
+                                InnerClass innerobj =new InnerClass();
+                                innerobj.displayx();
+                            }                            
+                            public static void main(String args[]) {
+                                ClassInsideMethod outerobj=new ClassInsideMethod();
+                                outerobj.getdata();
+                            }
+
+                        }
+    >>-anonymous innerclass
+        >>- anonymous as class extention
+        >>-anonymous as implementation class
+
+-outer class cannot be static and it is only public
+-inner class can be static and private,protected and public
+---------------- ;
+nonstatic member innerclass: a memeber innerclass which is declared withoud static keyword:
+it is of two types::
+
+vcariable is static and nonstatic- 2 types::::local and instance 
+
+In Java, an inner class is a class that is defined inside another class. An inner class can access the members of the outer class, including private members, and it can be used to implement callbacks and event handlers. There are four types of inner classes in Java:
+
+>Member Inner Class: It is a non-static class that is defined at the member level of a class. It has access to all the members of the outer class, including private members.
+
+>Local Inner Class: It is a class that is defined inside a method or a block of code. It has access to the final variables of the method or block in which it is defined.
+
+>Anonymous Inner Class: It is a class that is defined inline and has no name. It is used to implement interfaces or extend classes without creating a separate class.
+
+>Static Nested Class: It is a static class that is defined inside another class. It does not have access to the non-static members of the outer class.
+
+
+-------------------------------
+Instance member innerclass:
+Outerclassname.innerclassname obj=outerclassobjname.innerclassname
+//rules:::
+//			1) objoutter will have access to only outer class component
+//			2) objinner  will have access to only inner class component
+//			3) static members of innerclass can access to static memeber of the outer class
+//			4) non static memeber of the innerclass can access to non static memeber of the  inner class
+-------------------------------
+local memeber inner classs
+    - the class which is decalred inside a method
+    - the obj of the innerclass will be created inside the method
+
+anonomous innerclass::
+a innerclass which does not have a class name
+it is of two types::
+    1) Annonomous as Class extention
+        > we perform using classx
+
+        Class ClasName{
+            public static void m1(int a){
+                System.out.println(90);
+            }
+
+            public  String m2(String n){
+                return "class";
+            }
+        }
+
+        Class Main{
+            ClassName obj=new ClassName(){
+
+                // error static method cannot be overrider
+                //public static void m1(int a){
+                //    System.out.println(a);
+                //}
+                public  String m2(String n){
+                    return n;
+                }
+            }
+
+            //obj.m1(10);--> error
+            obj.m2("sakshi");
+        }
+    2) Annomous as implementation class
+        > we perform using interface
+        > the process of declaring the implementation class without name is known as  Annomous as implementation class
+        > we do interface implementation for eg: 
+            InterfaceName{
+                public abstract void display(int x);
+
+            }
+            InterfaceName interface_obj=new InterfaceName(){
+                public void display(int x) {
+					System.out.println(x);
+            };
+            interface_obj.display(10);
+            }
+            }
+----------------------------
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+if (value.equals("greater")) {}
+
+lambda expression :
+- the process of declaring method without its name is called as lambda function
+- it is also known as anymonous method and it works only with  one abstract method of interface 
+
+Functionalinterface: a interface with only one abstract method
+
+Factory Method::
+- the proces of constructing object by hiding the object creation process is called as Factory Method
+
+@FunctionalInterface
+public interface Interface1 {
+	public abstract void m1(int x,int y);
+    //	public abstract void m2(int y); lambda expression only need one abstract method in inter interface knowsn as functional interface
+	// for more than one abstreact method in interface we can use anonymous function
+	public static String m2(String name) {
+		return name;
+	}
+	public static void main(String args[]) {
+		//lambda-expession
+		// factory method: the process of constructing method by hiding object creation method
+//		Interface1 obj= (x)->{
+//			System.out.println(2*x);
+//			
+//		};
+//		obj.m1(10);
+		Interface1 obj=(x,y)-> System.out.println(2*x*y);
+		obj.m1(3, 1);
+	}
+}
+lambda expression also do implementation of factory class
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Exception Handling:: it is the process which is used to handle the exception . It is of two types:
+    > Unchecked Exception
+        - the exception which is not identified at compile time is called as unchecked Exception
+    > Checked Exception
+        - the exception which is identified at compile time is called as checked Exception
+     To handle exception we use try,catch,finally
+
+
+Exception: whenever an error occur, server stops ,so that the server will keep on running
+    
+public class TryCatch2 extends Exception{
+	public TryCatch2 (String name) {
+		super(name);
+	}
+	public static void main(String args[]) {
+		try {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter the salary");
+		int Salary=sc.nextInt();
+		if (Salary>=0 & Salary<=1200) {
+			TryCatch2 obj=new TryCatch2("salary is too low");
+			throw obj;
+		}
+		}catch(TryCatch2 obj) { //user-defined exception
+			System.out.println(obj.getMessage());
+		}catch(InputMismatchException ime) {
+			System.out.println(ime);
+			
+		}
+		catch(Exception e) { // pre-defined exceptions
+			e.printStackTrace();
+		}	
+	}
+}
+-------------------------------------------------------------------------------------------------------------------------------
+TRy with resorce::
+    -  "try-with-resources" statement is a special form of the try statement that automatically closes resources when they are no longer needed.
+    public class TryWithResourcesExceptionExample {
+        public static void main(String[] args) {
+            try (BufferedReader reader = new FaultyBufferedReader(new FileReader("example.txt"))) {
+                // Exception thrown during file reading
+                throw new IOException("Error during file reading");
+            } catch (IOException e) {
+                // This block will handle the primary exception during file reading
+                System.out.println("Primary Exception: " + e.getMessage());
+                
+                // Retrieve and display suppressed exceptions
+                Throwable[] suppressedExceptions = e.getSuppressed();
+                for (Throwable suppressed : suppressedExceptions) {
+                    System.out.println("Suppressed Exception: " + suppressed.getMessage());
+                }
+            }
+        }
+}
+
+------------------------------------------------------------------------------------------------------------------------------
+
+new keyword: creation of obj at compile time and we can change the value after that, compile time,fast
+newinstance : it is method constructor.newinstance() , runtime , uwing reflection, slow, 
+        import java.lang.reflect.Constructor;
+
+public class NewAndNewInstance {
+	public static void main(String[] args) {
+		//NewAndNewInstance obj=new NewAndNewInstance();
+		try {
+		Constructor<NewAndNewInstance> constructor=NewAndNewInstance.class.getDeclaredConstructor();
+//		NewAndNewInstance obj=(NewAndNewInstance) Class.forName("NewAndNewInstance").newInstance(); --depricated
+		NewAndNewInstance obj = constructor.newInstance();
+		System.out.println("Instance created using Constructor.newInstance(): " + obj);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}}}
+
+forname: it loads the class at runtime 
+
+------------------------------------------------------------------------------------------------------------------------------
+Oct22
+
+ 
+>>> sealed class permits 
+> singleton class
+>>> string and array
+
+
+
+------------------------------------------------------------------------------------------------------------------------------
+sealed class
+    > We can add sealed keyword infront of the class
+    > in sealed class we cannot extends the class without the permission of the sealed class
+    > class A permits B,C,d
+    > Class B extends A
+    > we create obj of the child class
+    > sealed class without abstract class
+    > absrtact class with sealed classs
+    > child class can only be final , sealed and non-sealed
+    > sealed class have a more control of the classs
+    
+   
+public abstract sealed class  sealedwithabstract permits Circle,Rectangle {
+	public abstract double area();
+	
+	public void displayarea() {
+		System.out.println("the area ="+area());
+	}
+
+}
+
+final class Circle extends sealedwithabstract{
+	private double radius;
+	
+	private Circle(double radius) {
+		this.radius=radius;	
+	}
+	public double area() {
+		return 2*3.5*radius;
+	}
+	public static void main(String[] args) {
+		Circle obj=new Circle(3);
+		obj.displayarea();
+
+	}
+}
+
+-----------------------------------------------------------------------------------------------------------------------------
+singleton class
+Declare a private static variable to hold the single instance of the class.
+Make the constructor of the class private, so that no other instances can be created.
+Provide a public static method to return the single instance of the class, creating it if necessary.
+
+ a class which generate only one obj
+
+public class Singlton {
+	
+	private final static Singlton instance=new Singlton(); 
+	private Singlton() {	
+	}
+	public static Singlton getinstance() {
+		return instance;	
+	}
+}
+
+Singlton obj=Singlton.getinstance();
+		System.out.println(obj);
+
+
+ //rule one: 
+//	one private constructor
+//	one variable  with final so that no other class can make an instance
+//	both variable with static so that it can access method with class name
+
+-----------------------------------------------------------------------------------------------------------------------------
+strings:
+    string is the sequence collections of characters
+    method1: String s1="fdddf";
+    method2: String s1=new String("fdfs");
+    strings are mutable
+
+    methods:
+        -toString() :  it return the string representation of the object -> s1.toString()
+        -charAt(): it will fetch value based on index value, its start from index0 -> s1.charAt(2)
+        -length(): find the length of the string, its start from index1
+        -concat(): one string to another --> s1.concat(s2)
+        -StringBuffer : to make string mutuable, thread safe, eg: multi-threaded environments slow StringBuffer sb=new StringBuffer("dfgsd")
+        -StringBuilder : to make string mutable, not thread safe, eg: works in single threaded enviroment fast StringBuilder sb1=new StringBuilder("hello")
+               StringBuffer sb=new StringBuffer("hello");
+                    sb.append("world");
+                    sb.insert(6,"beautiful");
+                    sb.reverse();
+                    sb.replace(0, 2, "him");
+                    System.out.println(sb);
+
+
+
+        -StringJoiner : StringJoiner sj=new StringJoiner(", ")
+        sj.add("hello").add("banana").add("apple")
+        System.out.println(sj.toString())
+        output::: hello, banana, apple, 
+        
+        
+        -String Tokenizer: 
+            String Tokenizer sk=new StringTokenizer("hello world good morning"," ")
+            while (sk.hasMoreToken()){
+                System.out.println(sk.nextToken())
+            }
+
+        hasMoreTokens() : hasMoreTokens() method will move the cursor on
+            StringTokenizer Object and check the token available or not.
+            If Token available returns "true",else resturns "false"
+
+
+       Q>> Differnce between append, concat, add()
+       in concate= String s3=s1.concate(s2) --> new string saved the value
+
+        // we use StringBuffer sb=new StringBuffer("hello")
+       append= sb.append("world") --> same object sb is not "hello worls"
+
+       add:: it uses with collections 
+       like List<String> li=new ArrayList<>(); // list in interface , arraylist is the class
+       li.add("hello")
+       li.add("word") //["hello","word"]
+
+       
+----------Warapper class:::
+
+the pre-defined variables that makes primitive data type avaible to the user in a form of obj
+>>> multithreading::
+
+>>> 
+Array:::
+    > it is a collection of similar datatype
+    > it is organised based on index value
+    > array is immuatable and we cannot cahnge the values once declare with size, therfore collection is introduced
+    > 2 types:
+        > Single dimensional : the array which has single dimension []
+            int arr[]=new int[10]
+            int arr[]={12,23,4}
+        > Multidemensional arrray : the array hich has to or more domension [[],[],[]]
+            int arr[][]=new int[rows][cols]
+            String arr[][]=new String[2][4]
+
+            int arr1[]= {5,6};		
+            for (int num:arr1) {
+                System.out.println(num);
+            }		
+            int doubarr[][]= {{2,5},{3,8},{4,8}};		
+            for (int i=0;i<=doubarr.length-1;i++) {
+                for (int j=0;j<=doubarr[0].length-1;j++) {
+                    System.out.println(doubarr[i][j]);
+                }			
+            }
+            
+            int arr[][]=new int [3][3];
+            int arr[][]= {{12,14,29},{23,31,35},{78,61,21}};
+            
+            for (int i=0;i<arr.length;i++) {
+                for (int j=0;j<arr[0].length;j++) {
+                    System.out.print(arr[i][j]+" ");
+                }
+                System.out.println();
+            }
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+Utility:
+the clss which performs operations on other object
+-eg string Builder and buffer: we perform insert,reverse,append
+
+generic::
+    -it is a class or method which is ready to accept any data type
+
+
+Collection::
+    > it is a interface which is coming from java.util package
+    > it is a root of framework- it containes all the 
+    > it contains 3 classes 
+        1)Set<Integer> hs=new HashSet<>(); hashset is a class which implements list
+                    new LinkedHashSet<>();
+                    new TreeSet<>();
+
+    
+        2)list  
+                List<> li=new ArrayList<>();
+                List<> li=new LinkedList<>();
+                List<> l3=new Stack<>(); #peek() , pop()
+                List<> l3=new Vector<>();
+
+        3) queue
+
+        4) map
+ 
+
+    > framework: a stucure which already contructed and avaible for the application developement
+    set()-> its a interface coming from java.util and it organised value without any specific index value and does not hold duplicate values
+
+    >linkedin hashset organise elements in insertion overrider
+    > tree set : assending or decending order
+
+Apache Tomcat is the web container to deploy our web application and test in local test machine
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+HashSet:
+// set is an interface coming from java,util package
+// it does not hold any duplicate values
+// it is not organized at specific index value
+
+Unordered.
+Allows null values.
+Best for general-purpose usage where ordering is not important.
+LinkedHashSet:
+
+Maintains insertion order.
+Slightly slower than HashSet due to maintaining a linked list internally.
+TreeSet:
+
+Sorted set.
+Does not allow null values.
+Useful when sorting is required.
+
+-------------------------------------------------------------------------------------------------------------------------
+List:
+list is an interface coming from java.util package
+    >it containes duplicate values
+    > it maintains the insertion order 
+    > it starts with 0 index
+
+Types of list in java:
+1) ArrayList - insertion order, contains duplicate value, good for reading operation
+    List<> li=new ArrayList<>(); add , set
+2) LinkedList - two pointer connecting head-node-tail, good for updation and deletion
+    List<> li=new LinkedList<>(); previous,next,datanode
+3) stack- lifo: 
+    List<> l3=new Stack<>(); pop(),peek(), push(),Empty(),search()
+3) vector( syncronised, thread safe) capacity,size,isEmpty,firstellement,lastelement, setelmentat,removeelementat,insertelement,addelenent,removeallelements
+    List<> l3=new Vector<>();
+
+-------------------------------------------------------------------------------------------------------------------------
+
+Queue:
+    >Queue is an interface which extends from java.util package
+    > it follows FIFO rule
+    > elements are inserted at head of the queue and removed from the tail of the queue
+
+    Queue implements:
+        >LinkedList First in first out add,offer,remove,poll,elememt,peek()
+        >PriorityQueue Comparator.reverseOrder(),bydefault smallest to lowest size(),isEmpty(),contains(Object o)
+            Comparator.comparingInt(task -> task.priority)
+        >ArrayDeque as DoubleEndedQueue
+                addFirst- if some erroc occured, throws exception
+                ,offerFirst- if some error occur return false
+                addLast()
+                offerLast()
+                removeFirst()
+                pollFirst()
+                pollLast()
+                getFirst() -> return first element
+                peekFirst()-> return null, if the queue is empty
+        >LinkedBlockingQueue ---> threadsafe, bounded, capacity
+        >ArrayBlockingQueue --->threadsafe, bounded or unblound
+        >PriorityBlockingQueue--> threadsafe, bounded
+
+
+    PriortyQueue:
+
+        import java.util.Comparator;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
+public class PriorityQueue1 {
+	
+	private String name;
+	private Integer loyalitypnt;
+	
+	private Integer getloyalitypnt() {
+		// TODO Auto-generated method stub
+		return loyalitypnt;
+	}
+	
+	public PriorityQueue1(String name,Integer loyalitypnt){
+		this.name=name;
+		this.loyalitypnt=loyalitypnt;
+	}
+	
+	@Override // because it will display the object
+	public String toString() {
+		return "customer-name"+name+"loyality point"+loyalitypnt;
+	}
+
+	public static void main(String[] args) {
+		//lambda expression // comparator
+		Comparator<PriorityQueue1> CustomComparator =(c1,c2)->Integer.compare(c1.getloyalitypnt(),c2.getloyalitypnt());
+		Queue<PriorityQueue1> p1=new PriorityQueue<>(CustomComparator);
+		p1.add(new PriorityQueue1("sakshi",12));
+		p1.add(new PriorityQueue1("sakshi-2",22));//??////////
+		p1.add(new PriorityQueue1("s",1));
+		p1.add(new PriorityQueue1("s3",00));
+		
+		while(!p1.isEmpty()) {
+			System.out.println(p1.poll());
+		}
+	}	
+}
+        
+
+        
+
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Map:: 
+    > it is interface which is extended from java.util package
+    > it has key and value parseInt
+    methods:
+        > keyset()
+        > values()
+        > entrySet()
+        > containSet
+        > clear()
+        > size()
+        > replace()
+        > remove()
+    Class interface that implements:::
+        > HashMap : unorder , allow null key and values
+        > LinkedMap : insertion order, non sycronised , allow null key and values, has get(),put() the element is added at the end, it has two pointer before() and after()
+        > TreeMap - Maintains sorted order based on keys (ordered), is not synchronized (not thread-safe), does not allow null keys, but allows null values.
+        > HashTable -syncronised, thread-safe,does not  allow null key and values, throw ConCurrentModificationException,
+        > ConcurentHashMap--syncromised,thread-safe,does not  allow null key and values, suited for heavy read and write
+
+package map;
+
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.concurrent.ConcurrentHashMap;
+public class MapCollection {
+	public static void mapExample() {
+		
+		Map<String,Integer> m1=new HashMap<>();
+		m1.put("sakshi",3);
+		m1.put("swarna",5);
+		m1.put(null, null);
+		m1.put("hanumant",15);
+
+		System.out.println(" hashmap is random order"+m1);
+		
+		Map<String,Integer> m2=new LinkedHashMap<>();
+		m2.put("d", 12);
+		m2.put("c", 122);
+		m2.put("b", 1222);
+		m2.put("a", 12222);
+		m2.put(null, null);
+		
+		System.out.println("linkedhashmap(insertionorder)"+m2);
+		
+		Map<String,Integer> m3=new TreeMap<>();
+		m3.put("d", 12);
+		m3.put("c", 122);
+		m3.put("b", 1222);
+		m3.put("a", 12222);
+		m3.put("xxxxx", null);
+		System.out.println("treemap(sorted) on the key value by default"+m3);
+		
+		Map<String,Integer> m4=new Hashtable<>();
+		m4.put("d", 12);
+		m4.put("c", 122);
+		m4.put("b", 1222);
+		m4.put("a", 12222);
+		//m4.put(null, null); -- null point exception
+		System.out.println("hashtable cannot have null key and value, thread safe order on the basis opf hashcodes"+m4);
+		
+		
+		Map<String,Integer> m5=new ConcurrentHashMap<>();
+		m5.put("d", 12);
+		m5.put("c", 122);
+		m5.put("b", 1222);
+		m5.put("a", 12222);
+		System.out.println("ConcurrentHashMap(sorted) cannot have null key and value concurrent, and threadsafe sorted on keys* "+m5);	
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		mapExample();
+	}
+}
+--------------------------------------------------------------------------------------------------------------------
+
+
+Thread:
+    
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+Go to Help > Eclipse Marketplace and search for Eclipse Java EE Developer Tools and install it if not already done.
+
+
+Configure Server on the eclipse console
+go to file> new> other > server> Apache tomcat server 11> select ache-tomcat -fileloacation https://www.youtube.com/watch?v=oGomEzR15MM
+-------------------------------------------------------------------------------------------------------------------
+> localhost 8085 change the port in apache>config> server.xml file
+> change  use tomcat installation
+> create dynamic web project
+>
+
+download:
+    -tomcat setup ::: https://www.youtube.com/watch?v=2KD7L8j1tio
+    > search tomcat setup in eclipse  macm1
+            >cd /Users/sakshisrivastava/Downloads/apache-tomcat-11.0.0/bin
+            >ls -al *.sh  
+            > chmod +x *.sh
+            > ./startup.sh 
+            > http://localhost:8080/
+            > ./shutdown.sh
+
+            to change to port 8080
+                > go to config
+                > vi server.xml
+                > <Connector port="8085" prot
+                > cd bin
+                > ./startup.sh
+                > http://localhost:8085/
+                > ./shutdown.sh
+    -ojdbc jar files
+    -SQL Plus
+
+    We need eclipse-enterprise version to show server
+    > install eclipse -ide --------IMPORTANT
+    
+    for window> help> new solftware install
+    https://download.eclipse.org/releases/2024-03/
+
+    > java --version java 21.0.4
+    > javac --version javac 21.0.4
+
+-----------------------------------------------------------------------------------------------------------------
+

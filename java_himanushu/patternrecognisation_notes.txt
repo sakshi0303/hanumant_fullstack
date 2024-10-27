@@ -1,0 +1,137 @@
+pattern
+
+Meta Character			Description
+----------------------------------------------------------------------------------
+ ?						Zero or One occurance of a character
+
+						Ex:  colou?r  	=>  color, colour
+
+ *						Zero or more occurances of a character
+
+						Ex:  colou*r	=> color, colour, colouur, colouuur
+
+ +						One or more occurances of character
+
+						 Ex:  colou+r	=> colour, colouur, colouuur..
+
+ . (dot)					Any single character
+						
+						Ex:   .at		=> cat, bat, mat, 2at, #at ...
+							..t		=> cot, cat
+
+|						Logical OR, any 1 of the given set of value.
+
+
+						Ex: pattern="green|red|blue"
+						      pattern="color|colour"
+
+\						It is an escape sequence character.
+						It changes a normal character into meta character and 
+						vice versa.
+
+						Ex:  pattern="gmail\.com"   => gmail.com
+
+^						//[^n] It defines excluding specified char  ^ -> it is the start of the string
+					
+						Ex:  pattern="^d"    => allow only "d" and exclude others
+
+\^						It defines starts with
+
+$						It defines ends width
+
+						Ex:
+							pattern="\^ expression $"
+
+( )						It defines union of chars or expressions.
+
+
+[ ]						It defines range of chars, or multiple chars set. [collection]
+
+						Ex:00
+						  pattern="[a-d]" 	=> a, b, c, d
+						  pattern="[^a-d]"	=> all other than a-d.
+						  pattern=[a,d,s]	=> only specified allowed
+						  pattern=[^a,d,s]	=> all others allowed excluding
+										     "a, d, s"
+
+\d						Any single digit number [0-9]
+
+						Ex:  pattern="\d"
+						       pattern="[0-9]"
+						       pattern="\d?\d" 
+						       pattern="\d\d?" 
+
+\D						all chars other than number. [Non Numeric]
+		
+						Ex:  pattern="\D"	=> [a-zA-z] and special chars allowed
+						       pattern="\D\d"  => A3, a4, $2, #5 
+							
+\s						It represents single blank space.
+						
+Note: Never use directly blank spaces in pattern always configure with  "\s".
+
+						Ex:  pattern="\D\s\d"   =>  A  4,  $ 5
+
+ \w						It defines a word char.
+						Word char can be 	
+
+						Ex: pattern="\w"	=> [ A-Z a-z 0-9 _ ]
+						      pattern="\w\d"	=> a4, _4, A5
+						      pattern="\w\D"	=>  AB, A$, _A
+
+\W						Only special chars allowed other than _ .
+						
+						Ex: pattern="\W"	=> ! @ # $ % ^ & 
+						      pattern="\W\w"	=> @A, @4, @_, @a
+
+[a-z]						only lower case letters
+[A-Z]						only upper case letters
+[a-zA-Z]					both upper & lower case
+[0-9]						only numeric
+[a-zA-Z0-9]				alpha numeric
+[!, @, # , $ ,%]				only specified special chars
+[^a-z]					excluding specified range
+[^a, d, s]					exclud
+ing specified chars
+[a, d, s]					only specified chars allow
+[a-d,4-9]					only specifies range of chars allows
+
+
+Pattern	Description	Example Pattern	Matches
+\d	Matches any digit (0-9)	\d\d	"23", "45"
+\D	Matches any non-digit	\D\D	"ab", "??"
+\w	Matches any word character (alphanumeric + _)	\w\w	"a1", "b_"
+\W	Matches any non-word character	\W	"!", "#", " "
+\s	Matches any whitespace character (spaces, tabs, newlines)	a\sb	"a b"
+\S	Matches any non-whitespace character	\S	"a", "1", "?"
+
+
+Pattern	Description	Example Pattern	Matches
+*	    Matches 0 or more repetitions	a*b	"b", "ab", "aaab"
++	    Matches 1 or more repetitions	a+b	"ab", "aaab"
+?	    Matches 0 or 1 repetition	a?b	"b", "ab"
+{n}	    Matches exactly n repetitions	a{3}	"aaa"
+{n,}	Matches n or more repetitions	a{2,}	"aa", "aaa", "aaaa"
+{n,m}	Matches between n and m repetitions	a{2,4}	"aa", "aaa", "aaaa"
+
+Quantifier				Description
+-------------------------------------------------------------------------------
+ { n }						exactly "n" number of chars
+
+						pattern="\d{4}"
+ 
+ {n, m}					minimum - n  & maximum - m
+
+						pattern ="\d{4,10}"
+
+ {n , }					minimum - n  & maximum - any
+
+						pattern="\d{4, }"
+
+
+"^[^g]*$"
+
+^ start off the string
+[^g] anything excluding g
+$ end of the string 
+* any character excluding g
