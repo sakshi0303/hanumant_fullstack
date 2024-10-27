@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 
 
 const Sidebar = (props) => {
+  console.log(props);
     const [isModalOpen, setIsModalOpen] = useState(false);
     let token=useSelector((state)=>state.user.token)
     const [selectedfile, setselectedfile] = useState([]);
@@ -111,7 +112,7 @@ const Sidebar = (props) => {
         console.log(finalobj);
 
         
-        let res=await axios.post("https://localhost:8080/posts/create",finalobj,{
+        let res=await axios.post("http://localhost:8080/posts/create",finalobj,{
            headers:{
             'Authorization':token
            } 
@@ -124,7 +125,7 @@ const Sidebar = (props) => {
           setloading(false)
         }
         setIsModalOpen(false);
-        props.getAllUSersPost();
+        props.getallpost();
         setdetails({
           title:'',
           description:'',

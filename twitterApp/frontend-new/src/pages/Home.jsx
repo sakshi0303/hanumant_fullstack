@@ -131,7 +131,7 @@ sx={{'--Card-radius': (theme) => theme.vars.radius.xs }}
 
 {ele.image && <img src={ele.image}   className=" w-[100%] h-[100%] object-contain" alt="" loading="lazy" /> }
 
-  {ele.video && <img src={ele.video}  className=" w-[100%] h-[100%] object-contain"  alt="" loading="lazy" />}
+  {ele.video && <video controls src={ele.video}  className=" w-[100%] h-[100%] object-contain"  alt="" loading="lazy" />}
   </div>
 </CardOverflow>
 <CardContent orientation="horizontal" sx={{ alignItems: 'center', mx: -1 }}>

@@ -485,3 +485,7 @@ babel warning and config issues::
 rm -rf node_modules/.cache/babel-loader
 npm install @babel/core @babel/preset-env babel-loader @babel/preset-react --save-dev
 npm install --save-dev babel-preset-react-app@10.0.0
+
+
+{ele.image && <img src={ele.image}   className=" w-[100%] h-[100%] object-contain" alt="" loading="lazy" /> }
+  {ele.video && <video controls src={ele.video}  className=" w-[100%] h-[100%] object-contain"  alt="" loading="lazy" />}
