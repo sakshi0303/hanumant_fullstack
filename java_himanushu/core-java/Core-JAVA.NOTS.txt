@@ -4,6 +4,8 @@ JAVA:
 //psvm:: for s=public statci void main
 // sysout: enpty printbox
 
+// to open two workspace:: /Applications/Eclipse.app/Contents/MacOS/eclipse -data ~/another_workspace
+
 // advance java venketesh mansani download pdf naresh it
 
 >OBJECT ORIENTED , PLATFORM INDEPENDENT(IT CAN RUN IN ANY PLATFORM VISUALcode,intellige,eciplse NETBEAN,ANY CODE EDITOR)  PROGRAMING LANGUAGE 
@@ -1244,8 +1246,8 @@ download:
                 > ./startup.sh
                 > http://localhost:8085/
                 > ./shutdown.sh
-    -ojdbc jar files
-    -SQL Plus
+    -ojdbc jar files: already installed with SQL Plus
+    -SQL Plus or oracle SQL developer from https://www.oracle.com/tools/downloads/sqldev-downloads.html for m1 mac
 
     We need eclipse-enterprise version to show server
     > install eclipse -ide --------IMPORTANT

@@ -1,0 +1,8 @@
+package sealedclass;
+
+public abstract sealed class  sealedwithabstract {
+	
+	
+	
+
+}

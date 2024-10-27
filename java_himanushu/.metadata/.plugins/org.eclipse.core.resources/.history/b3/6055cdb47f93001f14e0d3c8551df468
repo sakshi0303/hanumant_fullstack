@@ -1,0 +1,72 @@
+package map;
+
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.concurrent.ConcurrentHashMap;
+
+public class MapCollection {
+	
+	public static void mapExample() {
+		
+		Map<String,Integer> m1=new HashMap<>();
+		m1.put("sakshi",3);
+		m1.put("swarna",5);
+		m1.put(null, null);
+		m1.put("hanumant",15);
+		
+		
+		System.out.println(" hashmap is random order"+m1);
+		
+		Map<String,Integer> m2=new LinkedHashMap<>();
+		m2.put("d", 12);
+		m2.put("c", 122);
+		m2.put("b", 1222);
+		m2.put("a", 12222);
+		m2.put(null, null);
+		
+		System.out.println("linkedhashmap(insertionorder)"+m2);
+		
+		Map<String,Integer> m3=new TreeMap<>();
+		m3.put("d", 12);
+		m3.put("c", 122);
+		m3.put("b", 1222);
+		m3.put("a", 12222);
+		m3.put("xxxxx", null);
+		System.out.println("treemap(sorted) on the key value by default"+m3);
+		
+		Map<String,Integer> m4=new Hashtable<>();
+		m4.put("d", 12);
+		m4.put("c", 122);
+		m4.put("b", 1222);
+		m4.put("a", 12222);
+		//m4.put(null, null); -- null point exception
+		System.out.println("hashtable cannot have null key and value, thread safe"+m4);
+		
+		
+		Map<String,Integer> m5=new ConcurrentHashMap<>();
+		m5.put("d", 12);
+		m5.put("c", 122);
+		m5.put("b", 1222);
+		m5.put("a", 12222);
+		System.out.println("ConcurrentHashMap(sorted) cannot have null key and value concurrent, and threadsafe "+m5);
+		
+		
+		
+	
+		
+		
+	}
+	
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		mapExample();
+
+	}
+
+}

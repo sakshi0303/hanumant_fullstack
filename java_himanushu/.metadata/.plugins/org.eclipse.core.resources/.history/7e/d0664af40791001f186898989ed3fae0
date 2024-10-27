@@ -1,0 +1,37 @@
+package stringmethods;
+
+public class StringMethods {
+	
+	String s1=new String("s1");
+	String s2="s2";
+	
+	String s3=s1.concat(s2);
+	int i1=s1.charAt(0);
+	
+	
+	
+	
+	public void display() {
+		System.out.println(s3.toString()+s3.length());
+		System.out.println(i1);
+	}
+	
+	
+	//String s3=s1.append(s2); -> we can mutate after creating stringbuilder,stringBuffer obj
+	
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		StringBuffer sb=new StringBuffer("hello");
+		sb.append("world");
+		sb.insert(6,"beautiful");
+		sb.reverse();
+		sb.replace(0, 2, "him");
+		System.out.println(sb);
+		
+
+	}
+
+}

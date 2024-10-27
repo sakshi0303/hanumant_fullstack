@@ -1,0 +1,63 @@
+package set;
+
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+// set is an interface coming from java,util package
+// it does not hold any duplicate values
+// it is not organized at specific index value
+
+public class SetMethods {
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Set<Integer> set=new HashSet<>();
+		set.add(12);
+		set.add(13);
+		set.add(12);
+		set.add(90);
+		
+		System.out.print(set);
+		set.remove(13);
+		
+		System.out.print(set.contains(90));
+		System.out.print(set.size());
+		System.out.print(set.isEmpty());
+		Set<Integer> anotherset=new HashSet<>();
+		anotherset.add(12);
+		anotherset.add(91);
+		set.addAll(anotherset);
+		System.out.println("after addall"+set);
+		
+		
+		set.retainAll(anotherset); //all intersection 
+		System.out.println(set);
+		
+		set.removeAll(anotherset);
+		set.clear();
+		System.out.println(set);
+		
+		Set<String> setlinkedhashOrdered=new LinkedHashSet<>();
+		setlinkedhashOrdered.add("sa");
+		setlinkedhashOrdered.add("hanumant");
+		setlinkedhashOrdered.add("riya");
+		
+		System.out.println(setlinkedhashOrdered);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

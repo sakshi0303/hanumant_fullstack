@@ -1,0 +1,6 @@
+package sealedclass;
+
+public abstract sealed class  sealedwithabstract permits Circle,Rectangle {
+	public abstract void area();
+
+}

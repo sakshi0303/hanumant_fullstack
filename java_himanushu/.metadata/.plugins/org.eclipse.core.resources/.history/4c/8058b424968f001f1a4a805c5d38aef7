@@ -1,0 +1,18 @@
+package trycatch;
+
+public class NewAndNewInstance {
+
+	public static void main(String[] args) throws InstantiationException, IllegalAccessException , ClassNotFoundException {
+		// TODO Auto-generated method stub
+		
+		//NewAndNewInstance obj=new NewAndNewInstance();
+		
+		try {
+		NewAndNewInstance obj=(NewAndNewInstance) Class.forName("NewAndNewInstance").newInstance();
+		}catch(Exception e) {
+			e.printStackTrace();
+			
+		}
+	}
+
+}

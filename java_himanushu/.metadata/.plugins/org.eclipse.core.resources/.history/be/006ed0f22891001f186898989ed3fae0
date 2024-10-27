@@ -1,0 +1,40 @@
+package array;
+
+public class Array {
+	
+	
+	public static void main(String args[]) {
+		
+//		int arr1[]= {5,6};
+//		
+//		for (int num:arr1) {
+//			System.out.println(num);
+//		}
+//		
+//		int doubarr[][]= {{2,5},{3,8},{4,8}};
+//		
+//		for (int i=0;i<=doubarr.length-1;i++) {
+//			for (int j=0;j<=doubarr[0].length-1;j++) {
+//				System.out.println(doubarr[i][j]);
+//			}
+//			
+//		}
+		
+//		int arr[][]=new int [3][3];
+		int arr1212[][]= {{12,23,78},{14,31,61},{29,35,21}};
+		
+		for (int i=0;i<arr1212.length;i++) {
+			for (int j=0;j<arr1212[0].length;j++) {
+				System.out.print(arr1212[i][j]+' ');
+			}
+			System.out.println("effhlll");
+		}
+		
+		
+		
+		
+		
+		
+	}
+
+}

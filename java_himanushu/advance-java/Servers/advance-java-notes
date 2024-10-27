@@ -1,0 +1,44 @@
+--------------------------------------------------------------------------------------------------------------
+Go to Help > Eclipse Marketplace and search for Eclipse Java EE Developer Tools and install it if not already done.
+
+
+Configure Server on the eclipse console
+go to file> new> other > server> Apache tomcat server 11> select ache-tomcat -fileloacation https://www.youtube.com/watch?v=oGomEzR15MM
+-------------------------------------------------------------------------------------------------------------------
+> localhost 8085 change the port in apache>config> server.xml file
+> change  use tomcat installation
+> create dynamic web project
+>
+
+download:
+    -tomcat setup ::: https://www.youtube.com/watch?v=2KD7L8j1tio
+    > search tomcat setup in eclipse  macm1
+            >cd /Users/sakshisrivastava/Downloads/apache-tomcat-11.0.0/bin
+            >ls -al *.sh  
+            > chmod +x *.sh
+            > ./startup.sh 
+            > http://localhost:8080/
+            > ./shutdown.sh
+
+            to change to port 8080
+                > go to config
+                > vi server.xml
+                > <Connector port="8085" prot
+                > cd bin
+                > ./startup.sh
+                > http://localhost:8085/
+                > ./shutdown.sh
+    -ojdbc jar files: already installed with SQL Plus
+    -SQL Plus or oracle SQL developer from https://www.oracle.com/tools/downloads/sqldev-downloads.html for m1 mac
+
+    We need eclipse-enterprise version to show server
+    > install eclipse -ide --------IMPORTANT
+    
+    for window> help> new solftware install
+    https://download.eclipse.org/releases/2024-03/
+
+    > java --version java 21.0.4
+    > javac --version javac 21.0.4
+
+-----------------------------------------------------------------------------------------------------------------
+

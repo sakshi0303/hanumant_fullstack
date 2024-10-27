@@ -1,0 +1,6 @@
+
+public class Singletonclass {
+	
+	private static Singletonclass instance=new Singletonclass();
+
+}

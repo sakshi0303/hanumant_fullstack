@@ -1,0 +1,15 @@
+package Singltonp1;
+
+public class Singlton {
+	
+	private final static Singlton instance=new Singlton();
+	
+	private Singlton() {
+		
+	}
+	
+	public static Singlton getinstance() {
+		return instance;
+		
+	}
+

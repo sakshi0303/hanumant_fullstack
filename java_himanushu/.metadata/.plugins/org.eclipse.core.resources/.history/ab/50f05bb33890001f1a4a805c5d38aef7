@@ -1,0 +1,10 @@
+package sealedclass;
+
+public abstract sealed class  sealedwithabstract permits Circle,Rectangle {
+	public abstract void area();
+	
+	public displayarea() {
+		return System.out.printf("the area =",area());
+	}
+
+}

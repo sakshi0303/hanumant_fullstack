@@ -1,0 +1,24 @@
+package genneric;
+
+public class Genericv {
+	
+	public static <T> void printlist(T arr){
+		for(T element: arr) {
+			System.out.println(element);
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] arr= {1,2,4,5};
+		String[] arrs= {"name","method","class"};
+		
+		Genericv.printlist(arr);
+		Genericv.printlist(arrs);
+	
+		
+
+	}
+
+}

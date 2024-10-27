@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;p1.interface1.java&apos; to &apos;Interface1.java&apos;&#x0A;- Original project: &apos;lambdaExpression&apos;&#x0A;- Original element: &apos;p1.interface1.java&apos;&#x0A;- Renamed element: &apos;p1.Interface1.java&apos;" description="Rename compilation unit &apos;interface1.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;p1{interface1.java" name="Interface1.java" references="false" stamp="1729329587427" version="1.0"/>
+</session>

@@ -1,0 +1,10 @@
+
+public class Singletonclass {
+	
+	private static Singletonclass instance=new Singletonclass();
+	private Singletonclass();
+	public static Singletonclass getinstance() {
+		return instance;
+	}
+
+}

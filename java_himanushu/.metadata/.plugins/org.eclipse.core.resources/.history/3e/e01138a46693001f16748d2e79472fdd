@@ -1,0 +1,38 @@
+package queuemethods;
+
+import java.util.Comparator;
+
+public class PriorityQueue {
+	
+	private String name;
+	private Integer loyalitypnt;
+	
+	private Integer getloyalitypnt() {
+		// TODO Auto-generated method stub
+		return this.loyalitypnt;
+	}
+	
+	private String getname() {
+		// TODO Auto-generated method stub
+		return this.name;
+	}
+	
+	PriorityQueue(String name,Integer loyalitypnt){
+		this.name=name;
+		this.loyalitypnt=loyalitypnt;
+	}
+	
+
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//lambda expression
+		Comparator<PriorityQueue> CustomComparator =(c1,c2)->Integer.compare(c1.getloyalitypnt(),c2.getloyalitypnt());
+		
+
+	}
+
+	
+}
