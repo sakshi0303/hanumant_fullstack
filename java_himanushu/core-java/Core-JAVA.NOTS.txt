@@ -1210,9 +1210,146 @@ public class MapCollection {
 
 
 Thread:
-    
+
+garbage collections::
+
+In Java, Garbage Collection (GC) is the process of automatically reclaiming memory by deleting objects that are no longer in use, 
+thus freeing up resources and preventing memory leaks. 
 
 
+1. Garbage Collection Mechanism
+Java objects are stored in Heap Memory.
+When objects are no longer reachable (i.e., no live thread has a reference to them), the garbage collector identifies them as eligible for deletion.
+The garbage collector automatically deletes these objects, freeing memory for new objects.
+
+System.gc()->  to hint java compliler to start garbabe collection
+
+public class JavacollectionExample {
+	
+	public void finalize() throws Throwable{
+		System.out.println("gc "+this);
+	}
+	public static void main(String[] args) {
+		for(int i=0;i<1000000;i++){
+			JavacollectionExample obj=new JavacollectionExample();
+			obj=null;
+			
+		}
+		System.gc();
+	}
+}
+
+------------------------------------------------------------------------------------------------------------------
+Thread:::
+
+thread is the light weight and smallest unit of java program
+
+multithreading is the ability to execute multiple path of code at a same time
+
+normally java code has one thread but you have the ability to break off into multiple thread
+
+thread are independently running and share same mermory location
+
+obj.run() will work as independent thread
+
+obj.start() // parallel thread start
+obj.
+
+lifescyle::
+start
+runaable: 
+blocked/waiting:
+sleep
+terminate
+
+thread methods::
+run()
+start() 
+sleep()
+join() waiting for the current thread to finish and then other threads will be called
+yield() current thread pauses and the other thread waits
+
+
+
+
+
+for sepertate thread do obj.start()
+
+2 ways to create Thread
+> extends Thread class    
+    //public class SubClassExtendsThread extends Thread
+
+     public class mutlithreadingMainclassThread {
+	public static void main(String[] args) throws InterruptedException {
+		for (int i=0;i<2;i++) {
+			SubClassExtendsThread mythread=new SubClassExtendsThread(i);
+			mythread.start();
+			mythread.start();
+			//mythread.join(); // this thread will wait for the t1 thread to die
+			///mythread.yield();
+			System.out.println(mythread.isAlive());			
+		}		
+	}
+}
+> implement Runnable interface -- > favourable becasuse we can entends other class and implements mulitple interface
+
+    public class SubClassExtendsThread implements Runnable{
+	private int threadnumber;
+	public SubClassExtendsThread(int threadnumber) {
+		this.threadnumber=threadnumber;
+	}
+	
+	@Override
+	public void run() {
+		for (int i=0;i<3;i++) {
+			System.out.println(i+"from thread"+threadnumber);
+			if (threadnumber==3) {
+				throw new RuntimeException(); // threads works independently and 3 will have runtime expetion but other will keep on running
+			}
+			try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}	
+		}	
+	}
+}
+
+
+    public class mutlithreadingMainclassThread {
+	public static void main(String[] args) throws InterruptedException {
+		for (int i=0;i<2;i++) {
+			SubClassExtendsThread mythread=new SubClassExtendsThread(i);
+			//mythread.start();
+			Thread t1=new Thread(mythread);
+			t1.start();
+			//t1.join(); // this thread will wait for the t1 thread to die
+			///t1.yield();
+			System.out.println(t1.isAlive());			
+		}		
+	}
+}
+
+------------------------------------------------------------------------------------------------------------------
+
+
+Specification:
+type casting
+/ dynamic method dispatch
+
+downcasting: rediucing data : Specification
+double d=2.34
+i
+
+upcasting genreation
+
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+In Java, the Throwable class is the superclass for all errors and exceptions. It is part of the Java java.lang package and is the root class for the exception hierarchy in Java. 
+All exceptions and errors derive from Throwable, allowing them to be caught and handled in a try-catch block.
 
 
 

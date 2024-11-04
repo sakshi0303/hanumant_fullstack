@@ -1,0 +1,21 @@
+use reducer is similar to usestate hook 
+it provides a way to manage complex state logic in a component
+it takes a reducer function and a inital state as argument
+and return a current state paired with a dispatch function 
+button onlcick()=>dispatch({type:'',payload:})
+
+actions:
+actions are typically defined as object with a type property (to identigy the action) and sometimes a payload(to carry an additional data)
+
+
+Reducers:
+a reducer function manages how the state changes in response to each action
+it takes the current state and an action as argument and return a new state based on the action type
+const reducers=(state,action)=>{
+    if (action.type=='sc'){
+        let filterdAr=state.arr.filter((ele)=>ele.id!==action.payload.id)
+        return { ...state,arr:filterredArr}
+    }
+}
+
+-----

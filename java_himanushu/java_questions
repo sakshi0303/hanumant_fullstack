@@ -49,10 +49,13 @@ Java Collection framework
 file-stream
 netwroking in java
 cloning
+garbage collections
+
+
 multithreading
 multiprocessing -in opearating system
 multitasking
-garbage collections
+
 
 Oct 24--->
 advance java:
@@ -62,6 +65,8 @@ jsp
 jstl
 searialisation
 demon thread
+switch yield
+/ dynamic method dispatch
 
 co
 

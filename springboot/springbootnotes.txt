@@ -79,6 +79,7 @@ why spingboot::??
 		> through Simple maven project( skip archetype selection)
         > add parent devepnedency and spring-boot-starter-web and parnetn dependency
         >parent version will be applicable to all the child depenedcy
+        > transient property, parent version will be applicable to all its child dependecny
 				<parent>
 				  <groupId>org.springframework.boot</groupId>
 				    <artifactId>spring-boot-starter-parent</artifactId>
@@ -279,4 +280,8 @@ the name of the application.properties should be same otherwise it will through 
 application.yaml or YML
 > written in jsom format
 > application.properties to YML
+
+
+LAmbok: reduce the line of code, by providing boilerplate code
+
 

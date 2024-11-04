@@ -489,3 +489,8 @@ npm install --save-dev babel-preset-react-app@10.0.0
 
 {ele.image && <img src={ele.image}   className=" w-[100%] h-[100%] object-contain" alt="" loading="lazy" /> }
   {ele.video && <video controls src={ele.video}  className=" w-[100%] h-[100%] object-contain"  alt="" loading="lazy" />}
+
+
+multiple for multiple files []
+
+npm i swiper

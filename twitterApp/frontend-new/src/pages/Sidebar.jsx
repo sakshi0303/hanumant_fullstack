@@ -156,7 +156,7 @@ const Sidebar = (props) => {
                   </div>
                   <div className='flex gap-1'>
                        {details.image && <img src={URL.createObjectURL(details.image)} className='w-40 h-40 m-auto' alt="" />}
-                        { details.video && <video src={URL.createObjectURL(details.video)}  className='w-40 h-40 m-auto border border-red-400'></video>}
+                        { details.video && <video src={URL.createObjectURL(details.video)} controls  className='w-40 h-40 m-auto border border-red-400'></video>}
                   </div>
                     <button onClick={handleSubmit} className=' text-white bg-green-950 py-2 px-4 rounded-md my-2'>Submit</button>
                 </form>
@@ -165,6 +165,12 @@ const Sidebar = (props) => {
                 }
                 
             </Modal>
+
+
+
+
+
+            
 
             <ul>
               <l1>
