@@ -285,3 +285,58 @@ application.yaml or YML
 LAmbok: reduce the line of code, by providing boilerplate code
 
 
+spring boot
+advantage of spring boot
+create first Rest API
+
+spring intialiser download jdk 17
+and spring web devepnedency
+make controller clas make it restcontroller
+@getmapping
+
+
+Rest api:
+api: application programming interface
+communication between 2 application/software or projects to provide some kind of Service
+
+
+flipkart-->(payment service)--> paytm ---> code(API) to flipkart
+
+API is irrespective of code language, 
+jSON: javascript object notation, key and value
+
+send and receive the Data req,res
+
+when we sends  req with JSON data and get response as JSON format , it is REST-API  @rescontroller is used for making RESt-API
+
+{
+  "name": "Sakshi",
+  "age": 91,
+  "isStudent": false,
+  "skills": ["JavaScript", "React", "Node.js"],
+  "address": {
+    "street": "123 Main St",
+    "city": "Lucknow",
+    "country": "India"
+  }
+}
+Rest-api is the protocol or rules
+
+SOAP: simple object access protocol
+XML: 
+
+provider : paypal is the provider
+and client: amazon is the client
+is single value "heelo" it is also jSON
+@componet will create the object at run exeecution
+
+@restconstoller will tell the spring to make the componet and handle req, res  request in json format
+@restcontroller has @controller has @compoent annotation 
+RES
+
+we can retrn class as well inside
+@getmapping("/fetchdata")
+public iplteam fetchdata(){
+    iplteam obj1iplteam=new iplteam("salshi",30,false,["sdf","sfrf"])
+    return obj1iplteam
+}
