@@ -340,3 +340,42 @@ public iplteam fetchdata(){
     iplteam obj1iplteam=new iplteam("salshi",30,false,["sdf","sfrf"])
     return obj1iplteam
 }
+
+springboot is the extension of spring or java framework to use or build rapidly application
+make ready to run application
+
+@pathvariable is used to bind client argument to your method parameter
+
+Devtool dependency is used to automaticlly restart the server whenver changes occur , we dont have to manually stop and started
+
+@SpringBootApplication is the combination on @autoconfigure @EnableAutoConfiguration-dispacherservlet to enable/start @ComponentScan
+
+when we create beans auto config files we call it as @SpringBootApplication
+
+in requestmapping we have to provide value and mothod-old
+    @RequestMapping(method = RequestMethod.GET,value = "home")
+
+in BROWSER POST,PUT AND DELETE """"methhod is not allowed"""" only through postman we can access that
+
+componet means making it a part of spring container(all things like object container/object inilisation/destroy handle by spring)
+this should be inside main pakage
+
+subpakage inside  main package that has run method will also crete object if @componetnt is written
+
+
+>> @ComponentScan(basePackages = { "com.firstdemo.firstspringboot", "subpakage", "newpackage" })
+main package all class that has @component annotation and all subpackage will be automatically scanned with componentscan
+
+@ComponentScans({ @ComponentScan("com.firstdemo.firstspringboot"), @ComponentScan("newpackage"),@ComponentScan("subpakage") })
+@ComponentScan({ "com.firstdemo.firstspringboot", "subpakage", "newpackage" })
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+Spring boot vs spring boot MVC
+
+modle view container
+
+model is to provide buisness logic
+view is for User interface , view the data representation layer
+controller is to handle req , process the req and give the desired response
