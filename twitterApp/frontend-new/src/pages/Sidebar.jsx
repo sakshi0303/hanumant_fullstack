@@ -83,7 +83,7 @@ const Sidebar = (props) => {
           arr.push(details.video)
         }
 
-        let allFileUpdateOnCloudnary=arr.map(async (ele)=>{
+        let allFileUpdateOnCloudnary=arr && arr.map(async (ele)=>{
 
         let formdata=new FormData();
         formdata.append('file',ele);
@@ -95,7 +95,7 @@ const Sidebar = (props) => {
 
         })
 
-        let ans=await Promise.all(allFileUpdateOnCloudnary)
+        let ans=allFileUpdateOnCloudnary? await Promise.all(allFileUpdateOnCloudnary) :[];
 
         console.log(ans);
 
