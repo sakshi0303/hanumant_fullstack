@@ -1,3 +1,8 @@
+node.js: javascript runtime built on chome v8 engine on browser
+express.js: a lightweight javascript framework on the top of node.js that simplify web application development by providing tools  to use middleware,routing,request handling
+mongoose: it is  Oject data model design to provide mongodb schema validation,object manupulation,query building
+
+
 npm i react-router-dom
 search form in twailwind tap
 copy whoel component
