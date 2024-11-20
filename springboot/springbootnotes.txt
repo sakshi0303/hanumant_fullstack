@@ -379,3 +379,54 @@ modle view container
 model is to provide buisness logic
 view is for User interface , view the data representation layer
 controller is to handle req , process the req and give the desired response
+
+
+service layer: writes buisness logic
+
+controller gets the request
+goes to serice layer- do internal connect with model layer
+
+
+service class is used to define buisness logic
+
+
+---------------------------------------------------------
+spring security
+> how to implement Spring security
+> Inmemory Authentication
+> Database Authentication
+> Admin user role based Authentication
+> Custom Login form
+> Handle Not Found 404/ forbidden 403 errors
+
+---------------------------------------------------------
+
+spring initialiser
+deppendencies:
+    > spring web
+    > spring data jpa--- for datababse authentication 
+    > MySql Driver
+    > Lombok - for boiler code
+    > Spring boot Devtool- for live loading 
+    > theamleaf: show data in html
+    > spring-boot-starter-security
+
+in src/main/resources
+we can static html pages
+
+always use eclipse ide to open these
+new-other-html-home.html iinside src/main/resource
+
+
+project> maven> updateProject> froce click
+
+spring-starter-security will add login by default
+>
+/login
+username: user
+password:  one password will be generated in console
+spring.security.user.name=123
+spring.sec
+
+/logout
+
